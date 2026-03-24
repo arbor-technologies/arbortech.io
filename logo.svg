@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260">
+  <!-- Roots -->
+  <g stroke="#4E342E" fill="none" stroke-linecap="round">
+    <!-- Center root -->
+    <path d="M100 168 C100 185 100 205 100 228" stroke-width="3.5"/>
+    <path d="M100 228 C96 236 91 243 86 248" stroke-width="2"/>
+    <path d="M100 228 C104 236 109 243 114 248" stroke-width="2"/>
+    <!-- Left roots -->
+    <path d="M94 168 C84 182 68 200 50 218" stroke-width="3"/>
+    <path d="M50 218 C44 224 37 229 30 233" stroke-width="2"/>
+    <path d="M50 218 C48 226 45 233 42 240" stroke-width="2"/>
+    <path d="M90 170 C82 182 72 194 60 206" stroke-width="2.5"/>
+    <path d="M60 206 C55 212 49 217 43 221" stroke-width="1.8"/>
+    <path d="M88 168 C76 178 62 190 44 200" stroke-width="2"/>
+    <path d="M44 200 C38 204 32 207 26 209" stroke-width="1.5"/>
+    <!-- Right roots -->
+    <path d="M106 168 C116 182 132 200 150 218" stroke-width="3"/>
+    <path d="M150 218 C156 224 163 229 170 233" stroke-width="2"/>
+    <path d="M150 218 C152 226 155 233 158 240" stroke-width="2"/>
+    <path d="M110 170 C118 182 128 194 140 206" stroke-width="2.5"/>
+    <path d="M140 206 C145 212 151 217 157 221" stroke-width="1.8"/>
+    <path d="M112 168 C124 178 138 190 156 200" stroke-width="2"/>
+    <path d="M156 200 C162 204 168 207 174 209" stroke-width="1.5"/>
+  </g>
+
+  <!-- Trunk -->
+  <path d="M91 168 C89 148 88 128 91 108 L96 85 L100 70 L104 85 L109 108 C112 128 111 148 109 168 Z" fill="#4E342E"/>
+
+  <!-- Branches (behind canopy) -->
+  <g stroke="#5D4037" fill="none" stroke-linecap="round" stroke-width="2.5">
+    <path d="M94 105 C78 95 60 88 45 85"/>
+    <path d="M106 105 C122 95 140 88 155 85"/>
+    <path d="M92 90 C76 78 58 68 42 62"/>
+    <path d="M108 90 C124 78 142 68 158 62"/>
+    <path d="M96 76 C84 64 70 54 55 48"/>
+    <path d="M104 76 C116 64 130 54 145 48"/>
+  </g>
+
+  <!-- Canopy - layered circles, darkest on outside -->
+  <!-- Outer dark layer -->
+  <circle cx="42" cy="78" r="22" fill="#1B4332"/>
+  <circle cx="158" cy="78" r="22" fill="#1B4332"/>
+  <circle cx="32" cy="60" r="18" fill="#1B4332"/>
+  <circle cx="168" cy="60" r="18" fill="#1B4332"/>
+  <circle cx="55" cy="48" r="16" fill="#1B4332"/>
+  <circle cx="145" cy="48" r="16" fill="#1B4332"/>
+
+  <!-- Main canopy layer -->
+  <circle cx="100" cy="50" r="38" fill="#2D6A4F"/>
+  <circle cx="60" cy="60" r="30" fill="#2D6A4F"/>
+  <circle cx="140" cy="60" r="30" fill="#2D6A4F"/>
+  <circle cx="45" cy="55" r="22" fill="#2D6A4F"/>
+  <circle cx="155" cy="55" r="22" fill="#2D6A4F"/>
+  <circle cx="75" cy="40" r="24" fill="#2D6A4F"/>
+  <circle cx="125" cy="40" r="24" fill="#2D6A4F"/>
+
+  <!-- Mid-green layer -->
+  <circle cx="85" cy="42" r="26" fill="#40916C"/>
+  <circle cx="115" cy="42" r="26" fill="#40916C"/>
+  <circle cx="100" cy="32" r="24" fill="#40916C"/>
+  <circle cx="65" cy="50" r="20" fill="#40916C"/>
+  <circle cx="135" cy="50" r="20" fill="#40916C"/>
+  <circle cx="50" cy="58" r="15" fill="#40916C"/>
+  <circle cx="150" cy="58" r="15" fill="#40916C"/>
+
+  <!-- Light green highlights -->
+  <circle cx="90" cy="32" r="16" fill="#52B788" opacity="0.85"/>
+  <circle cx="110" cy="32" r="16" fill="#52B788" opacity="0.85"/>
+  <circle cx="100" cy="22" r="14" fill="#52B788" opacity="0.85"/>
+  <circle cx="75" cy="40" r="12" fill="#52B788" opacity="0.7"/>
+  <circle cx="125" cy="40" r="12" fill="#52B788" opacity="0.7"/>
+
+  <!-- Brightest highlights -->
+  <circle cx="95" cy="24" r="8" fill="#74C69D" opacity="0.7"/>
+  <circle cx="108" cy="26" r="7" fill="#74C69D" opacity="0.6"/>
+  <circle cx="100" cy="16" r="6" fill="#B7E4C7" opacity="0.5"/>
+</svg>
