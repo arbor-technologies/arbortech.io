@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbor | Early Adopters</title>
+<meta name="description" content="Be among the first to use Arbor, the strategic alignment platform that connects goals to execution. Join our early adopters and help shape the future of how teams work.">
+<meta property="og:title" content="Arbor | Early Adopters">
+<meta property="og:description" content="Work should flow from strategy, not report to it. Get early access to the platform that makes it happen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arbortech.io/waitlist">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-deep: #0A4B44;
+  --green-primary: #0D6B5E;
+  --green-mid: #1A8A7A;
+  --green-light: #E0F5F0;
+  --green-subtle: #F0FAF8;
+  --amber: #D4A843;
+  --amber-light: #E8D5A0;
+  --amber-subtle: #FBF6EA;
+  --rose: #D4654A;
+  --rose-light: #E8A090;
+  --rose-subtle: #FDF0EC;
+  --charcoal: #1A1F1E;
+  --charcoal-mid: #2A302E;
+  --text-primary: #1A1F1E;
+  --text-secondary: #4A5550;
+  --text-muted: #7A857F;
+  --text-on-dark: #E0F5F0;
+  --text-on-dark-muted: #A8DDD0;
+  --bg-warm: #FAFAF7;
+  --bg-white: #FFFFFF;
+  --border-light: #E4E2DD;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --max-width: 1200px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-warm);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes growUp {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes leafSway {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(2deg) translateY(-3px); }
+  75% { transform: rotate(-1.5deg) translateY(-1px); }
+}
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+}
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+/* --- NAV --- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 75, 68, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(26, 138, 122, 0.2);
+  transition: all 0.3s ease;
+}
+nav.scrolled {
+  background: rgba(10, 75, 68, 0.97);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.15);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--green-mid); }
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--amber);
+  background: rgba(212, 168, 67, 0.15);
+  padding: 8px 16px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(212, 168, 67, 0.25);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.nav-badge:hover {
+  background: rgba(212, 168, 67, 0.25);
+  border-color: rgba(212, 168, 67, 0.4);
+  transform: translateY(-1px);
+}
+.nav-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  animation: dotPulse 2s ease infinite;
+}
+
+/* --- HERO --- */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 107, 94, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.hero-content {
+  animation: fadeUp 0.8s ease forwards;
+}
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--amber);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--green-deep);
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--green-mid);
+}
+.hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin-bottom: 12px;
+}
+.hero-sub-secondary {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-primary);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-primary:hover {
+  background: var(--green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 107, 94, 0.25);
+}
+.hero-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+  cursor: pointer;
+}
+.hero-cta-arrow:hover { gap: 12px; }
+.hero-cta-arrow svg {
+  transition: transform 0.2s;
+}
+.hero-cta-arrow:hover svg {
+  transform: translateX(3px);
+}
+
+/* Hero visual — atmospheric tree */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease 0.3s forwards;
+  opacity: 0;
+}
+.hero-tree-svg {
+  width: 100%;
+  max-width: 420px;
+}
+.tree-node-glow {
+  animation: gentlePulse 3s ease infinite;
+}
+.tree-leaf-group {
+  animation: leafSway 6s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.tree-leaf-group:nth-child(2) { animation-delay: -1.5s; }
+.tree-leaf-group:nth-child(3) { animation-delay: -3s; }
+
+/* --- PROBLEM STRIP --- */
+.problem-strip {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 64px 0;
+}
+.problem-strip-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.problem-strip-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+.problem-strip h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.pain-card {
+  padding: 28px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-warm);
+  position: relative;
+  transition: all 0.3s ease;
+}
+.pain-card:hover {
+  border-color: var(--green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+}
+.pain-card:nth-child(1)::before { background: var(--rose); }
+.pain-card:nth-child(2)::before { background: var(--amber); }
+.pain-card:nth-child(3)::before { background: var(--rose-light); }
+.pain-card:nth-child(4)::before { background: var(--amber-light); }
+.pain-icon {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--bg-white);
+}
+.pain-card:nth-child(1) .pain-icon { background: var(--rose); }
+.pain-card:nth-child(2) .pain-icon { background: var(--amber); }
+.pain-card:nth-child(3) .pain-icon { background: var(--rose-light); }
+.pain-card:nth-child(4) .pain-icon { background: var(--amber-light); }
+.pain-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.pain-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* --- FORM SECTION --- */
+.form-section {
+  padding: 100px 0;
+  position: relative;
+}
+.form-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--border-light), transparent);
+}
+.form-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+.form-context {
+  padding-top: 20px;
+}
+.form-context-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 16px;
+}
+.form-context h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.form-context > p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+.what-you-get {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.what-you-get li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.what-you-get .check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.what-you-get .check-icon svg {
+  width: 12px;
+  height: 12px;
+  color: var(--green-primary);
+}
+
+/* The Form */
+.waitlist-form-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
+  position: relative;
+}
+.waitlist-form-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 40px; right: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-primary), var(--amber), var(--rose-light));
+  border-radius: 0 0 3px 3px;
+}
+.form-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.form-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+.form-group {
+  margin-bottom: 22px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 7px;
+}
+.form-group label .optional {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border-light);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background: var(--bg-warm);
+  transition: all 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+}
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237A857F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--green-primary);
+  background: var(--bg-white);
+  box-shadow: 0 0 0 3px rgba(13, 107, 94, 0.08);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.btn-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--green-primary);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 8px;
+}
+.btn-submit:hover {
+  background: var(--green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 107, 94, 0.25);
+}
+.btn-submit:active {
+  transform: translateY(0);
+}
+.form-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.form-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Success state */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.form-success.show {
+  display: block;
+  animation: fadeUp 0.5s ease forwards;
+}
+.form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.form-success-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--green-primary);
+}
+.form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+.form-success p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* --- WHAT TO EXPECT --- */
+.expect-section {
+  background: var(--green-deep);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.expect-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 138, 122, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.expect-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.expect-header {
+  margin-bottom: 56px;
+}
+.expect-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 14px;
+}
+.expect-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--text-on-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.expect-card {
+  padding: 36px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+.expect-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+.expect-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.expect-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.expect-card p {
+  font-size: 0.88rem;
+  color: var(--text-on-dark-muted);
+  line-height: 1.6;
+}
+
+/* --- MINI FAQ --- */
+.mini-faq {
+  padding: 80px 0;
+  background: var(--bg-white);
+}
+.mini-faq-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.mini-faq-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.mini-faq-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+}
+.faq-item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+  transition: color 0.2s;
+  gap: 16px;
+}
+.faq-question:hover { color: var(--green-primary); }
+.faq-question .arrow {
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.faq-item.open .arrow {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-answer-inner {
+  padding-bottom: 22px;
+}
+.faq-answer-inner p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* --- FINAL CTA --- */
+.final-cta {
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+}
+.final-cta-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.final-cta p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.btn-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-primary);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-final:hover {
+  background: var(--green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 107, 94, 0.25);
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 40px 0;
+  background: var(--green-deep);
+  border-top: none;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  letter-spacing: -0.02em;
+}
+.footer-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.82rem;
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--text-on-dark); }
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-visual {
+    order: -1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    justify-content: center;
+  }
+  .hero-sub {
+    max-width: 540px;
+  }
+  .pain-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 600px;
+  }
+  .form-context {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .what-you-get {
+    align-items: center;
+  }
+  .what-you-get li {
+    max-width: 400px;
+  }
+  .expect-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .pain-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-section {
+    padding: 64px 0;
+  }
+  .waitlist-form-card {
+    padding: 32px 24px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .expect-section {
+    padding: 60px 0;
+  }
+  .mini-faq {
+    padding: 60px 0;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="https://arbortech.io" class="nav-logo">arbor</a>
+    <a href="#waitlist-form" class="nav-badge">Early Adopter Access Open</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Early Access</div>
+      <h1>The alignment layer your tools are <em>missing.</em></h1>
+      <p class="hero-sub">Arbor connects your company's goals to your team's daily work in one living hierarchy. No more disconnect between strategy and execution.</p>
+      <p class="hero-sub-secondary">We're opening early access to a small group of teams who are ready to work differently.</p>
+      <a href="#waitlist-form" class="btn-primary">
+        Join the Early Adopters
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-tree-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background atmosphere -->
+        <circle cx="200" cy="220" r="160" fill="#0D6B5E" opacity="0.03"/>
+        <circle cx="200" cy="220" r="100" fill="#0D6B5E" opacity="0.04"/>
+        
+        <!-- Root node at top — the company goal -->
+        <circle cx="200" cy="60" r="14" fill="#0D6B5E" opacity="0.12"/>
+        <circle cx="200" cy="60" r="7" fill="#0D6B5E" opacity="0.4"/>
+        
+        <!-- Trunk downward from root -->
+        <line x1="200" y1="74" x2="200" y2="140" stroke="#0D6B5E" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+        
+        <!-- Level 1 branches (Initiatives) -->
+        <line x1="200" y1="130" x2="120" y2="185" stroke="#0D6B5E" stroke-width="2.5" stroke-linecap="round" opacity="0.18"/>
+        <line x1="200" y1="130" x2="280" y2="185" stroke="#0D6B5E" stroke-width="2.5" stroke-linecap="round" opacity="0.18"/>
+        
+        <!-- Level 2 branches (Projects) -->
+        <line x1="120" y1="195" x2="80" y2="255" stroke="#0D6B5E" stroke-width="2" stroke-linecap="round" opacity="0.14"/>
+        <line x1="120" y1="195" x2="160" y2="255" stroke="#0D6B5E" stroke-width="2" stroke-linecap="round" opacity="0.14"/>
+        <line x1="280" y1="195" x2="240" y2="255" stroke="#D4A843" stroke-width="2" stroke-linecap="round" opacity="0.14"/>
+        <line x1="280" y1="195" x2="320" y2="255" stroke="#D4A843" stroke-width="2" stroke-linecap="round" opacity="0.14"/>
+        
+        <!-- Level 3 branches (Tasks) -->
+        <line x1="80" y1="265" x2="60" y2="315" stroke="#0D6B5E" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="80" y1="265" x2="100" y2="315" stroke="#0D6B5E" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="160" y1="265" x2="145" y2="315" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="160" y1="265" x2="178" y2="315" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="240" y1="265" x2="225" y2="315" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="240" y1="265" x2="258" y2="315" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="320" y1="265" x2="305" y2="315" stroke="#D4654A" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        <line x1="320" y1="265" x2="340" y2="315" stroke="#D4654A" stroke-width="1.5" stroke-linecap="round" opacity="0.1"/>
+        
+        <!-- Level 1 nodes (Initiatives) -->
+        <g class="tree-leaf-group">
+          <circle cx="120" cy="190" r="24" fill="#0D6B5E" opacity="0.08"/>
+          <circle cx="120" cy="190" r="14" fill="#0D6B5E" opacity="0.1"/>
+          <circle class="tree-node-glow" cx="120" cy="190" r="6" fill="#0D6B5E" opacity="0.5"/>
+        </g>
+        <g class="tree-leaf-group">
+          <circle cx="280" cy="190" r="24" fill="#D4A843" opacity="0.1"/>
+          <circle cx="280" cy="190" r="14" fill="#D4A843" opacity="0.12"/>
+          <circle class="tree-node-glow" cx="280" cy="190" r="6" fill="#D4A843" opacity="0.5"/>
+        </g>
+        
+        <!-- Level 2 nodes (Projects) -->
+        <g class="tree-leaf-group">
+          <circle cx="80" cy="260" r="20" fill="#0D6B5E" opacity="0.07"/>
+          <circle cx="80" cy="260" r="12" fill="#0D6B5E" opacity="0.09"/>
+          <circle class="tree-node-glow" cx="80" cy="260" r="5" fill="#0D6B5E" opacity="0.45"/>
+        </g>
+        <g class="tree-leaf-group">
+          <circle cx="160" cy="260" r="20" fill="#1A8A7A" opacity="0.07"/>
+          <circle cx="160" cy="260" r="12" fill="#1A8A7A" opacity="0.09"/>
+          <circle class="tree-node-glow" cx="160" cy="260" r="5" fill="#1A8A7A" opacity="0.45"/>
+        </g>
+        <g class="tree-leaf-group">
+          <circle cx="240" cy="260" r="20" fill="#D4A843" opacity="0.08"/>
+          <circle cx="240" cy="260" r="12" fill="#D4A843" opacity="0.1"/>
+          <circle class="tree-node-glow" cx="240" cy="260" r="5" fill="#D4A843" opacity="0.45"/>
+        </g>
+        <g class="tree-leaf-group">
+          <circle cx="320" cy="260" r="20" fill="#D4654A" opacity="0.07"/>
+          <circle cx="320" cy="260" r="12" fill="#D4654A" opacity="0.09"/>
+          <circle class="tree-node-glow" cx="320" cy="260" r="5" fill="#D4654A" opacity="0.45"/>
+        </g>
+        
+        <!-- Level 3 nodes (Tasks - smallest) -->
+        <circle cx="60" cy="320" r="8" fill="#0D6B5E" opacity="0.06"/>
+        <circle cx="60" cy="320" r="3.5" fill="#0D6B5E" opacity="0.3"/>
+        <circle cx="100" cy="320" r="8" fill="#0D6B5E" opacity="0.06"/>
+        <circle cx="100" cy="320" r="3.5" fill="#0D6B5E" opacity="0.3"/>
+        <circle cx="145" cy="320" r="8" fill="#1A8A7A" opacity="0.06"/>
+        <circle cx="145" cy="320" r="3.5" fill="#1A8A7A" opacity="0.3"/>
+        <circle cx="178" cy="320" r="8" fill="#1A8A7A" opacity="0.06"/>
+        <circle cx="178" cy="320" r="3.5" fill="#1A8A7A" opacity="0.3"/>
+        <circle cx="225" cy="320" r="8" fill="#D4A843" opacity="0.06"/>
+        <circle cx="225" cy="320" r="3.5" fill="#D4A843" opacity="0.3"/>
+        <circle cx="258" cy="320" r="8" fill="#D4A843" opacity="0.06"/>
+        <circle cx="258" cy="320" r="3.5" fill="#D4A843" opacity="0.3"/>
+        <circle cx="305" cy="320" r="8" fill="#D4654A" opacity="0.06"/>
+        <circle cx="305" cy="320" r="3.5" fill="#D4654A" opacity="0.3"/>
+        <circle cx="340" cy="320" r="8" fill="#D4654A" opacity="0.06"/>
+        <circle cx="340" cy="320" r="3.5" fill="#D4654A" opacity="0.3"/>
+        
+        <!-- Floating context labels -->
+        <text x="200" y="38" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">STRATEGY</text>
+        <text x="200" y="365" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">EXECUTION</text>
+        
+        <!-- Directional flow arrows (subtle, pointing down) -->
+        <path d="M196 348 L200 353 L204 348" stroke="#7A857F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4"/>
+        <path d="M200 345 L200 355" stroke="#7A857F" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM STRIP -->
+<section class="problem-strip">
+  <div class="problem-strip-inner">
+    <div class="problem-strip-label animate-on-scroll">Sound familiar?</div>
+    <h2 class="animate-on-scroll">The problems we're building Arbor to&nbsp;solve.</h2>
+    <div class="pain-grid">
+      <div class="pain-card animate-on-scroll delay-1">
+        <div class="pain-icon">1</div>
+        <h3>Duplicate work</h3>
+        <p>Two teams. Same problem. Zero coordination. Nobody finds out until both are halfway done.</p>
+      </div>
+      <div class="pain-card animate-on-scroll delay-2">
+        <div class="pain-icon">2</div>
+        <h3>Meeting overload</h3>
+        <p>Status meetings about status meetings. Because the tools don't surface what matters, so humans have to.</p>
+      </div>
+      <div class="pain-card animate-on-scroll delay-3">
+        <div class="pain-icon">3</div>
+        <h3>OKR theater</h3>
+        <p>Objectives as a separate reporting layer that everyone maintains but nobody actually uses to make decisions.</p>
+      </div>
+      <div class="pain-card animate-on-scroll delay-4">
+        <div class="pain-icon">4</div>
+        <h3>Decisions in the dark</h3>
+        <p>Leaders without ground-level visibility making calls that cascade down to the people doing the actual work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="form-section" id="waitlist-form">
+  <div class="form-layout">
+    <div class="form-context animate-on-scroll">
+      <div class="form-context-label">Early adopters</div>
+      <h2>Shape Arbor from the&nbsp;ground&nbsp;up.</h2>
+      <p>We're looking for a small group of teams who live these problems every day. People who want to fix the system, not just manage around it. In return, you get a direct line to the team building the solution.</p>
+      <ul class="what-you-get">
+        <li>
+          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Early access before public launch. See it first, break it first</span>
+        </li>
+        <li>
+          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Direct access to the founders. Not a support queue, actual conversations</span>
+        </li>
+        <li>
+          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Your feedback shapes the roadmap. We build for real problems, not assumptions</span>
+        </li>
+        <li>
+          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Early adopter pricing, locked in for good</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="waitlist-form-card animate-on-scroll delay-2" id="formCard">
+      <div id="formContent">
+        <div class="form-title">Request Early Access</div>
+        <div class="form-subtitle">Takes about 60 seconds. We read every&nbsp;one.</div>
+        
+        <div class="form-group">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="First Last" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="role">Your role</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select role</option>
+              <option value="ceo-founder">CEO / Founder</option>
+              <option value="coo-ops">COO / Head of Ops</option>
+              <option value="chief-of-staff">Chief of Staff</option>
+              <option value="vp-director">VP / Director</option>
+              <option value="team-lead">Team Lead / Manager</option>
+              <option value="pm">Product Manager</option>
+              <option value="ic">Individual Contributor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="company-size">Company size</label>
+          <select id="company-size" name="company-size" required>
+            <option value="" disabled selected>How many people?</option>
+            <option value="1-10">1-10</option>
+            <option value="11-20">11-20</option>
+            <option value="21-50">21-50</option>
+            <option value="51-100">51-100</option>
+            <option value="101-200">101-200</option>
+            <option value="200+">200+</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="frustration">What's your biggest frustration with how your team tracks and aligns work today? <span class="optional">Optional but very helpful</span></label>
+          <textarea id="frustration" name="frustration" placeholder="The more specific, the better."></textarea>
+        </div>
+        
+        <button type="button" class="btn-submit" id="submitBtn" onclick="handleSubmit()">
+          Request Early Access
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="form-footer">No spam, and we'll never sell your data.</div>
+      </div>
+      
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>You're in.</h3>
+        <p>We'll be in touch soon with next steps. In the meantime, you can follow our build-in-public journey on LinkedIn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect-section">
+  <div class="expect-inner">
+    <div class="expect-header animate-on-scroll">
+      <div class="expect-label">What happens next</div>
+      <h2>This isn't a "sign up and wait" waitlist.</h2>
+    </div>
+    <div class="expect-grid">
+      <div class="expect-card animate-on-scroll delay-1">
+        <div class="expect-number">01</div>
+        <h3>We actually read your responses</h3>
+        <p>Every answer helps us build the right product. Your frustrations become our feature priorities. This isn't a vanity metric exercise.</p>
+      </div>
+      <div class="expect-card animate-on-scroll delay-2">
+        <div class="expect-number">02</div>
+        <h3>We'll reach out for a real conversation</h3>
+        <p>Not a sales call. A short conversation about your team, your tools, and where things break down. We're here to listen first.</p>
+      </div>
+      <div class="expect-card animate-on-scroll delay-3">
+        <div class="expect-number">03</div>
+        <h3>You'll get early access when we launch</h3>
+        <p>Early adopters get in first, at locked-in pricing, with a direct line to the team. You're not just early. You're part of how this gets built.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI FAQ -->
+<section class="mini-faq">
+  <div class="mini-faq-inner">
+    <div class="mini-faq-header animate-on-scroll">
+      <h2>A few things you might be wondering.</h2>
+    </div>
+    
+    <div class="faq-item animate-on-scroll">
+      <button class="faq-question" aria-expanded="false">
+        What exactly is Arbor?
+        <span class="arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Arbor is a strategic alignment platform. In plain language: it connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between "here's our vision" and "here's my to-do list" that most companies are currently managing with spreadsheets, meetings, and wishful thinking.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item animate-on-scroll">
+      <button class="faq-question" aria-expanded="false">
+        Why should I join now instead of waiting for launch?
+        <span class="arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Because the early adopters shape what gets built. Your problems, your workflows, your "I wish it did this" moments go directly into the product. You also lock in early adopter pricing permanently. And the teams who join early tend to get the most value, because the product is literally built around their reality.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item animate-on-scroll">
+      <button class="faq-question" aria-expanded="false">
+        Is this just another project management tool?
+        <span class="arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>No, and we're pretty deliberate about that. Arbor isn't competing with task trackers or documentation tools. We're the strategic alignment layer, the system that ensures all that daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams will consolidate over time. Some won't. We're not precious about it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item animate-on-scroll">
+      <button class="faq-question" aria-expanded="false">
+        What does "building in public" mean for me?
+        <span class="arrow">▾</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>It means we share the journey. The wins, the stumbles, the "well, that didn't work" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it). If that kind of transparency appeals to you, you're probably our people.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner animate-on-scroll">
+    <h2>The best tools get built with the people who need&nbsp;them.</h2>
+    <p>If your team has outgrown casual tools but dreads the overhead of enterprise software, we should talk.</p>
+    <a href="#waitlist-form" class="btn-final">
+      Join the Early Adopters
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">arbor</div>
+    <ul class="footer-links">
+      <li><a href="https://arbortech.io">Product</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Arbor. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Scroll-triggered animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = null;
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 80;
+      const position = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: position, behavior: 'smooth' });
+    }
+  });
+});
+
+// Form submission handler
+function handleSubmit() {
+  const email = document.getElementById('email');
+  const name = document.getElementById('name');
+  const role = document.getElementById('role');
+  const size = document.getElementById('company-size');
+  
+  // Basic validation
+  if (!email.value || !email.value.includes('@')) {
+    email.focus();
+    email.style.borderColor = 'var(--rose)';
+    setTimeout(() => email.style.borderColor = '', 2000);
+    return;
+  }
+  if (!name.value.trim()) {
+    name.focus();
+    name.style.borderColor = 'var(--rose)';
+    setTimeout(() => name.style.borderColor = '', 2000);
+    return;
+  }
+  if (!role.value) {
+    role.focus();
+    role.style.borderColor = 'var(--rose)';
+    setTimeout(() => role.style.borderColor = '', 2000);
+    return;
+  }
+  if (!size.value) {
+    size.focus();
+    size.style.borderColor = 'var(--rose)';
+    setTimeout(() => size.style.borderColor = '', 2000);
+    return;
+  }
+
+  // Collect data
+  const formData = {
+    email: email.value,
+    name: name.value,
+    role: role.value,
+    companySize: size.value,
+    frustration: document.getElementById('frustration').value,
+    timestamp: new Date().toISOString()
+  };
+  
+  console.log('Waitlist submission:', formData);
+  
+  // --- INTEGRATION POINT ---
+  // Replace this with your form backend:
+  // Option A: Formspree — fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: JSON.stringify(formData), headers: {'Content-Type': 'application/json'} })
+  // Option B: Google Sheets via Apps Script
+  // Option C: Your own API endpoint
+  // Option D: Make.com webhook
+  
+  // Show success
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+  
+  // Smooth scroll to show success message
+  document.getElementById('formCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// Remove error styling on input
+document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => {
+  el.addEventListener('focus', () => {
+    el.style.borderColor = '';
+  });
+});
+</script>
+
+</body>
+</html>
