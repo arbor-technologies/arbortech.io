@@ -1,689 +1,530 @@
-const translations = {
-    en: {
-        nav: {
-            features: "Features",
-            whyArbor: "Why Arbor",
-            about: "About",
-            getStarted: "Get Started"
-        },
-        hero: {
-            title: "Stop working hard on the wrong things",
-            subtitle: "Arbor aligns every task to your company's goals, surfaces risks and operational health automatically, and integrates with your existing AI tools.",
-            requestDemo: "Request a Demo",
-            learnMore: "Learn More"
-        },
-        features: {
-            title: "What Arbor does",
-            card1: {
-                title: "Goal-to-Task Alignment",
-                description: "From company-wide objectives down to individual tasks, every piece of work traces back to a strategic goal. Nothing drifts off course."
-            },
-            card2: {
-                title: "Intelligent Progress & Status",
-                description: "Progress and status roll up automatically from the work beneath them. Real signals replace manual updates \u2014 no more status meetings just to figure out where things stand."
-            },
-            card3: {
-                title: "Duplicate Work Detection",
-                description: "Arbor compares work by meaning, not just keywords, to catch duplication across teams \u2014 even when different words describe the same effort."
-            },
-            card4: {
-                title: "Related Work Identification",
-                description: "Automatically connects people working on similar tasks across the organization, enabling knowledge sharing and preventing wasted effort."
-            },
-            card5: {
-                title: "Leader Dashboards",
-                description: "Every leader gets the right view for their role. Executives see organization-wide operational health. Directors track their division\u2019s risks and progress. Team leads see what\u2019s blocking their people \u2014 all in real time."
-            },
-            card6: {
-                title: "Bring Your Own AI",
-                description: "Rather than locking you into a proprietary AI, Arbor integrates with your existing AI tools to maintain your company\u2019s context while leveraging our platform."
-            }
-        },
-        whyArbor: {
-            title: "Why Arbor?",
-            description: "Companies set annual goals, then daily work drifts away from them. Leaders waste time chasing status updates. Teams duplicate work without knowing it. Arbor was built to fix this.",
-            item1: {
-                title: "Every task advances a goal",
-                description: "Work is structured from company goals down to individual tasks, so nothing falls through the cracks."
-            },
-            item2: {
-                title: "Leaders see what matters",
-                description: "At-risk work, blocked items, and duplicate efforts are surfaced automatically \u2014 no more status meetings."
-            },
-            item3: {
-                title: "Operational health at every level",
-                description: "From executives to team leads, every leader gets real-time visibility into the health of their part of the organization."
-            }
-        },
-        about: {
-            title: "Work worth waking up for",
-            paragraph1: "Arbor was born from firsthand experience. Our co-founder watched a company he loved decline \u2014 not from lack of talent, but because leadership lacked visibility. Organizations were siloed, leaders couldn\u2019t coordinate objectives, and by the time problems surfaced, it was too late. Arbor exists to give every leader the real-time, objective visibility they need to act before things go wrong.",
-            paragraph2: "We believe a company is a collection of people coming together to make something about the world better. Profit is proof of value, not the purpose. We practice profit sharing, give every employee a voice, and hold ourselves to a standard of excellence that energizes rather than exhausts. We build tools to help organizations work the way they should \u2014 and Arbor is where we started."
-        },
-        contact: {
-            title: "Ready to align your team?",
-            description: "Schedule a demo to see how Arbor ensures every piece of work advances your company\u2019s goals.",
-            form: {
-                name: "Name",
-                email: "Email",
-                organization: "Organization",
-                phone: "Phone",
-                message: "Tell us about your needs",
-                submit: "Request Demo",
-                sending: "Sending...",
-                success: "Demo Request Sent!",
-                error: "Oops! There was a problem submitting your form",
-                networkError: "Network error. Please try again."
-            }
-        },
-        footer: {
-            tagline: "Aligning work to what matters",
-            product: "Product",
-            contact: "Contact",
-            getInTouch: "Get in Touch",
-            copyright: "\u00a9 2026 Arbor Technologies. All rights reserved."
-        }
-    },
+/* ============================================
+   Arbor Waitlist — translations.js
+   Languages: en, ko, ja, es, zh, zh-TW
+   ============================================ */
 
-    ko: {
-        nav: {
-            features: "\uae30\ub2a5",
-            whyArbor: "\uc65c Arbor\uc778\uac00",
-            about: "\uc18c\uac1c",
-            getStarted: "\uc2dc\uc791\ud558\uae30"
-        },
-        hero: {
-            title: "\uc798\ubabb\ub41c \uc77c\uc5d0 \uc5f4\uc2ec\ud788 \ud558\uc9c0 \ub9c8\uc138\uc694",
-            subtitle: "Arbor\ub294 \ubaa8\ub4e0 \uc5c5\ubb34\ub97c \ud68c\uc0ac \ubaa9\ud45c\uc5d0 \ub9de\ucd94\uace0, \ub9ac\uc2a4\ud06c\uc640 \uc6b4\uc601 \uac74\uc804\uc131\uc744 \uc790\ub3d9\uc73c\ub85c \ud45c\uba74\ud654\ud558\uba70, \uae30\uc874 AI \ub3c4\uad6c\uc640 \ud1b5\ud569\ub429\ub2c8\ub2e4.",
-            requestDemo: "\ub370\ubaa8 \uc694\uccad",
-            learnMore: "\uc790\uc138\ud788 \uc54c\uc544\ubcf4\uae30"
-        },
-        features: {
-            title: "Arbor\uac00 \ud558\ub294 \uc77c",
-            card1: {
-                title: "\ubaa9\ud45c-\uc5c5\ubb34 \uc815\ub82c",
-                description: "\ud68c\uc0ac \uc804\uccb4 \ubaa9\ud45c\uc5d0\uc11c \uac1c\uc778 \uc5c5\ubb34\uae4c\uc9c0, \ubaa8\ub4e0 \uc791\uc5c5\uc774 \uc804\ub7b5\uc801 \ubaa9\ud45c\ub85c \ucd94\uc801\ub429\ub2c8\ub2e4. \uc5b4\ub5a4 \uac83\ub3c4 \ubc29\ud5a5\uc744 \uc783\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
-            },
-            card2: {
-                title: "\uc9c0\ub2a5\ud615 \uc9c4\ud589 \uc0c1\ud669 \ubc0f \uc0c1\ud0dc",
-                description: "\uc9c4\ud589 \uc0c1\ud669\uacfc \uc0c1\ud0dc\uac00 \ud558\uc704 \uc791\uc5c5\uc5d0\uc11c \uc790\ub3d9\uc73c\ub85c \uc9d1\uacc4\ub429\ub2c8\ub2e4. \uc2e4\uc81c \uc2e0\ud638\uac00 \uc218\ub3d9 \uc5c5\ub370\uc774\ud2b8\ub97c \ub300\uccb4\ud569\ub2c8\ub2e4 \u2014 \uc0c1\ud669 \ud30c\uc545\uc744 \uc704\ud55c \uc0c1\ud0dc \ud68c\uc758\uac00 \ub354 \uc774\uc0c1 \ud544\uc694 \uc5c6\uc2b5\ub2c8\ub2e4."
-            },
-            card3: {
-                title: "\uc911\ubcf5 \uc5c5\ubb34 \ud0d0\uc9c0",
-                description: "Arbor\ub294 \ud0a4\uc6cc\ub4dc\ubfd0\ub9cc \uc544\ub2c8\ub77c \uc758\ubbf8\ub97c \uae30\uc900\uc73c\ub85c \uc5c5\ubb34\ub97c \ube44\uad50\ud558\uc5ec \ud300 \uac04 \uc911\ubcf5\uc744 \ud3ec\ucc29\ud569\ub2c8\ub2e4 \u2014 \uac19\uc740 \uc791\uc5c5\uc744 \ub2e4\ub978 \ub2e8\uc5b4\ub85c \uc124\uba85\ud558\ub354\ub77c\ub3c4."
-            },
-            card4: {
-                title: "\uad00\ub828 \uc5c5\ubb34 \uc2dd\ubcc4",
-                description: "\uc870\uc9c1 \uc804\uccb4\uc5d0\uc11c \uc720\uc0ac\ud55c \uc5c5\ubb34\ub97c \uc218\ud589\ud558\ub294 \uc0ac\ub78c\ub4e4\uc744 \uc790\ub3d9\uc73c\ub85c \uc5f0\uacb0\ud558\uc5ec \uc9c0\uc2dd \uacf5\uc720\ub97c \ud65c\uc131\ud654\ud558\uace0 \ub0ad\ube44\ub97c \ubc29\uc9c0\ud569\ub2c8\ub2e4."
-            },
-            card5: {
-                title: "\ub9ac\ub354 \ub300\uc2dc\ubcf4\ub4dc",
-                description: "\ubaa8\ub4e0 \ub9ac\ub354\uac00 \uc790\uc2e0\uc758 \uc5ed\ud560\uc5d0 \ub9de\ub294 \uc801\uc808\ud55c \ubdf0\ub97c \uc5bb\uc2b5\ub2c8\ub2e4. \uacbd\uc601\uc9c4\uc740 \uc870\uc9c1 \uc804\uccb4\uc758 \uc6b4\uc601 \uac74\uc804\uc131\uc744 \ud655\uc778\ud569\ub2c8\ub2e4. \ub514\ub809\ud130\ub294 \ubd80\uc11c\uc758 \ub9ac\uc2a4\ud06c\uc640 \uc9c4\ud589 \uc0c1\ud669\uc744 \ucd94\uc801\ud569\ub2c8\ub2e4. \ud300 \ub9ac\ub354\ub294 \ud300\uc6d0\ub4e4\uc744 \ub9c9\uace0 \uc788\ub294 \uac83\uc774 \ubb34\uc5c7\uc778\uc9c0 \uc2e4\uc2dc\uac04\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4."
-            },
-            card6: {
-                title: "\ub098\ub9cc\uc758 AI \uc5f0\uacb0",
-                description: "\ub3c5\uc810\uc801\uc778 AI\uc5d0 \uc885\uc18d\uc2dc\ud0a4\uc9c0 \uc54a\uace0, Arbor\ub294 \uae30\uc874 AI \ub3c4\uad6c\uc640 \ud1b5\ud569\ud558\uc5ec \ud68c\uc0ac\uc758 \ub9e5\ub77d\uc744 \uc720\uc9c0\ud558\uba74\uc11c \ud50c\ub7ab\ud3fc\uc758 \uc774\uc810\uc744 \ud65c\uc6a9\ud569\ub2c8\ub2e4."
-            }
-        },
-        whyArbor: {
-            title: "\uc65c Arbor\uc778\uac00?",
-            description: "\uae30\uc5c5\uc740 \uc5f0\uac04 \ubaa9\ud45c\ub97c \uc138\uc6b0\uc9c0\ub9cc, \uc77c\uc0c1 \uc5c5\ubb34\ub294 \uadf8 \ubaa9\ud45c\uc5d0\uc11c \uba40\uc5b4\uc9d1\ub2c8\ub2e4. \ub9ac\ub354\ub294 \uc0c1\ud0dc \uc5c5\ub370\uc774\ud2b8\ub97c \uc950\ub290\ub77c \uc2dc\uac04\uc744 \ub0ad\ube44\ud569\ub2c8\ub2e4. \ud300\uc740 \uc11c\ub85c \ubaa8\ub978 \uccb4 \uc911\ubcf5 \uc791\uc5c5\uc744 \ud569\ub2c8\ub2e4. Arbor\ub294 \uc774\ub97c \ud574\uacb0\ud558\uae30 \uc704\ud574 \ub9cc\ub4e4\uc5b4\uc84c\uc2b5\ub2c8\ub2e4.",
-            item1: {
-                title: "\ubaa8\ub4e0 \uc5c5\ubb34\uac00 \ubaa9\ud45c\ub97c \uc804\uc9c4\uc2dc\ud0b5\ub2c8\ub2e4",
-                description: "\ud68c\uc0ac \ubaa9\ud45c\uc5d0\uc11c \uac1c\uc778 \uc5c5\ubb34\uae4c\uc9c0 \uccb4\uacc4\uc801\uc73c\ub85c \uad6c\uc131\ub418\uc5b4 \uc5b4\ub5a4 \uac83\ub3c4 \ub193\uce58\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
-            },
-            item2: {
-                title: "\ub9ac\ub354\ub294 \uc911\uc694\ud55c \uac83\uc744 \ubd05\ub2c8\ub2e4",
-                description: "\uc704\ud5d8 \uc5c5\ubb34, \ucc28\ub2e8\ub41c \ud56d\ubaa9, \uc911\ubcf5 \uc791\uc5c5\uc774 \uc790\ub3d9\uc73c\ub85c \ud45c\uba74\ud654\ub429\ub2c8\ub2e4 \u2014 \uc0c1\ud0dc \ud68c\uc758\uac00 \ub354 \uc774\uc0c1 \ud544\uc694 \uc5c6\uc2b5\ub2c8\ub2e4."
-            },
-            item3: {
-                title: "\ubaa8\ub4e0 \uc218\uc900\uc5d0\uc11c\uc758 \uc6b4\uc601 \uac74\uc804\uc131",
-                description: "\uacbd\uc601\uc9c4\ubd80\ud130 \ud300 \ub9ac\ub354\uae4c\uc9c0, \ubaa8\ub4e0 \ub9ac\ub354\uac00 \uc870\uc9c1\uc758 \uac74\uc804\uc131\uc5d0 \ub300\ud55c \uc2e4\uc2dc\uac04 \uac00\uc2dc\uc131\uc744 \ud655\ubcf4\ud569\ub2c8\ub2e4."
-            }
-        },
-        about: {
-            title: "\uc544\uce68\uc774 \uae30\ub2e4\ub824\uc9c0\ub294 \uc77c",
-            paragraph1: "Arbor\ub294 \uc9c1\uc811\uc801\uc778 \uacbd\ud5d8\uc5d0\uc11c \ud0c4\uc0dd\ud588\uc2b5\ub2c8\ub2e4. \uacf5\ub3d9 \ucc3d\uc5c5\uc790\ub294 \uc0ac\ub791\ud588\ub358 \ud68c\uc0ac\uac00 \uc1e0\ud1b4\ud558\ub294 \uac83\uc744 \ubaa9\uaca9\ud588\uc2b5\ub2c8\ub2e4 \u2014 \uc778\uc7ac\uc758 \ubd80\uc871\uc774 \uc544\ub2c8\ub77c \ub9ac\ub354\uc2ed\uc758 \uac00\uc2dc\uc131 \ubd80\uc871 \ub54c\ubb38\uc774\uc5c8\uc2b5\ub2c8\ub2e4. \uc870\uc9c1\uc740 \uace0\ub9bd\ub418\uace0 \ub9ac\ub354\ub4e4\uc740 \ubaa9\ud45c\ub97c \uc870\uc728\ud558\uc9c0 \ubabb\ud588\uc73c\uba70, \ubb38\uc81c\uac00 \ud45c\uba74\ud654\ub418\uc5c8\uc744 \ub54c\ub294 \uc774\ubbf8 \ub108\ubb34 \ub2a6\uc5c8\uc2b5\ub2c8\ub2e4. Arbor\ub294 \ubaa8\ub4e0 \ub9ac\ub354\uc5d0\uac8c \ubb38\uc81c\uac00 \ubc1c\uc0dd\ud558\uae30 \uc804\uc5d0 \ud589\ub3d9\ud560 \uc218 \uc788\ub294 \uc2e4\uc2dc\uac04 \uac1d\uad00\uc801 \uac00\uc2dc\uc131\uc744 \uc81c\uacf5\ud558\uae30 \uc704\ud574 \uc874\uc7ac\ud569\ub2c8\ub2e4.",
-            paragraph2: "\uc6b0\ub9ac\ub294 \ud68c\uc0ac\ub780 \uc138\uc0c1\uc758 \ubb34\uc5b8\uac00\ub97c \ub354 \ub0ab\uac8c \ub9cc\ub4e4\uae30 \uc704\ud574 \ubaa8\uc778 \uc0ac\ub78c\ub4e4\uc758 \uc9d1\ud569\uc774\ub77c\uace0 \ubbff\uc2b5\ub2c8\ub2e4. \uc774\uc775\uc740 \uac00\uce58\uc758 \uc99d\uac70\uc774\uc9c0, \uc874\uc7ac\uc758 \ubaa9\uc801\uc774 \uc544\ub2d9\ub2c8\ub2e4. \uc6b0\ub9ac\ub294 \uc774\uc775 \uacf5\uc720\ub97c \uc2e4\ucc9c\ud558\uace0, \ubaa8\ub4e0 \uad6c\uc131\uc6d0\uc5d0\uac8c \ubaa9\uc18c\ub9ac\ub97c \ubd80\uc5ec\ud558\uba70, \uc0ac\ub78c\uc744 \uc9c0\uce58\uac8c \ud558\ub294 \uac83\uc774 \uc544\ub2c8\ub77c \uc5d0\ub108\uc9c0\ub97c \uc8fc\ub294 \ud0c1\uc6d4\ud568\uc758 \uae30\uc900\uc744 \uc2a4\uc2a4\ub85c\uc5d0\uac8c \uc801\uc6a9\ud569\ub2c8\ub2e4. \uc6b0\ub9ac\ub294 \uc870\uc9c1\uc774 \ub9c8\ub545\ud788 \uc77c\ud574\uc57c \ud560 \ubc29\uc2dd\uc73c\ub85c \uc77c\ud560 \uc218 \uc788\ub3c4\ub85d \ub3d5\ub294 \ub3c4\uad6c\ub97c \ub9cc\ub4ed\ub2c8\ub2e4 \u2014 \uadf8 \uc2dc\uc791\uc774 Arbor\uc785\ub2c8\ub2e4."
-        },
-        contact: {
-            title: "\ud300\uc744 \uc815\ub82c\ud560 \uc900\ube44\uac00 \ub418\uc168\ub098\uc694?",
-            description: "Arbor\uac00 \ubaa8\ub4e0 \uc5c5\ubb34\uac00 \ud68c\uc0ac \ubaa9\ud45c\ub97c \ub2ec\uc131\ud558\ub3c4\ub85d \uc5b4\ub5bb\uac8c \ubcf4\uc7a5\ud558\ub294\uc9c0 \ub370\ubaa8\ub97c \uc608\uc57d\ud558\uc138\uc694.",
-            form: {
-                name: "\uc774\ub984",
-                email: "\uc774\uba54\uc77c",
-                organization: "\uc870\uc9c1",
-                phone: "\uc804\ud654\ubc88\ud638",
-                message: "\uadc0\ud558\uc758 \uc694\uad6c\uc0ac\ud56d\uc744 \uc54c\ub824\uc8fc\uc138\uc694",
-                submit: "\ub370\ubaa8 \uc694\uccad",
-                sending: "\uc804\uc1a1 \uc911...",
-                success: "\ub370\ubaa8 \uc694\uccad\uc774 \uc804\uc1a1\ub418\uc5c8\uc2b5\ub2c8\ub2e4!",
-                error: "\uc591\uc2dd \uc81c\ucd9c\uc5d0 \ubb38\uc81c\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4",
-                networkError: "\ub124\ud2b8\uc6cc\ud06c \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4. \ub2e4\uc2dc \uc2dc\ub3c4\ud574\uc8fc\uc138\uc694."
-            }
-        },
-        footer: {
-            tagline: "\uc911\uc694\ud55c \uc77c\uc5d0 \uc5c5\ubb34\ub97c \ub9de\ucd94\ub2e4",
-            product: "\uc81c\ud488",
-            contact: "\uc5f0\ub77d\ucc98",
-            getInTouch: "\ubb38\uc758\ud558\uae30",
-            copyright: "\u00a9 2026 Arbor Technologies. \ubaa8\ub4e0 \uad8c\ub9ac \ubcf4\uc720."
-        }
-    },
+window.waitlistTranslations = {
 
-    ja: {
-        nav: {
-            features: "\u6a5f\u80fd",
-            whyArbor: "\u306a\u305cArbor",
-            about: "\u306b\u3064\u3044\u3066",
-            getStarted: "\u59cb\u3081\u308b"
-        },
-        hero: {
-            title: "\u9593\u9055\u3063\u305f\u3053\u3068\u306b\u4e00\u751f\u61f8\u547d\u306b\u306a\u3089\u306a\u3044\u3067",
-            subtitle: "Arbor\u306f\u3059\u3079\u3066\u306e\u30bf\u30b9\u30af\u3092\u4f1a\u793e\u306e\u76ee\u6a19\u306b\u6574\u5408\u3055\u305b\u3001\u30ea\u30b9\u30af\u3068\u904b\u55b6\u306e\u5065\u5168\u6027\u3092\u81ea\u52d5\u7684\u306b\u53ef\u8996\u5316\u3057\u3001\u65e2\u5b58\u306eAI\u30c4\u30fc\u30eb\u3068\u7d71\u5408\u3057\u307e\u3059\u3002",
-            requestDemo: "\u30c7\u30e2\u3092\u30ea\u30af\u30a8\u30b9\u30c8",
-            learnMore: "\u8a73\u7d30\u3092\u898b\u308b"
-        },
-        features: {
-            title: "Arbor\u306b\u3067\u304d\u308b\u3053\u3068",
-            card1: {
-                title: "\u76ee\u6a19\u304b\u3089\u30bf\u30b9\u30af\u3078\u306e\u6574\u5408",
-                description: "\u4f1a\u793e\u306e\u76ee\u6a19\u304b\u3089\u500b\u4eba\u306e\u30bf\u30b9\u30af\u307e\u3067\u3001\u3059\u3079\u3066\u306e\u4f5c\u696d\u304c\u6226\u7565\u76ee\u6a19\u306b\u7d10\u3065\u304d\u3001\u65b9\u5411\u6027\u304c\u305a\u308c\u308b\u3053\u3068\u304c\u3042\u308a\u307e\u305b\u3093\u3002"
-            },
-            card2: {
-                title: "\u30a4\u30f3\u30c6\u30ea\u30b8\u30a7\u30f3\u30c8\u306a\u9032\u6357\u3068\u30b9\u30c6\u30fc\u30bf\u30b9",
-                description: "\u9032\u6357\u3068\u30b9\u30c6\u30fc\u30bf\u30b9\u304c\u4e0b\u4f4d\u306e\u4f5c\u696d\u304b\u3089\u81ea\u52d5\u7684\u306b\u96c6\u8a08\u3055\u308c\u307e\u3059\u3002\u5b9f\u969b\u306e\u30b7\u30b0\u30ca\u30eb\u304c\u624b\u52d5\u66f4\u65b0\u3092\u7f6e\u304d\u63db\u3048\u307e\u3059 \u2014 \u72b6\u6cc1\u628a\u63e1\u306e\u305f\u3081\u306e\u30b9\u30c6\u30fc\u30bf\u30b9\u4f1a\u8b70\u306f\u4e0d\u8981\u3067\u3059\u3002"
-            },
-            card3: {
-                title: "\u91cd\u8907\u4f5c\u696d\u306e\u691c\u51fa",
-                description: "Arbor\u306f\u30ad\u30fc\u30ef\u30fc\u30c9\u3060\u3051\u3067\u306a\u304f\u610f\u5473\u3067\u4f5c\u696d\u3092\u6bd4\u8f03\u3057\u3001\u30c1\u30fc\u30e0\u9593\u306e\u91cd\u8907\u3092\u691c\u51fa\u3057\u307e\u3059 \u2014 \u7570\u306a\u308b\u8a00\u8449\u3067\u540c\u3058\u4f5c\u696d\u3092\u8aac\u660e\u3057\u3066\u3044\u3066\u3082\u3002"
-            },
-            card4: {
-                title: "\u95a2\u9023\u4f5c\u696d\u306e\u7279\u5b9a",
-                description: "\u7d44\u7e54\u5168\u4f53\u3067\u985e\u4f3c\u306e\u30bf\u30b9\u30af\u306b\u53d6\u308a\u7d44\u3080\u4eba\u3005\u3092\u81ea\u52d5\u7684\u306b\u3064\u306a\u304e\u3001\u77e5\u8b58\u306e\u5171\u6709\u3092\u4fc3\u9032\u3057\u3001\u7121\u99c4\u306a\u52aa\u529b\u3092\u9632\u304e\u307e\u3059\u3002"
-            },
-            card5: {
-                title: "\u30ea\u30fc\u30c0\u30fc\u30c0\u30c3\u30b7\u30e5\u30dc\u30fc\u30c9",
-                description: "\u3059\u3079\u3066\u306e\u30ea\u30fc\u30c0\u30fc\u304c\u5f79\u5272\u306b\u5fdc\u3058\u305f\u9069\u5207\u306a\u30d3\u30e5\u30fc\u3092\u5f97\u3089\u308c\u307e\u3059\u3002\u7d4c\u55b6\u9663\u306f\u7d44\u7e54\u5168\u4f53\u306e\u904b\u55b6\u5065\u5168\u6027\u3092\u78ba\u8a8d\u3002\u30c7\u30a3\u30ec\u30af\u30bf\u30fc\u306f\u90e8\u9580\u306e\u30ea\u30b9\u30af\u3068\u9032\u6357\u3092\u8ffd\u8de1\u3002\u30c1\u30fc\u30e0\u30ea\u30fc\u30c9\u306f\u30e1\u30f3\u30d0\u30fc\u306e\u969c\u5bb3\u3092\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u3067\u78ba\u8a8d\u3067\u304d\u307e\u3059\u3002"
-            },
-            card6: {
-                title: "\u81ea\u5206\u306eAI\u3092\u6301\u3061\u8fbc\u3080",
-                description: "\u72ec\u81ea\u306eAI\u306b\u7e1b\u3089\u308c\u308b\u3053\u3068\u306a\u304f\u3001Arbor\u306f\u65e2\u5b58\u306eAI\u30c4\u30fc\u30eb\u3068\u7d71\u5408\u3057\u3066\u4f1a\u793e\u306e\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u3092\u7dad\u6301\u3057\u306a\u304c\u3089\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u3092\u6d3b\u7528\u3067\u304d\u307e\u3059\u3002"
-            }
-        },
-        whyArbor: {
-            title: "\u306a\u305cArbor\u306a\u306e\u304b\uff1f",
-            description: "\u4f01\u696d\u306f\u5e74\u9593\u76ee\u6a19\u3092\u7acb\u3066\u307e\u3059\u304c\u3001\u65e5\u3005\u306e\u696d\u52d9\u306f\u305d\u3053\u304b\u3089\u96e2\u308c\u3066\u3044\u304d\u307e\u3059\u3002\u30ea\u30fc\u30c0\u30fc\u306f\u30b9\u30c6\u30fc\u30bf\u30b9\u66f4\u65b0\u3092\u8ffd\u3044\u304b\u3051\u3066\u6642\u9593\u3092\u6d6a\u8cbb\u3057\u307e\u3059\u3002\u30c1\u30fc\u30e0\u306f\u77e5\u3089\u306a\u3044\u3046\u3061\u306b\u4f5c\u696d\u3092\u91cd\u8907\u3057\u3066\u3044\u307e\u3059\u3002Arbor\u306f\u3053\u306e\u554f\u984c\u3092\u89e3\u6c7a\u3059\u308b\u305f\u3081\u306b\u4f5c\u3089\u308c\u307e\u3057\u305f\u3002",
-            item1: {
-                title: "\u3059\u3079\u3066\u306e\u30bf\u30b9\u30af\u304c\u76ee\u6a19\u3092\u524d\u9032\u3055\u305b\u308b",
-                description: "\u4f1a\u793e\u306e\u76ee\u6a19\u304b\u3089\u500b\u4eba\u306e\u30bf\u30b9\u30af\u307e\u3067\u4f53\u7cfb\u7684\u306b\u69cb\u6210\u3002\u4f55\u3082\u898b\u843d\u3068\u3057\u307e\u305b\u3093\u3002"
-            },
-            item2: {
-                title: "\u30ea\u30fc\u30c0\u30fc\u306f\u91cd\u8981\u306a\u3053\u3068\u3092\u898b\u308b",
-                description: "\u30ea\u30b9\u30af\u306e\u3042\u308b\u4f5c\u696d\u3001\u30d6\u30ed\u30c3\u30af\u3055\u308c\u305f\u9805\u76ee\u3001\u91cd\u8907\u4f5c\u696d\u304c\u81ea\u52d5\u7684\u306b\u53ef\u8996\u5316 \u2014 \u30b9\u30c6\u30fc\u30bf\u30b9\u4f1a\u8b70\u306f\u4e0d\u8981\u3067\u3059\u3002"
-            },
-            item3: {
-                title: "\u3042\u3089\u3086\u308b\u30ec\u30d9\u30eb\u3067\u306e\u904b\u55b6\u5065\u5168\u6027",
-                description: "\u7d4c\u55b6\u9663\u304b\u3089\u30c1\u30fc\u30e0\u30ea\u30fc\u30c9\u307e\u3067\u3001\u3059\u3079\u3066\u306e\u30ea\u30fc\u30c0\u30fc\u304c\u7d44\u7e54\u306e\u5065\u5168\u6027\u306b\u3064\u3044\u3066\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u306e\u53ef\u8996\u6027\u3092\u5f97\u3089\u308c\u307e\u3059\u3002"
-            }
-        },
-        about: {
-            title: "\u76ee\u899a\u3081\u308b\u306e\u304c\u697d\u3057\u307f\u306b\u306a\u308b\u4ed5\u4e8b",
-            paragraph1: "Arbor\u306f\u5b9f\u4f53\u9a13\u304b\u3089\u751f\u307e\u308c\u307e\u3057\u305f\u3002\u5171\u540c\u5275\u696d\u8005\u306f\u3001\u611b\u3057\u305f\u4f1a\u793e\u304c\u8870\u9000\u3059\u308b\u306e\u3092\u76ee\u306e\u5f53\u305f\u308a\u306b\u3057\u307e\u3057\u305f \u2014 \u4eba\u6750\u306e\u4e0d\u8db3\u3067\u306f\u306a\u304f\u3001\u30ea\u30fc\u30c0\u30fc\u30b7\u30c3\u30d7\u306e\u53ef\u8996\u6027\u304c\u6b20\u3051\u3066\u3044\u305f\u304b\u3089\u3067\u3059\u3002\u7d44\u7e54\u306f\u30b5\u30a4\u30ed\u5316\u3057\u3001\u30ea\u30fc\u30c0\u30fc\u306f\u76ee\u6a19\u3092\u8abf\u6574\u3067\u304d\u305a\u3001\u554f\u984c\u304c\u8868\u9762\u5316\u3057\u305f\u6642\u306b\u306f\u65e2\u306b\u624b\u9045\u308c\u3067\u3057\u305f\u3002Arbor\u306f\u3001\u3059\u3079\u3066\u306e\u30ea\u30fc\u30c0\u30fc\u306b\u554f\u984c\u304c\u767a\u751f\u3059\u308b\u524d\u306b\u884c\u52d5\u3067\u304d\u308b\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u306e\u5ba2\u89b3\u7684\u306a\u53ef\u8996\u6027\u3092\u63d0\u4f9b\u3059\u308b\u305f\u3081\u306b\u5b58\u5728\u3057\u307e\u3059\u3002",
-            paragraph2: "\u79c1\u305f\u3061\u306f\u3001\u4f1a\u793e\u3068\u306f\u4e16\u306e\u4e2d\u306e\u4f55\u304b\u3092\u3088\u308a\u826f\u304f\u3059\u308b\u305f\u3081\u306b\u96c6\u307e\u3063\u305f\u4eba\u3005\u306e\u96c6\u5408\u4f53\u3060\u3068\u4fe1\u3058\u3066\u3044\u307e\u3059\u3002\u5229\u76ca\u306f\u4fa1\u5024\u306e\u8a3c\u660e\u3067\u3042\u308a\u3001\u76ee\u7684\u305d\u306e\u3082\u306e\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u79c1\u305f\u3061\u306f\u5229\u76ca\u3092\u5206\u304b\u3061\u5408\u3044\u3001\u3059\u3079\u3066\u306e\u793e\u54e1\u306b\u767a\u8a00\u306e\u6a5f\u4f1a\u3092\u4e0e\u3048\u3001\u4eba\u3092\u75b2\u5f0a\u3055\u305b\u308b\u306e\u3067\u306f\u306a\u304f\u6d3b\u529b\u3092\u4e0e\u3048\u308b\u5353\u8d8a\u6027\u306e\u57fa\u6e96\u3092\u81ea\u3089\u306b\u8ab2\u3057\u3066\u3044\u307e\u3059\u3002\u7d44\u7e54\u304c\u672c\u6765\u3042\u308b\u3079\u304d\u59ff\u3067\u50cd\u3051\u308b\u3088\u3046\u306b\u3059\u308b\u305f\u3081\u306e\u30c4\u30fc\u30eb\u3092\u4f5c\u308b\u3053\u3068 \u2014 \u305d\u306e\u7b2c\u4e00\u6b69\u304cArbor\u3067\u3059\u3002"
-        },
-        contact: {
-            title: "\u30c1\u30fc\u30e0\u3092\u6574\u5408\u3055\u305b\u308b\u6e96\u5099\u306f\u3067\u304d\u3066\u3044\u307e\u3059\u304b\uff1f",
-            description: "Arbor\u304c\u3059\u3079\u3066\u306e\u4f5c\u696d\u3092\u4f1a\u793e\u306e\u76ee\u6a19\u9054\u6210\u306b\u3069\u3046\u7d50\u3073\u3064\u3051\u308b\u304b\u3001\u30c7\u30e2\u3092\u3054\u4e88\u7d04\u304f\u3060\u3055\u3044\u3002",
-            form: {
-                name: "\u540d\u524d",
-                email: "\u30e1\u30fc\u30eb",
-                organization: "\u7d44\u7e54",
-                phone: "\u96fb\u8a71",
-                message: "\u30cb\u30fc\u30ba\u3092\u304a\u805e\u304b\u305b\u304f\u3060\u3055\u3044",
-                submit: "\u30c7\u30e2\u3092\u30ea\u30af\u30a8\u30b9\u30c8",
-                sending: "\u9001\u4fe1\u4e2d...",
-                success: "\u30c7\u30e2\u30ea\u30af\u30a8\u30b9\u30c8\u304c\u9001\u4fe1\u3055\u308c\u307e\u3057\u305f\uff01",
-                error: "\u30d5\u30a9\u30fc\u30e0\u306e\u9001\u4fe1\u306b\u554f\u984c\u304c\u767a\u751f\u3057\u307e\u3057\u305f",
-                networkError: "\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002\u3082\u3046\u4e00\u5ea6\u304a\u8a66\u3057\u304f\u3060\u3055\u3044\u3002"
-            }
-        },
-        footer: {
-            tagline: "\u91cd\u8981\u306a\u3053\u3068\u306b\u4ed5\u4e8b\u3092\u5408\u308f\u305b\u308b",
-            product: "\u88fd\u54c1",
-            contact: "\u304a\u554f\u3044\u5408\u308f\u305b",
-            getInTouch: "\u304a\u554f\u3044\u5408\u308f\u305b",
-            copyright: "\u00a9 2026 Arbor Technologies. All rights reserved."
-        }
+  en: {
+    nav: {
+      badge: "Early Adopter Access Open"
     },
-
-    zh: {
-        nav: {
-            features: "\u529f\u80fd",
-            whyArbor: "\u4e3a\u4ec0\u4e48\u9009\u62e9Arbor",
-            about: "\u5173\u4e8e",
-            getStarted: "\u5f00\u59cb\u4f7f\u7528"
-        },
-        hero: {
-            title: "\u522b\u5728\u9519\u8bef\u7684\u4e8b\u60c5\u4e0a\u52aa\u529b",
-            subtitle: "Arbor\u5c06\u6bcf\u9879\u4efb\u52a1\u4e0e\u516c\u53f8\u76ee\u6807\u5bf9\u9f50\uff0c\u81ea\u52a8\u53d1\u73b0\u98ce\u9669\u548c\u8fd0\u8425\u5065\u5eb7\u72b6\u51b5\uff0c\u5e76\u4e0e\u60a8\u73b0\u6709\u7684AI\u5de5\u5177\u96c6\u6210\u3002",
-            requestDemo: "\u7533\u8bf7\u6f14\u793a",
-            learnMore: "\u4e86\u89e3\u66f4\u591a"
-        },
-        features: {
-            title: "Arbor\u7684\u529f\u80fd",
-            card1: {
-                title: "\u76ee\u6807\u5230\u4efb\u52a1\u7684\u5bf9\u9f50",
-                description: "\u4ece\u516c\u53f8\u76ee\u6807\u5230\u4e2a\u4eba\u4efb\u52a1\uff0c\u6bcf\u9879\u5de5\u4f5c\u90fd\u80fd\u8ffd\u6eaf\u5230\u6218\u7565\u76ee\u6807\uff0c\u786e\u4fdd\u4e0d\u4f1a\u504f\u79bb\u65b9\u5411\u3002"
-            },
-            card2: {
-                title: "\u667a\u80fd\u8fdb\u5ea6\u4e0e\u72b6\u6001",
-                description: "\u8fdb\u5ea6\u548c\u72b6\u6001\u4ece\u4e0b\u5c42\u5de5\u4f5c\u81ea\u52a8\u6c47\u603b\u3002\u771f\u5b9e\u4fe1\u53f7\u53d6\u4ee3\u624b\u52a8\u66f4\u65b0 \u2014 \u4e0d\u518d\u9700\u8981\u72b6\u6001\u4f1a\u8bae\u6765\u4e86\u89e3\u60c5\u51b5\u3002"
-            },
-            card3: {
-                title: "\u91cd\u590d\u5de5\u4f5c\u68c0\u6d4b",
-                description: "Arbor\u6309\u610f\u4e49\u800c\u975e\u4ec5\u6309\u5173\u952e\u8bcd\u6bd4\u8f83\u5de5\u4f5c\uff0c\u6355\u6349\u8de8\u56e2\u961f\u7684\u91cd\u590d \u2014 \u5373\u4f7f\u4e0d\u540c\u7684\u8bcd\u8bed\u63cf\u8ff0\u76f8\u540c\u7684\u5de5\u4f5c\u3002"
-            },
-            card4: {
-                title: "\u76f8\u5173\u5de5\u4f5c\u8bc6\u522b",
-                description: "\u81ea\u52a8\u8fde\u63a5\u7ec4\u7ec7\u4e2d\u4ece\u4e8b\u7c7b\u4f3c\u4efb\u52a1\u7684\u4eba\u5458\uff0c\u4fc3\u8fdb\u77e5\u8bc6\u5171\u4eab\uff0c\u9632\u6b62\u65e0\u8c13\u7684\u52aa\u529b\u6d6a\u8d39\u3002"
-            },
-            card5: {
-                title: "\u9886\u5bfc\u8005\u4eea\u8868\u677f",
-                description: "\u6bcf\u4f4d\u9886\u5bfc\u8005\u90fd\u80fd\u83b7\u5f97\u4e0e\u5176\u89d2\u8272\u76f8\u5339\u914d\u7684\u89c6\u56fe\u3002\u9ad8\u7ba1\u67e5\u770b\u7ec4\u7ec7\u8303\u56f4\u7684\u8fd0\u8425\u5065\u5eb7\u72b6\u51b5\u3002\u603b\u76d1\u8ddf\u8e2a\u90e8\u95e8\u7684\u98ce\u9669\u548c\u8fdb\u5ea6\u3002\u56e2\u961f\u4e3b\u7ba1\u5b9e\u65f6\u67e5\u770b\u56e2\u961f\u6210\u5458\u7684\u963b\u788d\u3002"
-            },
-            card6: {
-                title: "\u81ea\u5e26AI",
-                description: "Arbor\u4e0d\u4f1a\u5c06\u60a8\u9501\u5b9a\u5728\u4e13\u6709AI\u4e2d\uff0c\u800c\u662f\u4e0e\u60a8\u73b0\u6709\u7684AI\u5de5\u5177\u96c6\u6210\uff0c\u5728\u4fdd\u6301\u516c\u53f8\u4e0a\u4e0b\u6587\u7684\u540c\u65f6\u5229\u7528\u6211\u4eec\u7684\u5e73\u53f0\u3002"
-            }
-        },
-        whyArbor: {
-            title: "\u4e3a\u4ec0\u4e48\u9009\u62e9Arbor\uff1f",
-            description: "\u4f01\u4e1a\u8bbe\u5b9a\u5e74\u5ea6\u76ee\u6807\uff0c\u4f46\u65e5\u5e38\u5de5\u4f5c\u5374\u504f\u79bb\u4e86\u8fd9\u4e9b\u76ee\u6807\u3002\u9886\u5bfc\u8005\u6d6a\u8d39\u65f6\u95f4\u8ffd\u8e2a\u72b6\u6001\u66f4\u65b0\u3002\u56e2\u961f\u5728\u4e0d\u77e5\u60c5\u7684\u60c5\u51b5\u4e0b\u91cd\u590d\u5de5\u4f5c\u3002Arbor\u4e3a\u89e3\u51b3\u8fd9\u4e9b\u95ee\u9898\u800c\u751f\u3002",
-            item1: {
-                title: "\u6bcf\u9879\u4efb\u52a1\u90fd\u63a8\u8fdb\u76ee\u6807",
-                description: "\u4ece\u516c\u53f8\u76ee\u6807\u5230\u4e2a\u4eba\u4efb\u52a1\u7cfb\u7edf\u5316\u6784\u5efa\uff0c\u4efb\u4f55\u5de5\u4f5c\u90fd\u4e0d\u4f1a\u9057\u6f0f\u3002"
-            },
-            item2: {
-                title: "\u9886\u5bfc\u8005\u770b\u5230\u91cd\u8981\u7684\u4e8b",
-                description: "\u98ce\u9669\u5de5\u4f5c\u3001\u53d7\u963b\u9879\u76ee\u548c\u91cd\u590d\u5de5\u4f5c\u81ea\u52a8\u6d6e\u73b0 \u2014 \u4e0d\u518d\u9700\u8981\u72b6\u6001\u4f1a\u8bae\u3002"
-            },
-            item3: {
-                title: "\u5404\u5c42\u7ea7\u7684\u8fd0\u8425\u5065\u5eb7",
-                description: "\u4ece\u9ad8\u7ba1\u5230\u56e2\u961f\u4e3b\u7ba1\uff0c\u6bcf\u4f4d\u9886\u5bfc\u8005\u90fd\u80fd\u5b9e\u65f6\u4e86\u89e3\u5176\u7ec4\u7ec7\u90e8\u5206\u7684\u5065\u5eb7\u72b6\u51b5\u3002"
-            }
-        },
-        about: {
-            title: "\u503c\u5f97\u6bcf\u5929\u9192\u6765\u53bb\u505a\u7684\u5de5\u4f5c",
-            paragraph1: "Arbor\u8bde\u751f\u4e8e\u4eb2\u8eab\u7ecf\u5386\u3002\u6211\u4eec\u7684\u8054\u5408\u521b\u59cb\u4eba\u76ee\u7779\u4e86\u4ed6\u6240\u70ed\u7231\u7684\u516c\u53f8\u8d70\u5411\u8870\u843d \u2014 \u4e0d\u662f\u56e0\u4e3a\u7f3a\u4e4f\u4eba\u624d\uff0c\u800c\u662f\u56e0\u4e3a\u9886\u5bfc\u5c42\u7f3a\u4e4f\u53ef\u89c1\u6027\u3002\u7ec4\u7ec7\u88ab\u5b64\u7acb\uff0c\u9886\u5bfc\u8005\u65e0\u6cd5\u534f\u8c03\u76ee\u6807\uff0c\u5f53\u95ee\u9898\u6d6e\u51fa\u65f6\u5df2\u7ecf\u592a\u665a\u3002Arbor\u7684\u5b58\u5728\u662f\u4e3a\u4e86\u7ed9\u6bcf\u4f4d\u9886\u5bfc\u8005\u63d0\u4f9b\u5b9e\u65f6\u3001\u5ba2\u89c2\u7684\u53ef\u89c1\u6027\uff0c\u4ee5\u4fbf\u5728\u95ee\u9898\u53d1\u751f\u4e4b\u524d\u91c7\u53d6\u884c\u52a8\u3002",
-            paragraph2: "\u6211\u4eec\u76f8\u4fe1\uff0c\u516c\u53f8\u662f\u4e00\u7fa4\u4eba\u805a\u5728\u4e00\u8d77\uff0c\u8ba9\u8fd9\u4e2a\u4e16\u754c\u7684\u67d0\u4e9b\u65b9\u9762\u53d8\u5f97\u66f4\u597d\u3002\u5229\u6da6\u662f\u4ef7\u503c\u7684\u8bc1\u660e\uff0c\u800c\u975e\u5b58\u5728\u7684\u76ee\u7684\u3002\u6211\u4eec\u5b9e\u884c\u5229\u6da6\u5171\u4eab\uff0c\u8d4b\u4e88\u6bcf\u4f4d\u5458\u5de5\u53d1\u8a00\u6743\uff0c\u5e76\u4ee5\u4e00\u79cd\u6fc0\u53d1\u6d3b\u529b\u800c\u975e\u6d88\u8017\u7cbe\u529b\u7684\u5353\u8d8a\u6807\u51c6\u8981\u6c42\u81ea\u5df1\u3002\u6211\u4eec\u6253\u9020\u5de5\u5177\uff0c\u5e2e\u52a9\u7ec4\u7ec7\u4ee5\u5b83\u4eec\u5e94\u6709\u7684\u65b9\u5f0f\u8fd0\u8f6c \u2014 Arbor\u5c31\u662f\u6211\u4eec\u7684\u8d77\u70b9\u3002"
-        },
-        contact: {
-            title: "\u51c6\u5907\u597d\u5bf9\u9f50\u60a8\u7684\u56e2\u961f\u4e86\u5417\uff1f",
-            description: "\u9884\u7ea6\u6f14\u793a\uff0c\u4e86\u89e3Arbor\u5982\u4f55\u786e\u4fdd\u6bcf\u9879\u5de5\u4f5c\u90fd\u63a8\u8fdb\u516c\u53f8\u76ee\u6807\u3002",
-            form: {
-                name: "\u59d3\u540d",
-                email: "\u7535\u5b50\u90ae\u4ef6",
-                organization: "\u7ec4\u7ec7",
-                phone: "\u7535\u8bdd",
-                message: "\u544a\u8bc9\u6211\u4eec\u60a8\u7684\u9700\u6c42",
-                submit: "\u7533\u8bf7\u6f14\u793a",
-                sending: "\u53d1\u9001\u4e2d...",
-                success: "\u6f14\u793a\u7533\u8bf7\u5df2\u53d1\u9001\uff01",
-                error: "\u63d0\u4ea4\u8868\u5355\u65f6\u51fa\u73b0\u95ee\u9898",
-                networkError: "\u7f51\u7edc\u9519\u8bef\u3002\u8bf7\u91cd\u8bd5\u3002"
-            }
-        },
-        footer: {
-            tagline: "\u5c06\u5de5\u4f5c\u4e0e\u91cd\u8981\u7684\u4e8b\u60c5\u5bf9\u9f50",
-            product: "\u4ea7\u54c1",
-            contact: "\u8054\u7cfb",
-            getInTouch: "\u8054\u7cfb\u6211\u4eec",
-            copyright: "\u00a9 2026 Arbor Technologies. \u4fdd\u7559\u6240\u6709\u6743\u5229\u3002"
-        }
+    hero: {
+      eyebrow: "Early Access",
+      headline: "The alignment layer your tools are <em>missing.</em>",
+      sub: "Arbor connects your company's goals to your team's daily work in one living hierarchy. No more disconnect between strategy and execution.",
+      subSecondary: "We're opening early access to a small group of teams who are ready to work differently.",
+      cta: "Join the Early Adopters"
     },
-
-    "zh-TW": {
-        nav: {
-            features: "\u529f\u80fd",
-            whyArbor: "\u70ba\u4ec0\u9ebc\u9078\u64c7Arbor",
-            about: "\u95dc\u65bc",
-            getStarted: "\u958b\u59cb\u4f7f\u7528"
-        },
-        hero: {
-            title: "\u5225\u5728\u932f\u8aa4\u7684\u4e8b\u60c5\u4e0a\u52aa\u529b",
-            subtitle: "Arbor\u5c07\u6bcf\u9805\u4efb\u52d9\u8207\u516c\u53f8\u76ee\u6a19\u5c0d\u9f4a\uff0c\u81ea\u52d5\u767c\u73fe\u98a8\u96aa\u548c\u904b\u71df\u5065\u5eb7\u72c0\u6cc1\uff0c\u4e26\u8207\u60a8\u73fe\u6709\u7684AI\u5de5\u5177\u6574\u5408\u3002",
-            requestDemo: "\u7533\u8acb\u793a\u7bc4",
-            learnMore: "\u4e86\u89e3\u66f4\u591a"
-        },
-        features: {
-            title: "Arbor\u7684\u529f\u80fd",
-            card1: {
-                title: "\u76ee\u6a19\u5230\u4efb\u52d9\u7684\u5c0d\u9f4a",
-                description: "\u5f9e\u516c\u53f8\u76ee\u6a19\u5230\u500b\u4eba\u4efb\u52d9\uff0c\u6bcf\u9805\u5de5\u4f5c\u90fd\u80fd\u8ffd\u6eaf\u5230\u7b56\u7565\u76ee\u6a19\uff0c\u78ba\u4fdd\u4e0d\u6703\u504f\u96e2\u65b9\u5411\u3002"
-            },
-            card2: {
-                title: "\u667a\u6167\u9032\u5ea6\u8207\u72c0\u614b",
-                description: "\u9032\u5ea6\u548c\u72c0\u614b\u5f9e\u4e0b\u5c64\u5de5\u4f5c\u81ea\u52d5\u5f59\u7e3d\u3002\u771f\u5be6\u8a0a\u865f\u53d6\u4ee3\u624b\u52d5\u66f4\u65b0 \u2014 \u4e0d\u518d\u9700\u8981\u72c0\u614b\u6703\u8b70\u4f86\u4e86\u89e3\u60c5\u6cc1\u3002"
-            },
-            card3: {
-                title: "\u91cd\u8907\u5de5\u4f5c\u5075\u6e2c",
-                description: "Arbor\u6309\u610f\u7fa9\u800c\u975e\u50c5\u6309\u95dc\u9375\u8a5e\u6bd4\u8f03\u5de5\u4f5c\uff0c\u6355\u6349\u8de8\u5718\u968a\u7684\u91cd\u8907 \u2014 \u5373\u4f7f\u4e0d\u540c\u7684\u8a5e\u8a9e\u63cf\u8ff0\u76f8\u540c\u7684\u5de5\u4f5c\u3002"
-            },
-            card4: {
-                title: "\u76f8\u95dc\u5de5\u4f5c\u8b58\u5225",
-                description: "\u81ea\u52d5\u9023\u63a5\u7d44\u7e54\u4e2d\u5f9e\u4e8b\u985e\u4f3c\u4efb\u52d9\u7684\u4eba\u54e1\uff0c\u4fc3\u9032\u77e5\u8b58\u5206\u4eab\uff0c\u9632\u6b62\u7121\u8b02\u7684\u52aa\u529b\u6d6a\u8cbb\u3002"
-            },
-            card5: {
-                title: "\u9818\u5c0e\u8005\u5100\u8868\u677f",
-                description: "\u6bcf\u4f4d\u9818\u5c0e\u8005\u90fd\u80fd\u7372\u5f97\u8207\u5176\u89d2\u8272\u76f8\u5339\u914d\u7684\u8996\u5716\u3002\u9ad8\u7ba1\u67e5\u770b\u7d44\u7e54\u7bc4\u570d\u7684\u904b\u71df\u5065\u5eb7\u72c0\u6cc1\u3002\u7e3d\u76e3\u8ffd\u8e64\u90e8\u9580\u7684\u98a8\u96aa\u548c\u9032\u5ea6\u3002\u5718\u968a\u4e3b\u7ba1\u5373\u6642\u67e5\u770b\u5718\u968a\u6210\u54e1\u7684\u969c\u7919\u3002"
-            },
-            card6: {
-                title: "\u81ea\u5e36AI",
-                description: "Arbor\u4e0d\u6703\u5c07\u60a8\u9396\u5b9a\u5728\u5c08\u6709AI\u4e2d\uff0c\u800c\u662f\u8207\u60a8\u73fe\u6709\u7684AI\u5de5\u5177\u6574\u5408\uff0c\u5728\u4fdd\u6301\u516c\u53f8\u8108\u7d61\u7684\u540c\u6642\u5229\u7528\u6211\u5011\u7684\u5e73\u53f0\u3002"
-            }
-        },
-        whyArbor: {
-            title: "\u70ba\u4ec0\u9ebc\u9078\u64c7Arbor\uff1f",
-            description: "\u4f01\u696d\u8a2d\u5b9a\u5e74\u5ea6\u76ee\u6a19\uff0c\u4f46\u65e5\u5e38\u5de5\u4f5c\u537b\u504f\u96e2\u4e86\u9019\u4e9b\u76ee\u6a19\u3002\u9818\u5c0e\u8005\u6d6a\u8cbb\u6642\u9593\u8ffd\u8e64\u72c0\u614b\u66f4\u65b0\u3002\u5718\u968a\u5728\u4e0d\u77e5\u60c5\u7684\u60c5\u6cc1\u4e0b\u91cd\u8907\u5de5\u4f5c\u3002Arbor\u70ba\u89e3\u6c7a\u9019\u4e9b\u554f\u984c\u800c\u751f\u3002",
-            item1: {
-                title: "\u6bcf\u9805\u4efb\u52d9\u90fd\u63a8\u9032\u76ee\u6a19",
-                description: "\u5f9e\u516c\u53f8\u76ee\u6a19\u5230\u500b\u4eba\u4efb\u52d9\u7cfb\u7d71\u5316\u69cb\u5efa\uff0c\u4efb\u4f55\u5de5\u4f5c\u90fd\u4e0d\u6703\u907a\u6f0f\u3002"
-            },
-            item2: {
-                title: "\u9818\u5c0e\u8005\u770b\u5230\u91cd\u8981\u7684\u4e8b",
-                description: "\u98a8\u96aa\u5de5\u4f5c\u3001\u53d7\u963b\u9805\u76ee\u548c\u91cd\u8907\u5de5\u4f5c\u81ea\u52d5\u6d6e\u73fe \u2014 \u4e0d\u518d\u9700\u8981\u72c0\u614b\u6703\u8b70\u3002"
-            },
-            item3: {
-                title: "\u5404\u5c64\u7d1a\u7684\u904b\u71df\u5065\u5eb7",
-                description: "\u5f9e\u9ad8\u7ba1\u5230\u5718\u968a\u4e3b\u7ba1\uff0c\u6bcf\u4f4d\u9818\u5c0e\u8005\u90fd\u80fd\u5373\u6642\u4e86\u89e3\u5176\u7d44\u7e54\u90e8\u5206\u7684\u5065\u5eb7\u72c0\u6cc1\u3002"
-            }
-        },
-        about: {
-            title: "\u503c\u5f97\u6bcf\u5929\u9192\u4f86\u53bb\u505a\u7684\u5de5\u4f5c",
-            paragraph1: "Arbor\u8a95\u751f\u65bc\u89aa\u8eab\u7d93\u6b77\u3002\u6211\u5011\u7684\u806f\u5408\u5275\u59cb\u4eba\u76ee\u7779\u4e86\u4ed6\u6240\u71b1\u611b\u7684\u516c\u53f8\u8d70\u5411\u8870\u843d \u2014 \u4e0d\u662f\u56e0\u70ba\u7f3a\u4e4f\u4eba\u624d\uff0c\u800c\u662f\u56e0\u70ba\u9818\u5c0e\u5c64\u7f3a\u4e4f\u53ef\u898b\u6027\u3002\u7d44\u7e54\u88ab\u5b64\u7acb\uff0c\u9818\u5c0e\u8005\u7121\u6cd5\u5354\u8abf\u76ee\u6a19\uff0c\u7576\u554f\u984c\u6d6e\u51fa\u6642\u5df2\u7d93\u592a\u665a\u3002Arbor\u7684\u5b58\u5728\u662f\u70ba\u4e86\u7d66\u6bcf\u4f4d\u9818\u5c0e\u8005\u63d0\u4f9b\u5373\u6642\u3001\u5ba2\u89c0\u7684\u53ef\u898b\u6027\uff0c\u4ee5\u4fbf\u5728\u554f\u984c\u767c\u751f\u4e4b\u524d\u63a1\u53d6\u884c\u52d5\u3002",
-            paragraph2: "\u6211\u5011\u76f8\u4fe1\uff0c\u516c\u53f8\u662f\u4e00\u7fa4\u4eba\u805a\u5728\u4e00\u8d77\uff0c\u8b93\u9019\u500b\u4e16\u754c\u7684\u67d0\u4e9b\u9762\u5411\u8b8a\u5f97\u66f4\u597d\u3002\u5229\u6f64\u662f\u50f9\u503c\u7684\u8b49\u660e\uff0c\u800c\u975e\u5b58\u5728\u7684\u76ee\u7684\u3002\u6211\u5011\u5be6\u884c\u5229\u6f64\u5171\u4eab\uff0c\u8ce6\u4e88\u6bcf\u4f4d\u54e1\u5de5\u767c\u8a00\u6b0a\uff0c\u4e26\u4ee5\u4e00\u7a2e\u6fc0\u767c\u6d3b\u529b\u800c\u975e\u6d88\u8017\u7cbe\u529b\u7684\u5353\u8d8a\u6a19\u6e96\u8981\u6c42\u81ea\u5df1\u3002\u6211\u5011\u6253\u9020\u5de5\u5177\uff0c\u5e6b\u52a9\u7d44\u7e54\u4ee5\u5b83\u5011\u61c9\u6709\u7684\u65b9\u5f0f\u904b\u4f5c \u2014 Arbor\u5c31\u662f\u6211\u5011\u7684\u8d77\u9ede\u3002"
-        },
-        contact: {
-            title: "\u6e96\u5099\u597d\u5c0d\u9f4a\u60a8\u7684\u5718\u968a\u4e86\u55ce\uff1f",
-            description: "\u9810\u7d04\u793a\u7bc4\uff0c\u4e86\u89e3Arbor\u5982\u4f55\u78ba\u4fdd\u6bcf\u9805\u5de5\u4f5c\u90fd\u63a8\u9032\u516c\u53f8\u76ee\u6a19\u3002",
-            form: {
-                name: "\u59d3\u540d",
-                email: "\u96fb\u5b50\u90f5\u4ef6",
-                organization: "\u7d44\u7e54",
-                phone: "\u96fb\u8a71",
-                message: "\u544a\u8a34\u6211\u5011\u60a8\u7684\u9700\u6c42",
-                submit: "\u7533\u8acb\u793a\u7bc4",
-                sending: "\u767c\u9001\u4e2d...",
-                success: "\u793a\u7bc4\u7533\u8acb\u5df2\u767c\u9001\uff01",
-                error: "\u63d0\u4ea4\u8868\u55ae\u6642\u51fa\u73fe\u554f\u984c",
-                networkError: "\u7db2\u8def\u932f\u8aa4\u3002\u8acb\u91cd\u8a66\u3002"
-            }
-        },
-        footer: {
-            tagline: "\u5c07\u5de5\u4f5c\u8207\u91cd\u8981\u7684\u4e8b\u60c5\u5c0d\u9f4a",
-            product: "\u7522\u54c1",
-            contact: "\u806f\u7e6b",
-            getInTouch: "\u806f\u7e6b\u6211\u5011",
-            copyright: "\u00a9 2026 Arbor Technologies. \u4fdd\u7559\u6240\u6709\u6b0a\u5229\u3002"
-        }
+    problems: {
+      label: "Sound familiar?",
+      headline: "The problems we're building Arbor to solve.",
+      card1: { title: "Duplicate work", body: "Two teams. Same problem. Zero coordination. Nobody finds out until both are halfway done." },
+      card2: { title: "Meeting overload", body: "Status meetings about status meetings. Because the tools don't surface what matters, so humans have to." },
+      card3: { title: "OKR theater", body: "Objectives as a separate reporting layer that everyone maintains but nobody actually uses to make decisions." },
+      card4: { title: "Decisions in the dark", body: "Leaders without ground-level visibility making calls that cascade down to the people doing the actual work." }
     },
-
-    es: {
-        nav: {
-            features: "Caracter\u00edsticas",
-            whyArbor: "Por qu\u00e9 Arbor",
-            about: "Acerca de",
-            getStarted: "Comenzar"
-        },
-        hero: {
-            title: "Deja de esforzarte en lo que no importa",
-            subtitle: "Arbor alinea cada tarea con los objetivos de tu empresa, detecta riesgos y salud operativa autom\u00e1ticamente, y se integra con tus herramientas de IA existentes.",
-            requestDemo: "Solicitar una Demo",
-            learnMore: "M\u00e1s Informaci\u00f3n"
-        },
-        features: {
-            title: "Qu\u00e9 hace Arbor",
-            card1: {
-                title: "Alineaci\u00f3n de Objetivos a Tareas",
-                description: "Desde los objetivos de la empresa hasta las tareas individuales, cada trabajo se conecta a un objetivo estrat\u00e9gico. Nada se desv\u00eda del rumbo."
-            },
-            card2: {
-                title: "Progreso y Estado Inteligentes",
-                description: "El progreso y el estado se calculan autom\u00e1ticamente a partir del trabajo subyacente. Se\u00f1ales reales reemplazan las actualizaciones manuales \u2014 no m\u00e1s reuniones de estado solo para saber c\u00f3mo van las cosas."
-            },
-            card3: {
-                title: "Detecci\u00f3n de Trabajo Duplicado",
-                description: "Arbor compara el trabajo por significado, no solo por palabras clave, para detectar duplicaci\u00f3n entre equipos \u2014 incluso cuando diferentes palabras describen el mismo esfuerzo."
-            },
-            card4: {
-                title: "Identificaci\u00f3n de Trabajo Relacionado",
-                description: "Conecta autom\u00e1ticamente a personas que trabajan en tareas similares en toda la organizaci\u00f3n, facilitando el intercambio de conocimientos y previniendo esfuerzos desperdiciados."
-            },
-            card5: {
-                title: "Paneles de Liderazgo",
-                description: "Cada l\u00edder obtiene la vista adecuada para su rol. Los ejecutivos ven la salud operativa de toda la organizaci\u00f3n. Los directores rastrean riesgos y progreso de su divisi\u00f3n. Los l\u00edderes de equipo ven qu\u00e9 bloquea a su gente \u2014 todo en tiempo real."
-            },
-            card6: {
-                title: "Trae Tu Propia IA",
-                description: "En lugar de encerrarte en una IA propietaria, Arbor se integra con tus herramientas de IA existentes para mantener el contexto de tu empresa mientras aprovechas nuestra plataforma."
-            }
-        },
-        whyArbor: {
-            title: "\u00bfPor qu\u00e9 Arbor?",
-            description: "Las empresas establecen objetivos anuales, pero el trabajo diario se aleja de ellos. Los l\u00edderes pierden tiempo persiguiendo actualizaciones de estado. Los equipos duplican trabajo sin saberlo. Arbor fue creado para solucionar esto.",
-            item1: {
-                title: "Cada tarea avanza un objetivo",
-                description: "El trabajo se estructura desde los objetivos de la empresa hasta las tareas individuales, nada se escapa."
-            },
-            item2: {
-                title: "Los l\u00edderes ven lo que importa",
-                description: "El trabajo en riesgo, los elementos bloqueados y los esfuerzos duplicados se muestran autom\u00e1ticamente \u2014 no m\u00e1s reuniones de estado."
-            },
-            item3: {
-                title: "Salud operativa en cada nivel",
-                description: "Desde ejecutivos hasta l\u00edderes de equipo, cada l\u00edder obtiene visibilidad en tiempo real sobre la salud de su parte de la organizaci\u00f3n."
-            }
-        },
-        about: {
-            title: "Un trabajo por el que vale la pena despertar",
-            paragraph1: "Arbor naci\u00f3 de la experiencia directa. Nuestro cofundador vio c\u00f3mo una empresa que amaba declinaba \u2014 no por falta de talento, sino porque el liderazgo carec\u00eda de visibilidad. Las organizaciones estaban aisladas, los l\u00edderes no pod\u00edan coordinar objetivos, y cuando los problemas salieron a la superficie, ya era demasiado tarde. Arbor existe para dar a cada l\u00edder la visibilidad objetiva y en tiempo real que necesitan para actuar antes de que las cosas salgan mal.",
-            paragraph2: "Creemos que una empresa es un grupo de personas que se unen para mejorar algo en el mundo. Las ganancias son la prueba de que se genera valor, no el prop\u00f3sito en s\u00ed. Practicamos el reparto de beneficios, damos voz a cada empleado y nos exigimos un est\u00e1ndar de excelencia que energiza en lugar de agotar. Creamos herramientas para ayudar a las organizaciones a trabajar como deber\u00edan \u2014 y Arbor fue donde empezamos."
-        },
-        contact: {
-            title: "\u00bfListo para alinear a tu equipo?",
-            description: "Programa una demo para ver c\u00f3mo Arbor asegura que cada trabajo avance los objetivos de tu empresa.",
-            form: {
-                name: "Nombre",
-                email: "Correo Electr\u00f3nico",
-                organization: "Organizaci\u00f3n",
-                phone: "Tel\u00e9fono",
-                message: "Cu\u00e9ntenos sobre sus necesidades",
-                submit: "Solicitar Demo",
-                sending: "Enviando...",
-                success: "\u00a1Solicitud de Demo Enviada!",
-                error: "Hubo un problema al enviar su formulario",
-                networkError: "Error de red. Por favor, int\u00e9ntelo de nuevo."
-            }
-        },
-        footer: {
-            tagline: "Alineando el trabajo con lo que importa",
-            product: "Producto",
-            contact: "Contacto",
-            getInTouch: "Cont\u00e1ctenos",
-            copyright: "\u00a9 2026 Arbor Technologies. Todos los derechos reservados."
-        }
+    form: {
+      contextLabel: "Early adopters",
+      contextHeadline: "Shape Arbor from the ground up.",
+      contextBody: "We're looking for a small group of teams who live these problems every day. People who want to fix the system, not just manage around it. In return, you get a direct line to the team building the solution.",
+      benefit1: "Early access before public launch. See it first, break it first",
+      benefit2: "Direct access to the founders. Not a support queue, actual conversations",
+      benefit3: "Your feedback shapes the roadmap. We build for real problems, not assumptions",
+      benefit4: "Early adopter pricing, locked in for good",
+      cardTitle: "Request Early Access",
+      cardSubtitle: "Takes about 60 seconds. We read every one.",
+      emailLabel: "Work email",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "Your name",
+      namePlaceholder: "First Last",
+      roleLabel: "Your role",
+      rolePlaceholder: "Select role",
+      roleOptions: {
+        ceoFounder: "CEO / Founder",
+        cooOps: "COO / Head of Ops",
+        chiefOfStaff: "Chief of Staff",
+        vpDirector: "VP / Director",
+        teamLead: "Team Lead / Manager",
+        pm: "Product Manager",
+        ic: "Individual Contributor",
+        other: "Other"
+      },
+      sizeLabel: "Company size",
+      sizePlaceholder: "How many people?",
+      frustrationLabel: "What's your biggest frustration with how your team tracks and aligns work today?",
+      frustrationOptional: "Optional but very helpful",
+      frustrationPlaceholder: "The more specific, the better.",
+      submit: "Request Early Access",
+      privacy: "No spam, and we'll never sell your data.",
+      successTitle: "You're in.",
+      successBody: "We'll be in touch soon with next steps. In the meantime, you can follow our build-in-public journey on LinkedIn."
     },
-
-    ar: {
-        nav: {
-            features: "\u0627\u0644\u0645\u064a\u0632\u0627\u062a",
-            whyArbor: "\u0644\u0645\u0627\u0630\u0627 Arbor",
-            about: "\u062d\u0648\u0644",
-            getStarted: "\u0627\u0628\u062f\u0623 \u0627\u0644\u0622\u0646"
-        },
-        hero: {
-            title: "\u062a\u0648\u0642\u0641 \u0639\u0646 \u0627\u0644\u0639\u0645\u0644 \u0628\u062c\u062f \u0639\u0644\u0649 \u0627\u0644\u0623\u0634\u064a\u0627\u0621 \u0627\u0644\u062e\u0627\u0637\u0626\u0629",
-            subtitle: "\u064a\u064f\u0648\u0627\u0626\u0645 Arbor \u0643\u0644 \u0645\u0647\u0645\u0629 \u0645\u0639 \u0623\u0647\u062f\u0627\u0641 \u0634\u0631\u0643\u062a\u0643\u060c \u0648\u064a\u0643\u0634\u0641 \u0627\u0644\u0645\u062e\u0627\u0637\u0631 \u0648\u0627\u0644\u0635\u062d\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644\u064a\u0629 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b\u060c \u0648\u064a\u062a\u0643\u0627\u0645\u0644 \u0645\u0639 \u0623\u062f\u0648\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u062d\u0627\u0644\u064a\u0629.",
-            requestDemo: "\u0637\u0644\u0628 \u0639\u0631\u0636 \u062a\u0648\u0636\u064a\u062d\u064a",
-            learnMore: "\u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0645\u0632\u064a\u062f"
-        },
-        features: {
-            title: "\u0645\u0627 \u064a\u0641\u0639\u0644\u0647 Arbor",
-            card1: {
-                title: "\u0645\u0648\u0627\u0621\u0645\u0629 \u0627\u0644\u0623\u0647\u062f\u0627\u0641 \u0645\u0639 \u0627\u0644\u0645\u0647\u0627\u0645",
-                description: "\u0645\u0646 \u0623\u0647\u062f\u0627\u0641 \u0627\u0644\u0634\u0631\u0643\u0629 \u0625\u0644\u0649 \u0627\u0644\u0645\u0647\u0627\u0645 \u0627\u0644\u0641\u0631\u062f\u064a\u0629\u060c \u0643\u0644 \u0639\u0645\u0644 \u064a\u0631\u062a\u0628\u0637 \u0628\u0647\u062f\u0641 \u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u060c \u0645\u0645\u0627 \u064a\u0636\u0645\u0646 \u0639\u062f\u0645 \u0627\u0644\u0627\u0646\u062d\u0631\u0627\u0641 \u0639\u0646 \u0627\u0644\u0645\u0633\u0627\u0631."
-            },
-            card2: {
-                title: "\u062a\u0642\u062f\u0645 \u0648\u062d\u0627\u0644\u0629 \u0630\u0643\u064a\u0629",
-                description: "\u064a\u062a\u0645 \u062d\u0633\u0627\u0628 \u0627\u0644\u062a\u0642\u062f\u0645 \u0648\u0627\u0644\u062d\u0627\u0644\u0629 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b \u0645\u0646 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0623\u0633\u0627\u0633\u064a. \u0625\u0634\u0627\u0631\u0627\u062a \u062d\u0642\u064a\u0642\u064a\u0629 \u062a\u062d\u0644 \u0645\u062d\u0644 \u0627\u0644\u062a\u062d\u062f\u064a\u062b\u0627\u062a \u0627\u0644\u064a\u062f\u0648\u064a\u0629 \u2014 \u0644\u0627 \u0645\u0632\u064a\u062f \u0645\u0646 \u0627\u062c\u062a\u0645\u0627\u0639\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u0629."
-            },
-            card3: {
-                title: "\u0643\u0634\u0641 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0645\u0643\u0631\u0631",
-                description: "\u064a\u0642\u0627\u0631\u0646 Arbor \u0627\u0644\u0639\u0645\u0644 \u0628\u0627\u0644\u0645\u0639\u0646\u0649 \u0648\u0644\u064a\u0633 \u0641\u0642\u0637 \u0628\u0627\u0644\u0643\u0644\u0645\u0627\u062a \u0627\u0644\u0645\u0641\u062a\u0627\u062d\u064a\u0629\u060c \u0644\u0644\u0643\u0634\u0641 \u0639\u0646 \u0627\u0644\u062a\u0643\u0631\u0627\u0631 \u0639\u0628\u0631 \u0627\u0644\u0641\u0631\u0642 \u2014 \u062d\u062a\u0649 \u0639\u0646\u062f\u0645\u0627 \u062a\u0635\u0641 \u0643\u0644\u0645\u0627\u062a \u0645\u062e\u062a\u0644\u0641\u0629 \u0646\u0641\u0633 \u0627\u0644\u062c\u0647\u062f."
-            },
-            card4: {
-                title: "\u062a\u062d\u062f\u064a\u062f \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0645\u0631\u062a\u0628\u0637",
-                description: "\u064a\u0631\u0628\u0637 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b \u0628\u064a\u0646 \u0627\u0644\u0623\u0634\u062e\u0627\u0635 \u0627\u0644\u0630\u064a\u0646 \u064a\u0639\u0645\u0644\u0648\u0646 \u0639\u0644\u0649 \u0645\u0647\u0627\u0645 \u0645\u062a\u0634\u0627\u0628\u0647\u0629 \u0639\u0628\u0631 \u0627\u0644\u0645\u0646\u0638\u0645\u0629\u060c \u0645\u0645\u0627 \u064a\u062a\u064a\u062d \u0645\u0634\u0627\u0631\u0643\u0629 \u0627\u0644\u0645\u0639\u0631\u0641\u0629 \u0648\u064a\u0645\u0646\u0639 \u0625\u0647\u062f\u0627\u0631 \u0627\u0644\u062c\u0647\u0648\u062f."
-            },
-            card5: {
-                title: "\u0644\u0648\u062d\u0627\u062a \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0627\u0644\u0642\u0627\u062f\u0629",
-                description: "\u0643\u0644 \u0642\u0627\u0626\u062f \u064a\u062d\u0635\u0644 \u0639\u0644\u0649 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u0645\u0646\u0627\u0633\u0628 \u0644\u062f\u0648\u0631\u0647. \u0627\u0644\u0645\u062f\u064a\u0631\u0648\u0646 \u0627\u0644\u062a\u0646\u0641\u064a\u0630\u064a\u0648\u0646 \u064a\u0631\u0648\u0646 \u0627\u0644\u0635\u062d\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644\u064a\u0629 \u0639\u0644\u0649 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0645\u0646\u0638\u0645\u0629. \u0627\u0644\u0645\u062f\u064a\u0631\u0648\u0646 \u064a\u062a\u0627\u0628\u0639\u0648\u0646 \u0645\u062e\u0627\u0637\u0631 \u0648\u062a\u0642\u062f\u0645 \u0623\u0642\u0633\u0627\u0645\u0647\u0645. \u0642\u0627\u062f\u0629 \u0627\u0644\u0641\u0631\u0642 \u064a\u0631\u0648\u0646 \u0645\u0627 \u064a\u0639\u064a\u0642 \u0623\u0641\u0631\u0627\u062f\u0647\u0645 \u2014 \u0643\u0644 \u0630\u0644\u0643 \u0641\u064a \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0641\u0639\u0644\u064a."
-            },
-            card6: {
-                title: "\u0623\u062d\u0636\u0631 \u0630\u0643\u0627\u0621\u0643 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a",
-                description: "\u0628\u062f\u0644\u0627\u064b \u0645\u0646 \u062d\u0635\u0631\u0643 \u0641\u064a \u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0645\u0645\u0644\u0648\u0643\u060c \u064a\u062a\u0643\u0627\u0645\u0644 Arbor \u0645\u0639 \u0623\u062f\u0648\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u062d\u0627\u0644\u064a\u0629 \u0644\u0644\u062d\u0641\u0627\u0638 \u0639\u0644\u0649 \u0633\u064a\u0627\u0642 \u0634\u0631\u0643\u062a\u0643 \u0645\u0639 \u0627\u0644\u0627\u0633\u062a\u0641\u0627\u062f\u0629 \u0645\u0646 \u0645\u0646\u0635\u062a\u0646\u0627."
-            }
-        },
-        whyArbor: {
-            title: "\u0644\u0645\u0627\u0630\u0627 Arbor\u061f",
-            description: "\u062a\u0636\u0639 \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0623\u0647\u062f\u0627\u0641\u0627\u064b \u0633\u0646\u0648\u064a\u0629\u060c \u062b\u0645 \u064a\u0646\u062d\u0631\u0641 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u064a\u0648\u0645\u064a \u0639\u0646\u0647\u0627. \u064a\u0647\u062f\u0631 \u0627\u0644\u0642\u0627\u062f\u0629 \u0648\u0642\u062a\u0647\u0645 \u0641\u064a \u0645\u0644\u0627\u062d\u0642\u0629 \u062a\u062d\u062f\u064a\u062b\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u0629. \u062a\u0643\u0631\u0631 \u0627\u0644\u0641\u0631\u0642 \u0627\u0644\u0639\u0645\u0644 \u062f\u0648\u0646 \u0639\u0644\u0645\u0647\u0627. Arbor \u0628\u064f\u0646\u064a \u0644\u062d\u0644 \u0647\u0630\u0647 \u0627\u0644\u0645\u0634\u0643\u0644\u0629.",
-            item1: {
-                title: "\u0643\u0644 \u0645\u0647\u0645\u0629 \u062a\u062f\u0641\u0639 \u0647\u062f\u0641\u0627\u064b \u0644\u0644\u0623\u0645\u0627\u0645",
-                description: "\u064a\u064f\u0646\u0638\u0645 \u0627\u0644\u0639\u0645\u0644 \u0645\u0646 \u0623\u0647\u062f\u0627\u0641 \u0627\u0644\u0634\u0631\u0643\u0629 \u0648\u0635\u0648\u0644\u0627\u064b \u0625\u0644\u0649 \u0627\u0644\u0645\u0647\u0627\u0645 \u0627\u0644\u0641\u0631\u062f\u064a\u0629\u060c \u0644\u0627 \u0634\u064a\u0621 \u064a\u0633\u0642\u0637 \u0645\u0646 \u0627\u0644\u062d\u0633\u0628\u0627\u0646."
-            },
-            item2: {
-                title: "\u0627\u0644\u0642\u0627\u062f\u0629 \u064a\u0631\u0648\u0646 \u0645\u0627 \u064a\u0647\u0645",
-                description: "\u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0645\u0639\u0631\u0636 \u0644\u0644\u062e\u0637\u0631 \u0648\u0627\u0644\u0639\u0646\u0627\u0635\u0631 \u0627\u0644\u0645\u062d\u0638\u0648\u0631\u0629 \u0648\u0627\u0644\u062c\u0647\u0648\u062f \u0627\u0644\u0645\u0643\u0631\u0631\u0629 \u062a\u0638\u0647\u0631 \u062a\u0644\u0642\u0627\u0626\u064a\u0627\u064b \u2014 \u0644\u0627 \u0645\u0632\u064a\u062f \u0645\u0646 \u0627\u062c\u062a\u0645\u0627\u0639\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u0629."
-            },
-            item3: {
-                title: "\u0635\u062d\u0629 \u062a\u0634\u063a\u064a\u0644\u064a\u0629 \u0639\u0644\u0649 \u0643\u0644 \u0645\u0633\u062a\u0648\u0649",
-                description: "\u0645\u0646 \u0627\u0644\u0645\u062f\u064a\u0631\u064a\u0646 \u0627\u0644\u062a\u0646\u0641\u064a\u0630\u064a\u064a\u0646 \u0625\u0644\u0649 \u0642\u0627\u062f\u0629 \u0627\u0644\u0641\u0631\u0642\u060c \u0643\u0644 \u0642\u0627\u0626\u062f \u064a\u062d\u0635\u0644 \u0639\u0644\u0649 \u0631\u0624\u064a\u0629 \u0641\u0648\u0631\u064a\u0629 \u0644\u0635\u062d\u0629 \u062c\u0632\u0626\u0647 \u0645\u0646 \u0627\u0644\u0645\u0646\u0638\u0645\u0629."
-            }
-        },
-        about: {
-            title: "\u0639\u0645\u0644 \u064a\u0633\u062a\u062d\u0642 \u0623\u0646 \u062a\u0633\u062a\u064a\u0642\u0638 \u0645\u0646 \u0623\u062c\u0644\u0647",
-            paragraph1: "\u0648\u064f\u0644\u062f Arbor \u0645\u0646 \u062a\u062c\u0631\u0628\u0629 \u0645\u0628\u0627\u0634\u0631\u0629. \u0634\u0627\u0647\u062f \u0627\u0644\u0645\u0624\u0633\u0633 \u0627\u0644\u0645\u0634\u0627\u0631\u0643 \u0634\u0631\u0643\u0629 \u0623\u062d\u0628\u0647\u0627 \u062a\u062a\u0631\u0627\u062c\u0639 \u2014 \u0644\u064a\u0633 \u0628\u0633\u0628\u0628 \u0646\u0642\u0635 \u0627\u0644\u0645\u0648\u0627\u0647\u0628\u060c \u0628\u0644 \u0644\u0623\u0646 \u0627\u0644\u0642\u064a\u0627\u062f\u0629 \u0627\u0641\u062a\u0642\u0631\u062a \u0625\u0644\u0649 \u0627\u0644\u0631\u0624\u064a\u0629. \u0643\u0627\u0646\u062a \u0627\u0644\u0645\u0646\u0638\u0645\u0627\u062a \u0645\u0639\u0632\u0648\u0644\u0629\u060c \u0648\u0644\u0645 \u064a\u062a\u0645\u0643\u0646 \u0627\u0644\u0642\u0627\u062f\u0629 \u0645\u0646 \u062a\u0646\u0633\u064a\u0642 \u0627\u0644\u0623\u0647\u062f\u0627\u0641\u060c \u0648\u0639\u0646\u062f\u0645\u0627 \u0638\u0647\u0631\u062a \u0627\u0644\u0645\u0634\u0627\u0643\u0644 \u0643\u0627\u0646 \u0627\u0644\u0623\u0648\u0627\u0646 \u0642\u062f \u0641\u0627\u062a. Arbor \u0645\u0648\u062c\u0648\u062f \u0644\u0645\u0646\u062d \u0643\u0644 \u0642\u0627\u0626\u062f \u0627\u0644\u0631\u0624\u064a\u0629 \u0627\u0644\u0645\u0648\u0636\u0648\u0639\u064a\u0629 \u0627\u0644\u0641\u0648\u0631\u064a\u0629 \u0627\u0644\u062a\u064a \u064a\u062d\u062a\u0627\u062c\u0647\u0627 \u0644\u0644\u062a\u0635\u0631\u0641 \u0642\u0628\u0644 \u0623\u0646 \u062a\u0633\u0648\u0621 \u0627\u0644\u0623\u0645\u0648\u0631.",
-            paragraph2: "\u0646\u0624\u0645\u0646 \u0628\u0623\u0646 \u0627\u0644\u0634\u0631\u0643\u0629 \u0647\u064a \u0645\u062c\u0645\u0648\u0639\u0629 \u0645\u0646 \u0627\u0644\u0623\u0634\u062e\u0627\u0635 \u064a\u062c\u062a\u0645\u0639\u0648\u0646 \u0644\u062c\u0639\u0644 \u0634\u064a\u0621 \u0645\u0627 \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645 \u0623\u0641\u0636\u0644. \u0627\u0644\u0631\u0628\u062d \u062f\u0644\u064a\u0644 \u0639\u0644\u0649 \u0627\u0644\u0642\u064a\u0645\u0629\u060c \u0648\u0644\u064a\u0633 \u0627\u0644\u063a\u0627\u064a\u0629. \u0646\u0645\u0627\u0631\u0633 \u0645\u0634\u0627\u0631\u0643\u0629 \u0627\u0644\u0623\u0631\u0628\u0627\u062d\u060c \u0648\u0646\u0645\u0646\u062d \u0643\u0644 \u0645\u0648\u0638\u0641 \u0635\u0648\u062a\u0627\u064b \u0645\u0633\u0645\u0648\u0639\u0627\u064b\u060c \u0648\u0646\u064f\u0644\u0632\u0645 \u0623\u0646\u0641\u0633\u0646\u0627 \u0628\u0645\u0639\u0627\u064a\u064a\u0631 \u062a\u0645\u064a\u0651\u0632 \u062a\u0645\u0646\u062d \u0627\u0644\u0637\u0627\u0642\u0629 \u0628\u062f\u0644\u0627\u064b \u0645\u0646 \u0623\u0646 \u062a\u0633\u062a\u0646\u0632\u0641\u0647\u0627. \u0646\u0628\u0646\u064a \u0623\u062f\u0648\u0627\u062a \u062a\u0633\u0627\u0639\u062f \u0627\u0644\u0645\u0624\u0633\u0633\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0639\u0645\u0644 \u0628\u0627\u0644\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u064a \u064a\u0646\u0628\u063a\u064a \u0623\u0646 \u062a\u0639\u0645\u0644 \u0628\u0647\u0627 \u2014 \u0648Arbor \u0647\u064a \u062d\u064a\u062b \u0628\u062f\u0623\u0646\u0627."
-        },
-        contact: {
-            title: "\u0647\u0644 \u0623\u0646\u062a \u0645\u0633\u062a\u0639\u062f \u0644\u0645\u0648\u0627\u0621\u0645\u0629 \u0641\u0631\u064a\u0642\u0643\u061f",
-            description: "\u062d\u062f\u062f \u0645\u0648\u0639\u062f\u0627\u064b \u0644\u0644\u0639\u0631\u0636 \u0627\u0644\u062a\u0648\u0636\u064a\u062d\u064a \u0644\u062a\u0631\u0649 \u0643\u064a\u0641 \u064a\u0636\u0645\u0646 Arbor \u0623\u0646 \u0643\u0644 \u0639\u0645\u0644 \u064a\u062f\u0641\u0639 \u0623\u0647\u062f\u0627\u0641 \u0634\u0631\u0643\u062a\u0643 \u0644\u0644\u0623\u0645\u0627\u0645.",
-            form: {
-                name: "\u0627\u0644\u0627\u0633\u0645",
-                email: "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a",
-                organization: "\u0627\u0644\u0645\u0646\u0638\u0645\u0629",
-                phone: "\u0627\u0644\u0647\u0627\u062a\u0641",
-                message: "\u0623\u062e\u0628\u0631\u0646\u0627 \u0639\u0646 \u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a\u0643",
-                submit: "\u0637\u0644\u0628 \u0639\u0631\u0636 \u062a\u0648\u0636\u064a\u062d\u064a",
-                sending: "\u062c\u0627\u0631\u064d \u0627\u0644\u0625\u0631\u0633\u0627\u0644...",
-                success: "\u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u062a\u0648\u0636\u064a\u062d\u064a!",
-                error: "\u062d\u062f\u062b\u062a \u0645\u0634\u0643\u0644\u0629 \u0641\u064a \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u062e\u0627\u0635 \u0628\u0643",
-                networkError: "\u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u0634\u0628\u0643\u0629. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649."
-            }
-        },
-        footer: {
-            tagline: "\u0645\u0648\u0627\u0621\u0645\u0629 \u0627\u0644\u0639\u0645\u0644 \u0645\u0639 \u0645\u0627 \u064a\u0647\u0645",
-            product: "\u0627\u0644\u0645\u0646\u062a\u062c",
-            contact: "\u0627\u062a\u0635\u0644",
-            getInTouch: "\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627",
-            copyright: "\u00a9 2026 Arbor Technologies. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629."
-        }
+    expect: {
+      label: "What happens next",
+      headline: "This isn't a \"sign up and wait\" waitlist.",
+      card1: { title: "We actually read your responses", body: "Every answer helps us build the right product. Your frustrations become our feature priorities. This isn't a vanity metric exercise." },
+      card2: { title: "We'll reach out for a real conversation", body: "Not a sales call. A short conversation about your team, your tools, and where things break down. We're here to listen first." },
+      card3: { title: "You'll get early access when we launch", body: "Early adopters get in first, at locked-in pricing, with a direct line to the team. You're not just early. You're part of how this gets built." }
     },
-
-    pt: {
-        nav: {
-            features: "Recursos",
-            whyArbor: "Por que Arbor",
-            about: "Sobre",
-            getStarted: "Come\u00e7ar"
-        },
-        hero: {
-            title: "Pare de se esfor\u00e7ar no que n\u00e3o importa",
-            subtitle: "Arbor alinha cada tarefa aos objetivos da sua empresa, detecta riscos e sa\u00fade operacional automaticamente, e se integra com suas ferramentas de IA existentes.",
-            requestDemo: "Solicitar uma Demonstra\u00e7\u00e3o",
-            learnMore: "Saiba Mais"
-        },
-        features: {
-            title: "O que o Arbor faz",
-            card1: {
-                title: "Alinhamento de Objetivos a Tarefas",
-                description: "Dos objetivos da empresa \u00e0s tarefas individuais, cada trabalho se conecta a um objetivo estrat\u00e9gico. Nada sai do rumo."
-            },
-            card2: {
-                title: "Progresso e Status Inteligentes",
-                description: "Progresso e status s\u00e3o calculados automaticamente a partir do trabalho subjacente. Sinais reais substituem atualiza\u00e7\u00f5es manuais \u2014 sem mais reuni\u00f5es de status s\u00f3 para saber como as coisas est\u00e3o."
-            },
-            card3: {
-                title: "Detec\u00e7\u00e3o de Trabalho Duplicado",
-                description: "Arbor compara trabalho por significado, n\u00e3o apenas por palavras-chave, para detectar duplica\u00e7\u00e3o entre equipes \u2014 mesmo quando palavras diferentes descrevem o mesmo esfor\u00e7o."
-            },
-            card4: {
-                title: "Identifica\u00e7\u00e3o de Trabalho Relacionado",
-                description: "Conecta automaticamente pessoas que trabalham em tarefas similares em toda a organiza\u00e7\u00e3o, facilitando o compartilhamento de conhecimento e prevenindo esfor\u00e7os desperdi\u00e7ados."
-            },
-            card5: {
-                title: "Pain\u00e9is de Lideran\u00e7a",
-                description: "Cada l\u00edder obt\u00e9m a vis\u00e3o certa para seu papel. Executivos veem a sa\u00fade operacional de toda a organiza\u00e7\u00e3o. Diretores acompanham riscos e progresso de sua divis\u00e3o. L\u00edderes de equipe veem o que bloqueia seu pessoal \u2014 tudo em tempo real."
-            },
-            card6: {
-                title: "Traga Sua Pr\u00f3pria IA",
-                description: "Em vez de prender voc\u00ea a uma IA propriet\u00e1ria, Arbor se integra com suas ferramentas de IA existentes para manter o contexto da sua empresa enquanto aproveita nossa plataforma."
-            }
-        },
-        whyArbor: {
-            title: "Por que Arbor?",
-            description: "Empresas definem metas anuais, mas o trabalho di\u00e1rio se afasta delas. L\u00edderes perdem tempo perseguindo atualiza\u00e7\u00f5es de status. Equipes duplicam trabalho sem saber. Arbor foi criado para resolver isso.",
-            item1: {
-                title: "Cada tarefa avan\u00e7a um objetivo",
-                description: "O trabalho \u00e9 estruturado dos objetivos da empresa at\u00e9 as tarefas individuais, nada passa despercebido."
-            },
-            item2: {
-                title: "L\u00edderes veem o que importa",
-                description: "Trabalhos em risco, itens bloqueados e esfor\u00e7os duplicados s\u00e3o exibidos automaticamente \u2014 sem mais reuni\u00f5es de status."
-            },
-            item3: {
-                title: "Sa\u00fade operacional em cada n\u00edvel",
-                description: "De executivos a l\u00edderes de equipe, cada l\u00edder obt\u00e9m visibilidade em tempo real sobre a sa\u00fade de sua parte da organiza\u00e7\u00e3o."
-            }
-        },
-        about: {
-            title: "Um trabalho pelo qual vale a pena acordar",
-            paragraph1: "Arbor nasceu da experi\u00eancia direta. Nosso cofundador viu uma empresa que amava declinar \u2014 n\u00e3o por falta de talento, mas porque a lideran\u00e7a carecia de visibilidade. As organiza\u00e7\u00f5es estavam isoladas, l\u00edderes n\u00e3o conseguiam coordenar objetivos, e quando os problemas vieram \u00e0 tona, j\u00e1 era tarde demais. Arbor existe para dar a cada l\u00edder a visibilidade objetiva e em tempo real que precisam para agir antes que as coisas d\u00eaem errado.",
-            paragraph2: "Acreditamos que uma empresa \u00e9 um conjunto de pessoas que se unem para tornar algo no mundo melhor. O lucro \u00e9 a prova de valor, n\u00e3o o prop\u00f3sito. Praticamos a participa\u00e7\u00e3o nos lucros, damos voz a cada colaborador e nos comprometemos com um padr\u00e3o de excel\u00eancia que energiza em vez de esgotar. Constru\u00edmos ferramentas para ajudar organiza\u00e7\u00f5es a trabalharem da forma como deveriam \u2014 e Arbor foi onde tudo come\u00e7ou."
-        },
-        contact: {
-            title: "Pronto para alinhar sua equipe?",
-            description: "Agende uma demonstra\u00e7\u00e3o para ver como Arbor garante que cada trabalho avance os objetivos da sua empresa.",
-            form: {
-                name: "Nome",
-                email: "E-mail",
-                organization: "Organiza\u00e7\u00e3o",
-                phone: "Telefone",
-                message: "Conte-nos sobre suas necessidades",
-                submit: "Solicitar Demonstra\u00e7\u00e3o",
-                sending: "Enviando...",
-                success: "Solicita\u00e7\u00e3o de Demonstra\u00e7\u00e3o Enviada!",
-                error: "Houve um problema ao enviar seu formul\u00e1rio",
-                networkError: "Erro de rede. Por favor, tente novamente."
-            }
-        },
-        footer: {
-            tagline: "Alinhando o trabalho ao que importa",
-            product: "Produto",
-            contact: "Contato",
-            getInTouch: "Entre em Contato",
-            copyright: "\u00a9 2026 Arbor Technologies. Todos os direitos reservados."
-        }
+    faq: {
+      headline: "A few things you might be wondering.",
+      q1: "What exactly is Arbor?",
+      a1: "Arbor is a strategic alignment platform. In plain language: it connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between \"here's our vision\" and \"here's my to-do list\" that most companies are currently managing with spreadsheets, meetings, and wishful thinking.",
+      q2: "Why should I join now instead of waiting for launch?",
+      a2: "Because the early adopters shape what gets built. Your problems, your workflows, your \"I wish it did this\" moments go directly into the product. You also lock in early adopter pricing permanently. And the teams who join early tend to get the most value, because the product is literally built around their reality.",
+      q3: "Is this just another project management tool?",
+      a3: "No, and we're pretty deliberate about that. Arbor isn't competing with task trackers or documentation tools. We're the strategic alignment layer, the system that ensures all that daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams will consolidate over time. Some won't. We're not precious about it.",
+      q4: "What does \"building in public\" mean for me?",
+      a4: "It means we share the journey. The wins, the stumbles, the \"well, that didn't work\" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it). If that kind of transparency appeals to you, you're probably our people."
+    },
+    finalCta: {
+      headline: "The best tools get built with the people who need them.",
+      body: "If your team has outgrown casual tools but dreads the overhead of enterprise software, we should talk.",
+      cta: "Join the Early Adopters"
+    },
+    footer: {
+      product: "Product",
+      linkedin: "LinkedIn",
+      privacy: "Privacy",
+      terms: "Terms",
+      copy: "© 2026 Arbor. All rights reserved."
     }
+  },
+
+  ko: {
+    nav: {
+      badge: "얼리 어답터 모집 중"
+    },
+    hero: {
+      eyebrow: "얼리 액세스",
+      headline: "여러분의 도구가 <em>놓치고 있는</em> 정렬 레이어.",
+      sub: "Arbor는 회사의 목표와 팀의 일상 업무를 하나의 살아있는 계층 구조로 연결합니다. 전략과 실행 사이의 단절은 이제 끝입니다.",
+      subSecondary: "다르게 일할 준비가 된 소규모 팀에게 얼리 액세스를 엽니다.",
+      cta: "얼리 어답터 신청하기"
+    },
+    problems: {
+      label: "익숙하지 않으신가요?",
+      headline: "Arbor가 해결하기 위해 만든 문제들.",
+      card1: { title: "중복 업무", body: "두 팀. 같은 문제. 조율 없음. 둘 다 절반쯤 진행될 때까지 아무도 모릅니다." },
+      card2: { title: "회의 과부하", body: "상태 회의에 대한 상태 회의. 도구가 중요한 것을 보여주지 않으니 사람이 직접 해야 합니다." },
+      card3: { title: "OKR 형식주의", body: "모두가 관리하지만 실제 의사결정에는 아무도 사용하지 않는 별도의 보고 레이어로서의 목표." },
+      card4: { title: "정보 없는 의사결정", body: "현장 가시성 없이 결정을 내리는 리더들. 그 결정이 실제 일하는 사람들에게 연쇄적으로 영향을 미칩니다." }
+    },
+    form: {
+      contextLabel: "얼리 어답터",
+      contextHeadline: "처음부터 Arbor를 만들어 가세요.",
+      contextBody: "이런 문제를 매일 겪는 소규모 팀을 찾고 있습니다. 시스템을 그저 관리하는 것이 아니라 고치고 싶은 분들. 그 대가로 솔루션을 만드는 팀과 직접 소통할 수 있습니다.",
+      benefit1: "공개 출시 전 얼리 액세스. 먼저 보고, 먼저 테스트하세요",
+      benefit2: "창업자와의 직접 소통. 지원 대기열이 아닌 실제 대화",
+      benefit3: "여러분의 피드백이 로드맵을 만듭니다. 가정이 아닌 실제 문제를 위해 만듭니다",
+      benefit4: "얼리 어답터 가격 영구 고정",
+      cardTitle: "얼리 액세스 신청",
+      cardSubtitle: "약 60초 소요됩니다. 모든 답변을 읽습니다.",
+      emailLabel: "업무용 이메일",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "성함",
+      namePlaceholder: "홍길동",
+      roleLabel: "직책",
+      rolePlaceholder: "직책 선택",
+      roleOptions: {
+        ceoFounder: "CEO / 창업자",
+        cooOps: "COO / 운영 총괄",
+        chiefOfStaff: "비서실장",
+        vpDirector: "VP / 이사",
+        teamLead: "팀장 / 매니저",
+        pm: "프로덕트 매니저",
+        ic: "개인 기여자",
+        other: "기타"
+      },
+      sizeLabel: "회사 규모",
+      sizePlaceholder: "직원 수는?",
+      frustrationLabel: "현재 팀이 업무를 추적하고 정렬하는 방식에서 가장 큰 불만은 무엇인가요?",
+      frustrationOptional: "선택사항이지만 매우 도움이 됩니다",
+      frustrationPlaceholder: "구체적일수록 좋습니다.",
+      submit: "얼리 액세스 신청",
+      privacy: "스팸 없음. 데이터를 판매하지 않습니다.",
+      successTitle: "신청 완료.",
+      successBody: "곧 다음 단계로 연락드리겠습니다. 그 사이에 LinkedIn에서 저희의 공개 빌드 여정을 팔로우하세요."
+    },
+    expect: {
+      label: "다음 단계",
+      headline: "\"신청하고 기다리는\" 대기자 명단이 아닙니다.",
+      card1: { title: "답변을 실제로 읽습니다", body: "모든 답변이 올바른 제품을 만드는 데 도움이 됩니다. 여러분의 불만이 기능 우선순위가 됩니다. 허영 지표를 위한 것이 아닙니다." },
+      card2: { title: "실제 대화를 위해 연락드립니다", body: "영업 전화가 아닙니다. 팀, 도구, 어디서 문제가 생기는지에 대한 짧은 대화입니다. 먼저 듣겠습니다." },
+      card3: { title: "출시 시 얼리 액세스 제공", body: "얼리 어답터는 가장 먼저 입장하고, 가격이 고정되며, 팀과 직접 연결됩니다. 단순히 빠른 것이 아닙니다. 이것이 만들어지는 방식의 일부입니다." }
+    },
+    faq: {
+      headline: "궁금하실 것들.",
+      q1: "Arbor가 정확히 무엇인가요?",
+      a1: "Arbor는 전략적 정렬 플랫폼입니다. 쉽게 말하면: 회사가 달성하고자 하는 것(목표, OKR, 이니셔티브)과 팀이 매일 실제로 하는 일(작업, 프로젝트, 결과물)을 전략에서 아래로 흐르는 하나의 계층 구조로 연결합니다. 대부분의 회사가 현재 스프레드시트, 회의, 막연한 기대로 관리하고 있는 '비전'과 '할 일 목록' 사이의 레이어입니다.",
+      q2: "출시를 기다리지 않고 지금 신청해야 하는 이유는?",
+      a2: "얼리 어답터가 무엇이 만들어질지를 결정하기 때문입니다. 여러분의 문제, 워크플로우, '이런 기능이 있으면 좋겠다'는 순간이 직접 제품에 반영됩니다. 얼리 어답터 가격도 영구적으로 고정됩니다. 일찍 합류한 팀이 가장 많은 가치를 얻는 경향이 있습니다. 제품이 문자 그대로 그들의 현실을 중심으로 만들어지기 때문입니다.",
+      q3: "그냥 또 다른 프로젝트 관리 도구 아닌가요?",
+      a3: "아닙니다. 이는 의도적인 것입니다. Arbor는 작업 추적기나 문서 도구와 경쟁하지 않습니다. 저희는 모든 일상 업무가 회사가 달성하려는 것과 실제로 연결되도록 보장하는 전략적 정렬 레이어입니다. 기존 도구와 함께 Arbor를 사용할 수 있습니다. 시간이 지나면서 통합하는 팀도 있고 그렇지 않은 팀도 있습니다. 저희는 이에 크게 개의치 않습니다.",
+      q4: "\"공개 빌드\"가 저에게 무슨 의미인가요?",
+      a4: "여정을 공유한다는 뜻입니다. 성공, 실수, '그게 안 됐어' 순간들. 의사결정이 어떻게 이루어지는지, 사용자 대화에서 무엇을 배우는지, 실제 로드맵에 무엇이 있는지(마케팅 버전이 아닌)를 볼 수 있습니다. 그런 투명성이 마음에 든다면, 아마도 저희 사람일 것입니다."
+    },
+    finalCta: {
+      headline: "최고의 도구는 그것을 필요로 하는 사람들과 함께 만들어집니다.",
+      body: "팀이 간단한 도구를 넘어섰지만 엔터프라이즈 소프트웨어의 복잡함이 두렵다면, 대화가 필요합니다.",
+      cta: "얼리 어답터 신청하기"
+    },
+    footer: {
+      product: "제품",
+      linkedin: "LinkedIn",
+      privacy: "개인정보처리방침",
+      terms: "이용약관",
+      copy: "© 2026 Arbor. 모든 권리 보유."
+    }
+  },
+
+  ja: {
+    nav: {
+      badge: "アーリーアダプター募集中"
+    },
+    hero: {
+      eyebrow: "アーリーアクセス",
+      headline: "あなたのツールが<em>見落としている</em>整合レイヤー。",
+      sub: "Arborは会社の目標とチームの日々の業務を、ひとつの生きた階層構造で繋ぎます。戦略と実行の断絶はもう終わりです。",
+      subSecondary: "違う働き方をする準備ができた小さなチームにアーリーアクセスを開放します。",
+      cta: "アーリーアダプターに申し込む"
+    },
+    problems: {
+      label: "心当たりはありますか？",
+      headline: "Arborが解決するために作られた問題。",
+      card1: { title: "重複作業", body: "二つのチーム。同じ問題。調整なし。両方が半分進んで初めて気づく。" },
+      card2: { title: "会議の過多", body: "状況報告のための状況報告会議。ツールが重要なことを示せないから、人間がやるしかない。" },
+      card3: { title: "OKRのパフォーマンス", body: "誰もが管理するが、実際の意思決定には誰も使わない別の報告レイヤーとしての目標。" },
+      card4: { title: "情報なき意思決定", body: "現場の可視性なしに判断を下すリーダー。その決定が実際に働く人々に連鎖していく。" }
+    },
+    form: {
+      contextLabel: "アーリーアダプター",
+      contextHeadline: "Arborを最初から作り上げてください。",
+      contextBody: "これらの問題を毎日抱えている小さなチームを探しています。システムを管理するだけでなく、直したい人たち。その代わりに、ソリューションを作るチームへの直接アクセスが得られます。",
+      benefit1: "公開リリース前のアーリーアクセス。最初に見て、最初に試す",
+      benefit2: "創業者への直接アクセス。サポートキューではなく、本物の会話",
+      benefit3: "あなたのフィードバックがロードマップを作る。仮定ではなく実際の問題のために作る",
+      benefit4: "アーリーアダプター価格を永久固定",
+      cardTitle: "アーリーアクセスを申請",
+      cardSubtitle: "約60秒。すべての回答を読みます。",
+      emailLabel: "業務用メール",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "お名前",
+      namePlaceholder: "山田太郎",
+      roleLabel: "役職",
+      rolePlaceholder: "役職を選択",
+      roleOptions: {
+        ceoFounder: "CEO / 創業者",
+        cooOps: "COO / 運営責任者",
+        chiefOfStaff: "チーフオブスタッフ",
+        vpDirector: "VP / ディレクター",
+        teamLead: "チームリード / マネージャー",
+        pm: "プロダクトマネージャー",
+        ic: "個人貢献者",
+        other: "その他"
+      },
+      sizeLabel: "会社の規模",
+      sizePlaceholder: "何人ですか？",
+      frustrationLabel: "現在チームが業務を追跡・整合する方法で最も不満なことは何ですか？",
+      frustrationOptional: "任意ですが、とても参考になります",
+      frustrationPlaceholder: "具体的であればあるほど良いです。",
+      submit: "アーリーアクセスを申請",
+      privacy: "スパムなし。データを販売しません。",
+      successTitle: "申請完了。",
+      successBody: "近日中に次のステップをご連絡します。それまでの間、LinkedInでビルドインパブリックの旅をフォローしてください。"
+    },
+    expect: {
+      label: "次のステップ",
+      headline: "「登録して待つ」ウェイトリストではありません。",
+      card1: { title: "回答を実際に読みます", body: "すべての回答が正しい製品を作るのに役立ちます。あなたの不満が機能の優先事項になります。虚栄の指標のためではありません。" },
+      card2: { title: "本物の会話のために連絡します", body: "営業電話ではありません。チーム、ツール、どこで問題が起きるかについての短い会話です。まず聞くことを大切にしています。" },
+      card3: { title: "リリース時にアーリーアクセスを提供", body: "アーリーアダプターは最初に入り、価格は固定され、チームへの直接ラインがあります。ただ早いだけではありません。作り方の一部になります。" }
+    },
+    faq: {
+      headline: "気になることがあるかもしれません。",
+      q1: "Arborとは正確には何ですか？",
+      a1: "Arborは戦略的整合プラットフォームです。簡単に言うと：会社が達成したいこと（目標、OKR、イニシアチブ）とチームが毎日実際にやること（タスク、プロジェクト、成果物）を、戦略から下に流れる一つの階層構造で繋ぎます。ほとんどの会社がスプレッドシート、会議、希望的観測で管理している「ビジョン」と「ToDoリスト」の間のレイヤーです。",
+      q2: "リリースを待たずに今申し込むべき理由は？",
+      a2: "アーリーアダプターが何が作られるかを決めるからです。あなたの問題、ワークフロー、「こんな機能があれば」という瞬間が直接製品に反映されます。アーリーアダプター価格も永久に固定されます。早く参加するチームは最も多くの価値を得る傾向があります。製品が文字通り彼らの現実を中心に作られるからです。",
+      q3: "これはただの別のプロジェクト管理ツールでは？",
+      a3: "いいえ、これは意図的なものです。Arborはタスクトラッカーやドキュメントツールと競合していません。すべての日々の業務が会社が達成しようとしていることと実際に繋がるようにする戦略的整合レイヤーです。既存のツールと並行してArborを使えます。時間をかけて統合するチームもあれば、しないチームもあります。どちらでも構いません。",
+      q4: "「パブリックビルド」は私にとって何を意味しますか？",
+      a4: "旅を共有するということです。成功、失敗、「それはうまくいかなかった」瞬間。意思決定がどのように行われるか、ユーザーの会話から何を学んでいるか、実際のロードマップに何があるか（マーケティング版ではなく）を見ることができます。そういった透明性が魅力的なら、あなたはおそらく私たちの仲間です。"
+    },
+    finalCta: {
+      headline: "最高のツールは、それを必要とする人々と共に作られます。",
+      body: "チームがカジュアルなツールを超えたが、エンタープライズソフトウェアのオーバーヘッドを恐れているなら、話しましょう。",
+      cta: "アーリーアダプターに申し込む"
+    },
+    footer: {
+      product: "製品",
+      linkedin: "LinkedIn",
+      privacy: "プライバシー",
+      terms: "利用規約",
+      copy: "© 2026 Arbor. All rights reserved."
+    }
+  },
+
+  es: {
+    nav: {
+      badge: "Acceso para Primeros Adoptantes Abierto"
+    },
+    hero: {
+      eyebrow: "Acceso Anticipado",
+      headline: "La capa de alineación que tus herramientas <em>no tienen.</em>",
+      sub: "Arbor conecta los objetivos de tu empresa con el trabajo diario de tu equipo en una jerarquía viva. Sin más desconexión entre estrategia y ejecución.",
+      subSecondary: "Abrimos el acceso anticipado a un pequeño grupo de equipos listos para trabajar diferente.",
+      cta: "Unirse a los Primeros Adoptantes"
+    },
+    problems: {
+      label: "¿Te suena familiar?",
+      headline: "Los problemas que estamos construyendo Arbor para resolver.",
+      card1: { title: "Trabajo duplicado", body: "Dos equipos. El mismo problema. Cero coordinación. Nadie se entera hasta que ambos están a la mitad." },
+      card2: { title: "Exceso de reuniones", body: "Reuniones de estado sobre reuniones de estado. Las herramientas no muestran lo importante, así que los humanos tienen que hacerlo." },
+      card3: { title: "Teatro de OKRs", body: "Objetivos como capa de reporte separada que todos mantienen pero nadie usa para tomar decisiones." },
+      card4: { title: "Decisiones a ciegas", body: "Líderes sin visibilidad del terreno tomando decisiones que se propagan hacia las personas que hacen el trabajo real." }
+    },
+    form: {
+      contextLabel: "Primeros adoptantes",
+      contextHeadline: "Da forma a Arbor desde cero.",
+      contextBody: "Buscamos un pequeño grupo de equipos que viven estos problemas cada día. Personas que quieren arreglar el sistema, no solo gestionarlo. A cambio, obtienes acceso directo al equipo que construye la solución.",
+      benefit1: "Acceso anticipado antes del lanzamiento público. Vélo primero, pruébalo primero",
+      benefit2: "Acceso directo a los fundadores. No una cola de soporte, conversaciones reales",
+      benefit3: "Tu feedback da forma al roadmap. Construimos para problemas reales, no suposiciones",
+      benefit4: "Precio de primer adoptante bloqueado para siempre",
+      cardTitle: "Solicitar Acceso Anticipado",
+      cardSubtitle: "Toma unos 60 segundos. Leemos cada respuesta.",
+      emailLabel: "Correo corporativo",
+      emailPlaceholder: "tu@empresa.com",
+      nameLabel: "Tu nombre",
+      namePlaceholder: "Nombre Apellido",
+      roleLabel: "Tu rol",
+      rolePlaceholder: "Seleccionar rol",
+      roleOptions: {
+        ceoFounder: "CEO / Fundador",
+        cooOps: "COO / Director de Operaciones",
+        chiefOfStaff: "Jefe de Gabinete",
+        vpDirector: "VP / Director",
+        teamLead: "Líder de Equipo / Gerente",
+        pm: "Product Manager",
+        ic: "Colaborador Individual",
+        other: "Otro"
+      },
+      sizeLabel: "Tamaño de empresa",
+      sizePlaceholder: "¿Cuántas personas?",
+      frustrationLabel: "¿Cuál es tu mayor frustración con cómo tu equipo rastrea y alinea el trabajo hoy?",
+      frustrationOptional: "Opcional pero muy útil",
+      frustrationPlaceholder: "Cuanto más específico, mejor.",
+      submit: "Solicitar Acceso Anticipado",
+      privacy: "Sin spam. Nunca venderemos tus datos.",
+      successTitle: "Ya estás dentro.",
+      successBody: "Nos pondremos en contacto pronto con los próximos pasos. Mientras tanto, puedes seguir nuestro viaje de construcción pública en LinkedIn."
+    },
+    expect: {
+      label: "Qué pasa después",
+      headline: "Esta no es una lista de espera para \"registrarse y esperar\".",
+      card1: { title: "Realmente leemos tus respuestas", body: "Cada respuesta nos ayuda a construir el producto correcto. Tus frustraciones se convierten en prioridades de funciones. No es un ejercicio de vanidad." },
+      card2: { title: "Te contactaremos para una conversación real", body: "No es una llamada de ventas. Una breve conversación sobre tu equipo, tus herramientas y dónde las cosas fallan. Primero escuchamos." },
+      card3: { title: "Obtendrás acceso anticipado cuando lancemos", body: "Los primeros adoptantes entran primero, con precio bloqueado y acceso directo al equipo. No solo llegas antes. Eres parte de cómo se construye esto." }
+    },
+    faq: {
+      headline: "Algunas cosas que quizás te preguntas.",
+      q1: "¿Qué es exactamente Arbor?",
+      a1: "Arbor es una plataforma de alineación estratégica. En términos simples: conecta lo que tu empresa quiere lograr (objetivos, OKRs, iniciativas) con lo que tu equipo hace cada día (tareas, proyectos, entregables) en una jerarquía que fluye de arriba hacia abajo desde la estrategia. Piénsalo como la capa entre \"aquí está nuestra visión\" y \"aquí está mi lista de tareas\" que la mayoría de empresas gestiona actualmente con hojas de cálculo, reuniones y pensamiento positivo.",
+      q2: "¿Por qué unirme ahora en vez de esperar al lanzamiento?",
+      a2: "Porque los primeros adoptantes determinan qué se construye. Tus problemas, tus flujos de trabajo, tus momentos de \"ojalá hiciera esto\" van directamente al producto. También fijas el precio de primer adoptante permanentemente. Y los equipos que se unen antes tienden a obtener más valor, porque el producto está literalmente construido alrededor de su realidad.",
+      q3: "¿Es solo otra herramienta de gestión de proyectos?",
+      a3: "No, y somos bastante deliberados al respecto. Arbor no compite con rastreadores de tareas ni herramientas de documentación. Somos la capa de alineación estratégica, el sistema que garantiza que todo ese trabajo diario realmente se conecte con lo que la empresa intenta lograr. Puedes usar Arbor junto con tus herramientas existentes. Algunos equipos consolidarán con el tiempo. Otros no. No somos rígidos al respecto.",
+      q4: "¿Qué significa \"construir en público\" para mí?",
+      a4: "Significa que compartimos el camino. Los éxitos, los tropiezos, los momentos de \"eso no funcionó\". Verás cómo se toman las decisiones, qué aprendemos de las conversaciones con usuarios y qué hay realmente en el roadmap (no la versión de marketing). Si ese tipo de transparencia te atrae, probablemente seas de los nuestros."
+    },
+    finalCta: {
+      headline: "Las mejores herramientas se construyen con las personas que las necesitan.",
+      body: "Si tu equipo ha superado las herramientas informales pero teme la complejidad del software empresarial, deberíamos hablar.",
+      cta: "Unirse a los Primeros Adoptantes"
+    },
+    footer: {
+      product: "Producto",
+      linkedin: "LinkedIn",
+      privacy: "Privacidad",
+      terms: "Términos",
+      copy: "© 2026 Arbor. Todos los derechos reservados."
+    }
+  },
+
+  zh: {
+    nav: {
+      badge: "早期用户招募开放中"
+    },
+    hero: {
+      eyebrow: "早期访问",
+      headline: "你的工具<em>缺失</em>的对齐层。",
+      sub: "Arbor 将公司目标与团队日常工作连接在一个活的层级结构中。彻底告别战略与执行之间的脱节。",
+      subSecondary: "我们向一小批准备好以不同方式工作的团队开放早期访问。",
+      cta: "加入早期用户"
+    },
+    problems: {
+      label: "听起来很熟悉？",
+      headline: "我们构建 Arbor 要解决的问题。",
+      card1: { title: "重复工作", body: "两个团队。同一个问题。零协调。直到双方都进行到一半才发现。" },
+      card2: { title: "会议过载", body: "关于状态汇报的状态汇报会议。因为工具无法展示重要的事情，所以人们不得不去做。" },
+      card3: { title: "OKR 走过场", body: "作为独立汇报层的目标——每个人都在维护，但实际上没有人用它来做决策。" },
+      card4: { title: "在黑暗中决策", body: "缺乏一线可见性的领导者做出的决定，层层传导到实际做事的人。" }
+    },
+    form: {
+      contextLabel: "早期用户",
+      contextHeadline: "从零开始塑造 Arbor。",
+      contextBody: "我们寻找每天都在经历这些问题的小团队。想要修复系统而不只是绕过它的人。作为回报，你将获得与构建解决方案团队的直接沟通渠道。",
+      benefit1: "公开发布前的早期访问。最先看到，最先测试",
+      benefit2: "与创始人的直接接触。不是支持队列，而是真实对话",
+      benefit3: "你的反馈塑造路线图。我们为真实问题而建，而非假设",
+      benefit4: "早期用户定价，永久锁定",
+      cardTitle: "申请早期访问",
+      cardSubtitle: "大约需要 60 秒。我们会阅读每一份申请。",
+      emailLabel: "工作邮箱",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "您的姓名",
+      namePlaceholder: "张三",
+      roleLabel: "您的职位",
+      rolePlaceholder: "选择职位",
+      roleOptions: {
+        ceoFounder: "CEO / 创始人",
+        cooOps: "COO / 运营负责人",
+        chiefOfStaff: "首席执行助理",
+        vpDirector: "VP / 总监",
+        teamLead: "团队负责人 / 经理",
+        pm: "产品经理",
+        ic: "个人贡献者",
+        other: "其他"
+      },
+      sizeLabel: "公司规模",
+      sizePlaceholder: "多少人？",
+      frustrationLabel: "您对团队目前追踪和对齐工作方式最大的不满是什么？",
+      frustrationOptional: "可选，但非常有帮助",
+      frustrationPlaceholder: "越具体越好。",
+      submit: "申请早期访问",
+      privacy: "不发垃圾邮件，我们永远不会出售您的数据。",
+      successTitle: "申请成功。",
+      successBody: "我们很快会联系您告知后续步骤。在此期间，您可以在 LinkedIn 上关注我们的公开构建之旅。"
+    },
+    expect: {
+      label: "接下来会发生什么",
+      headline: "这不是一个「注册然后等待」的候补名单。",
+      card1: { title: "我们真的会阅读您的回复", body: "每一个回答都帮助我们构建正确的产品。您的不满将成为我们的功能优先级。这不是一个虚荣指标练习。" },
+      card2: { title: "我们会联系您进行真实对话", body: "不是销售电话。是关于您的团队、工具以及哪里出现问题的简短对话。我们首先是来倾听的。" },
+      card3: { title: "发布时您将获得早期访问", body: "早期用户最先进入，价格锁定，并与团队直接连接。您不只是早到。您是这一切被构建方式的一部分。" }
+    },
+    faq: {
+      headline: "您可能想了解的几件事。",
+      q1: "Arbor 到底是什么？",
+      a1: "Arbor 是一个战略对齐平台。简单来说：它将公司想要实现的事情（目标、OKR、举措）与团队每天实际做的事情（任务、项目、可交付成果）连接在一个从战略向下流动的层级结构中。可以把它看作大多数公司目前用电子表格、会议和一厢情愿管理的「这是我们的愿景」和「这是我的待办清单」之间的那一层。",
+      q2: "为什么现在加入而不是等待发布？",
+      a2: "因为早期用户决定构建什么。您的问题、工作流程、「我希望它能做到这个」的时刻直接进入产品。您还能永久锁定早期用户定价。早加入的团队往往获得最大价值，因为产品从字面意义上是围绕他们的现实构建的。",
+      q3: "这只是另一个项目管理工具吗？",
+      a3: "不是，我们对此非常刻意。Arbor 不与任务追踪器或文档工具竞争。我们是战略对齐层，确保所有日常工作真正与公司试图实现的目标相连接。您可以在现有工具旁边运行 Arbor。有些团队会随着时间整合，有些不会。我们对此并不执着。",
+      q4: "「公开构建」对我意味着什么？",
+      a4: "这意味着我们分享旅程。成功、挫折、「那个没用」的时刻。您将看到决策如何做出、我们从用户对话中学到了什么，以及路线图上实际有什么（不是营销版本）。如果这种透明度吸引您，您可能就是我们的人。"
+    },
+    finalCta: {
+      headline: "最好的工具是与需要它的人一起构建的。",
+      body: "如果您的团队已经超越了随意的工具，但又对企业软件的复杂性感到恐惧，我们应该谈谈。",
+      cta: "加入早期用户"
+    },
+    footer: {
+      product: "产品",
+      linkedin: "LinkedIn",
+      privacy: "隐私政策",
+      terms: "服务条款",
+      copy: "© 2026 Arbor. 保留所有权利。"
+    }
+  },
+
+  "zh-TW": {
+    nav: {
+      badge: "早期用戶招募開放中"
+    },
+    hero: {
+      eyebrow: "早期訪問",
+      headline: "你的工具<em>缺少</em>的對齊層。",
+      sub: "Arbor 將公司目標與團隊日常工作連接在一個活的層級結構中。徹底告別策略與執行之間的脫節。",
+      subSecondary: "我們向一小批準備好以不同方式工作的團隊開放早期訪問。",
+      cta: "加入早期用戶"
+    },
+    problems: {
+      label: "聽起來很熟悉？",
+      headline: "我們構建 Arbor 要解決的問題。",
+      card1: { title: "重複工作", body: "兩個團隊。同一個問題。零協調。直到雙方都進行到一半才發現。" },
+      card2: { title: "會議過載", body: "關於狀態彙報的狀態彙報會議。因為工具無法展示重要的事情，所以人們不得不去做。" },
+      card3: { title: "OKR 走過場", body: "作為獨立彙報層的目標——每個人都在維護，但實際上沒有人用它來做決策。" },
+      card4: { title: "在黑暗中決策", body: "缺乏一線可見性的領導者做出的決定，層層傳導到實際做事的人。" }
+    },
+    form: {
+      contextLabel: "早期用戶",
+      contextHeadline: "從零開始塑造 Arbor。",
+      contextBody: "我們尋找每天都在經歷這些問題的小團隊。想要修復系統而不只是繞過它的人。作為回報，你將獲得與構建解決方案團隊的直接溝通管道。",
+      benefit1: "公開發布前的早期訪問。最先看到，最先測試",
+      benefit2: "與創辦人的直接接觸。不是支援佇列，而是真實對話",
+      benefit3: "你的反饋塑造路線圖。我們為真實問題而建，而非假設",
+      benefit4: "早期用戶定價，永久鎖定",
+      cardTitle: "申請早期訪問",
+      cardSubtitle: "大約需要 60 秒。我們會閱讀每一份申請。",
+      emailLabel: "工作信箱",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "您的姓名",
+      namePlaceholder: "王小明",
+      roleLabel: "您的職位",
+      rolePlaceholder: "選擇職位",
+      roleOptions: {
+        ceoFounder: "CEO / 創辦人",
+        cooOps: "COO / 營運負責人",
+        chiefOfStaff: "幕僚長",
+        vpDirector: "VP / 總監",
+        teamLead: "團隊負責人 / 經理",
+        pm: "產品經理",
+        ic: "個人貢獻者",
+        other: "其他"
+      },
+      sizeLabel: "公司規模",
+      sizePlaceholder: "多少人？",
+      frustrationLabel: "您對團隊目前追蹤和對齊工作方式最大的不滿是什麼？",
+      frustrationOptional: "可選，但非常有幫助",
+      frustrationPlaceholder: "越具體越好。",
+      submit: "申請早期訪問",
+      privacy: "不發垃圾郵件，我們永遠不會出售您的數據。",
+      successTitle: "申請成功。",
+      successBody: "我們很快會聯繫您告知後續步驟。在此期間，您可以在 LinkedIn 上關注我們的公開構建之旅。"
+    },
+    expect: {
+      label: "接下來會發生什麼",
+      headline: "這不是一個「註冊然後等待」的候補名單。",
+      card1: { title: "我們真的會閱讀您的回覆", body: "每一個回答都幫助我們構建正確的產品。您的不滿將成為我們的功能優先級。這不是一個虛榮指標練習。" },
+      card2: { title: "我們會聯繫您進行真實對話", body: "不是銷售電話。是關於您的團隊、工具以及哪裡出現問題的簡短對話。我們首先是來傾聽的。" },
+      card3: { title: "發布時您將獲得早期訪問", body: "早期用戶最先進入，價格鎖定，並與團隊直接連接。您不只是早到。您是這一切被構建方式的一部分。" }
+    },
+    faq: {
+      headline: "您可能想了解的幾件事。",
+      q1: "Arbor 到底是什麼？",
+      a1: "Arbor 是一個策略對齊平台。簡單來說：它將公司想要實現的事情（目標、OKR、舉措）與團隊每天實際做的事情（任務、專案、可交付成果）連接在一個從策略向下流動的層級結構中。可以把它看作大多數公司目前用電子表格、會議和一廂情願管理的「這是我們的願景」和「這是我的待辦清單」之間的那一層。",
+      q2: "為什麼現在加入而不是等待發布？",
+      a2: "因為早期用戶決定構建什麼。您的問題、工作流程、「我希望它能做到這個」的時刻直接進入產品。您還能永久鎖定早期用戶定價。早加入的團隊往往獲得最大價值，因為產品從字面意義上是圍繞他們的現實構建的。",
+      q3: "這只是另一個專案管理工具嗎？",
+      a3: "不是，我們對此非常刻意。Arbor 不與任務追蹤器或文件工具競爭。我們是策略對齊層，確保所有日常工作真正與公司試圖實現的目標相連接。您可以在現有工具旁邊運行 Arbor。有些團隊會隨著時間整合，有些不會。我們對此並不執著。",
+      q4: "「公開構建」對我意味著什麼？",
+      a4: "這意味著我們分享旅程。成功、挫折、「那個沒用」的時刻。您將看到決策如何做出、我們從用戶對話中學到了什麼，以及路線圖上實際有什麼（不是行銷版本）。如果這種透明度吸引您，您可能就是我們的人。"
+    },
+    finalCta: {
+      headline: "最好的工具是與需要它的人一起構建的。",
+      body: "如果您的團隊已經超越了隨意的工具，但又對企業軟體的複雜性感到恐懼，我們應該談談。",
+      cta: "加入早期用戶"
+    },
+    footer: {
+      product: "產品",
+      linkedin: "LinkedIn",
+      privacy: "隱私政策",
+      terms: "服務條款",
+      copy: "© 2026 Arbor. 保留所有權利。"
+    }
+  }
+
 };
