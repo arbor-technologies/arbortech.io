@@ -162,29 +162,31 @@ async function handleSubmit() {
     timestamp: new Date().toISOString()
   };
 
-  console.log('Waitlist submission:', formData);
+  // --- HUBSPOT INTEGRATION ---
+  try {
+    await fetch('https://api.hsforms.com/submissions/v3/integration/submit/245811751/5565157e-6827-42c2-ae5e-670bfba75c7f', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: [
+          { name: 'email',                value: formData.email },
+          { name: 'firstname',            value: formData.name.split(' ')[0] },
+          { name: 'lastname',             value: formData.name.split(' ').slice(1).join(' ') || '' },
+          { name: 'your_role',            value: formData.role },
+          { name: 'companysize',          value: formData.companySize },
+          { name: 'waitlistpain_points',  value: formData.frustration }
+        ],
+        context: {
+          pageUri: 'arbortech.io',
+          pageName: 'Arbor Home'
+        }
+      })
+    });
+  } catch (err) {
+    console.error('HubSpot submission error:', err);
+  }
 
-  // --- INTEGRATION POINT ---
-  // Replace with your chosen backend. Options:
-  //
-  // HubSpot:
-  // await fetch('https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_GUID', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({
-  //     fields: [
-  //       { name: 'email', value: formData.email },
-  //       { name: 'firstname', value: formData.name.split(' ')[0] },
-  //       { name: 'lastname', value: formData.name.split(' ').slice(1).join(' ') || '' },
-  //       { name: 'role', value: formData.role },
-  //       { name: 'company_size', value: formData.companySize },
-  //       { name: 'frustration', value: formData.frustration }
-  //     ],
-  //     context: { pageUri: 'arbortech.io/waitlist', pageName: 'Arbor Waitlist' }
-  //   })
-  // });
-  //
-  // Make.com webhook:
+  // Make.com webhook (alternative — uncomment to use instead):
   // await fetch('https://hook.eu1.make.com/YOUR_WEBHOOK_ID', {
   //   method: 'POST',
   //   headers: { 'Content-Type': 'application/json' },
