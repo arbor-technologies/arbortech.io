@@ -1,301 +1,211 @@
-/* ===== INTERNATIONALIZATION ===== */
+/* ============================================
+   Arbor Waitlist — script.js
+   Includes: nav, animations, FAQ, form, i18n
+   ============================================ */
 
-let currentLang = 'en';
+// --- LANGUAGE DETECTION & SWITCHING ---
 
-function getPreferredLanguage() {
-    const saved = localStorage.getItem('preferredLanguage');
-    if (saved && translations[saved]) return saved;
+const SUPPORTED_LANGS = ['en', 'ko', 'ja', 'es', 'zh', 'zh-TW'];
 
-    const browserLang = navigator.language || navigator.userLanguage || '';
-    const lang = browserLang.toLowerCase();
-
-    if (lang.startsWith('ko')) return 'ko';
-    if (lang.startsWith('ja')) return 'ja';
-    if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-mo') return 'zh-TW';
-    if (lang.startsWith('zh')) return 'zh';
-    if (lang.startsWith('es')) return 'es';
-    if (lang.startsWith('ar')) return 'ar';
-    if (lang.startsWith('pt')) return 'pt';
-    return 'en';
+function getBrowserLang() {
+  const lang = navigator.language || navigator.userLanguage || 'en';
+  // Check for exact match first (e.g. zh-TW)
+  if (SUPPORTED_LANGS.includes(lang)) return lang;
+  // Check for base language match (e.g. 'ko-KR' → 'ko')
+  const base = lang.split('-')[0];
+  if (SUPPORTED_LANGS.includes(base)) return base;
+  return 'en';
 }
 
-function getTranslation(lang, key) {
-    const keys = key.split('.');
-    let value = translations[lang];
-    for (const k of keys) {
-        if (!value) return key;
-        value = value[k];
-    }
-    return value || key;
+let currentLang = getBrowserLang();
+
+function t(keyPath) {
+  const keys = keyPath.split('.');
+  let val = (window.waitlistTranslations || {})[currentLang];
+  if (!val) val = (window.waitlistTranslations || {})['en'];
+  for (const k of keys) {
+    if (val == null) return keyPath;
+    val = val[k];
+  }
+  return val || keyPath;
 }
 
-function applyTranslations(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        const key = el.getAttribute('data-i18n');
-        const translation = getTranslation(lang, key);
-        if (translation !== key) {
-            el.textContent = translation;
-        }
-    });
-
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-        const key = el.getAttribute('data-i18n-placeholder');
-        const translation = getTranslation(lang, key);
-        if (translation !== key) {
-            el.placeholder = translation;
-        }
-    });
-
-    // Update HTML lang and dir attributes
-    document.documentElement.lang = lang === 'zh-TW' ? 'zh-Hant' : lang;
-
-    const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
-    if (rtlLanguages.includes(lang)) {
-        document.documentElement.dir = 'rtl';
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const attr = el.getAttribute('data-i18n-attr');
+    const translated = t(key);
+    if (attr) {
+      el.setAttribute(attr, translated);
     } else {
-        document.documentElement.dir = 'ltr';
+      // Preserve child elements (e.g. SVG arrows, em tags)
+      const children = Array.from(el.childNodes).filter(n => n.nodeType !== Node.TEXT_NODE);
+      el.childNodes.forEach(n => { if (n.nodeType === Node.TEXT_NODE) n.remove(); });
+      el.insertAdjacentText('afterbegin', translated);
     }
+  });
+
+  // Handle HTML content keys (for copy with markup like <em>)
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    el.innerHTML = t(key);
+  });
+
+  // Update lang attribute on html element
+  document.documentElement.lang = currentLang;
 }
 
-function toggleLanguageDropdown() {
-    var switcher = document.querySelector('.language-switcher');
-    var btn = switcher.querySelector('button');
-    var isOpen = switcher.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen);
-
-    if (isOpen) {
-        var activeBtn = switcher.querySelector('.language-dropdown button.active');
-        if (activeBtn) activeBtn.focus();
-    }
+function switchLang(lang) {
+  if (!SUPPORTED_LANGS.includes(lang)) return;
+  currentLang = lang;
+  applyTranslations();
+  // Update active state on switcher buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
 }
 
-function closeLanguageDropdown() {
-    var switcher = document.querySelector('.language-switcher');
-    switcher.classList.remove('open');
-    switcher.querySelector('button').setAttribute('aria-expanded', 'false');
-}
+// --- NAV SCROLL EFFECT ---
 
-function changeLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem('preferredLanguage', lang);
-    applyTranslations(lang);
-    updateActiveLanguage(lang);
-    closeLanguageDropdown();
-}
-
-function updateActiveLanguage(lang) {
-    var buttons = document.querySelectorAll('.language-dropdown button');
-    buttons.forEach(function (btn) {
-        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-    });
-
-    var currentLangDisplay = document.querySelector('.current-lang');
-    var displayMap = {
-        en: 'EN', ko: 'KO', ja: 'JA', zh: 'ZH', 'zh-TW': 'TW',
-        es: 'ES', ar: 'AR', pt: 'PT'
-    };
-    currentLangDisplay.textContent = displayMap[lang] || lang.toUpperCase();
-}
-
-/* ===== INITIALIZATION ===== */
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize language
-    currentLang = getPreferredLanguage();
-    applyTranslations(currentLang);
-    updateActiveLanguage(currentLang);
-
-    // Language switcher toggle
-    var langToggle = document.querySelector('.language-switcher > button');
-    langToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toggleLanguageDropdown();
-    });
-
-    // Language selection buttons
-    document.querySelectorAll('.language-dropdown button').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            changeLanguage(this.getAttribute('data-lang'));
-        });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!e.target.closest('.language-switcher')) {
-            closeLanguageDropdown();
-        }
-    });
-
-    // Keyboard nav for language dropdown
-    document.querySelector('.language-dropdown').addEventListener('keydown', function (e) {
-        var items = Array.from(this.querySelectorAll('button'));
-        var idx = items.indexOf(document.activeElement);
-
-        if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            items[(idx + 1) % items.length].focus();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            items[(idx - 1 + items.length) % items.length].focus();
-        } else if (e.key === 'Escape') {
-            closeLanguageDropdown();
-            langToggle.focus();
-        }
-    });
-
-    /* ===== SMOOTH SCROLLING ===== */
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                // Close mobile menu if open
-                var navLinks = document.getElementById('nav-links');
-                if (navLinks.classList.contains('mobile-visible')) {
-                    navLinks.classList.remove('mobile-visible');
-                    var toggle = document.querySelector('.mobile-menu-toggle');
-                    if (toggle) {
-                        toggle.setAttribute('aria-expanded', 'false');
-                        toggle.textContent = '\u2630';
-                    }
-                }
-            }
-        });
-    });
-
-    /* ===== NAVBAR SCROLL EFFECT ===== */
-    var navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }, { passive: true });
-
-    /* ===== CONTACT FORM ===== */
-    var contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            var button = contactForm.querySelector('button[type="submit"]');
-            var formStatus = document.getElementById('formStatus');
-            var originalText = button.textContent;
-
-            button.disabled = true;
-            button.textContent = getTranslation(currentLang, 'contact.form.sending');
-
-            try {
-                var response = await fetch(contactForm.action, {
-                    method: contactForm.method,
-                    body: new FormData(contactForm),
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    button.textContent = getTranslation(currentLang, 'contact.form.success');
-                    button.classList.add('success');
-                    formStatus.textContent = getTranslation(currentLang, 'contact.form.success');
-                    contactForm.reset();
-                    setTimeout(function () {
-                        button.textContent = originalText;
-                        button.classList.remove('success');
-                        button.disabled = false;
-                    }, 3000);
-                } else {
-                    var data = await response.json();
-                    var errorMsg = data.errors
-                        ? data.errors.map(function (err) { return err.message; }).join(', ')
-                        : getTranslation(currentLang, 'contact.form.error');
-                    button.textContent = errorMsg;
-                    button.classList.add('error');
-                    formStatus.textContent = errorMsg;
-                    setTimeout(function () {
-                        button.textContent = originalText;
-                        button.classList.remove('error');
-                        button.disabled = false;
-                    }, 5000);
-                }
-            } catch (err) {
-                button.textContent = getTranslation(currentLang, 'contact.form.networkError');
-                button.classList.add('error');
-                formStatus.textContent = getTranslation(currentLang, 'contact.form.networkError');
-                setTimeout(function () {
-                    button.textContent = originalText;
-                    button.classList.remove('error');
-                    button.disabled = false;
-                }, 5000);
-            }
-        });
-    }
-
-    /* ===== SCROLL ANIMATIONS ===== */
-    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (!prefersReducedMotion) {
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry, index) {
-                if (entry.isIntersecting) {
-                    entry.target.style.transitionDelay = (index * 0.1) + 's';
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        document.querySelectorAll('.fade-in').forEach(function (el) {
-            observer.observe(el);
-        });
-    }
-
-    /* ===== MOBILE MENU ===== */
-    createMobileMenu();
-    window.addEventListener('resize', function () {
-        if (window.innerWidth <= 640) {
-            createMobileMenu();
-        } else {
-            removeMobileMenu();
-        }
-    });
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-var mobileMenuCreated = false;
+// --- SCROLL-TRIGGERED ANIMATIONS ---
 
-function createMobileMenu() {
-    if (mobileMenuCreated) return;
-    if (window.innerWidth > 640) return;
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-    var navbar = document.querySelector('.navbar .container');
-    var navLinks = document.getElementById('nav-links');
-    var langSwitcher = document.querySelector('.language-switcher');
+// --- FAQ ACCORDION ---
 
-    var toggle = document.createElement('button');
-    toggle.className = 'mobile-menu-toggle';
-    toggle.setAttribute('aria-label', 'Toggle navigation menu');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-controls', 'nav-links');
-    toggle.textContent = '\u2630';
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
 
-    toggle.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('mobile-visible');
-        this.setAttribute('aria-expanded', isOpen);
-        this.textContent = isOpen ? '\u2715' : '\u2630';
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = null;
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
     });
 
-    navbar.insertBefore(toggle, langSwitcher);
-    mobileMenuCreated = true;
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// --- SMOOTH SCROLL FOR ANCHOR LINKS ---
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 80;
+      const position = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: position, behavior: 'smooth' });
+    }
+  });
+});
+
+// --- FORM SUBMISSION ---
+
+async function handleSubmit() {
+  const email = document.getElementById('email');
+  const name = document.getElementById('name');
+  const role = document.getElementById('role');
+  const size = document.getElementById('company-size');
+
+  // Validation
+  if (!email.value || !email.value.includes('@')) {
+    email.focus();
+    email.style.borderColor = 'var(--rose)';
+    setTimeout(() => email.style.borderColor = '', 2000);
+    return;
+  }
+  if (!name.value.trim()) {
+    name.focus();
+    name.style.borderColor = 'var(--rose)';
+    setTimeout(() => name.style.borderColor = '', 2000);
+    return;
+  }
+  if (!role.value) {
+    role.focus();
+    role.style.borderColor = 'var(--rose)';
+    setTimeout(() => role.style.borderColor = '', 2000);
+    return;
+  }
+  if (!size.value) {
+    size.focus();
+    size.style.borderColor = 'var(--rose)';
+    setTimeout(() => size.style.borderColor = '', 2000);
+    return;
+  }
+
+  const formData = {
+    email: email.value,
+    name: name.value,
+    role: role.value,
+    companySize: size.value,
+    frustration: document.getElementById('frustration').value,
+    language: currentLang,
+    timestamp: new Date().toISOString()
+  };
+
+  console.log('Waitlist submission:', formData);
+
+  // --- INTEGRATION POINT ---
+  // Replace with your chosen backend. Options:
+  //
+  // HubSpot:
+  // await fetch('https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_GUID', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({
+  //     fields: [
+  //       { name: 'email', value: formData.email },
+  //       { name: 'firstname', value: formData.name.split(' ')[0] },
+  //       { name: 'lastname', value: formData.name.split(' ').slice(1).join(' ') || '' },
+  //       { name: 'role', value: formData.role },
+  //       { name: 'company_size', value: formData.companySize },
+  //       { name: 'frustration', value: formData.frustration }
+  //     ],
+  //     context: { pageUri: 'arbortech.io/waitlist', pageName: 'Arbor Waitlist' }
+  //   })
+  // });
+  //
+  // Make.com webhook:
+  // await fetch('https://hook.eu1.make.com/YOUR_WEBHOOK_ID', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(formData)
+  // });
+
+  // Show success state
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+  document.getElementById('formCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function removeMobileMenu() {
-    var toggle = document.querySelector('.mobile-menu-toggle');
-    if (toggle) {
-        toggle.remove();
-        mobileMenuCreated = false;
-        var navLinks = document.getElementById('nav-links');
-        navLinks.classList.remove('mobile-visible');
-    }
-}
+// Remove error styling on focus
+document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => {
+  el.addEventListener('focus', () => { el.style.borderColor = ''; });
+});
+
+// --- INIT ---
+// Apply translations once DOM and translations file are both ready
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.waitlistTranslations) {
+    applyTranslations();
+  }
+});
