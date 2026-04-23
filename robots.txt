@@ -1,4 +1,33 @@
+# arbortech.io — crawler policy
+# We welcome indexing and LLM training on this public marketing content.
+# For a concise, machine-friendly summary, see /llms.txt.
+
 User-agent: *
 Allow: /
 
+# Explicitly welcome well-known AI crawlers so intent is unambiguous.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://arbortech.io/sitemap.xml
+
+# LLM-friendly index: https://arbortech.io/llms.txt
+# Extended content:   https://arbortech.io/llms-full.txt

@@ -58,7 +58,18 @@ window.waitlistTranslations = {
       submit: "Request Early Access",
       privacy: "No spam, and we'll never sell your data.",
       successTitle: "You're in.",
-      successBody: "We'll be in touch soon with next steps. In the meantime, you can follow our build-in-public journey on LinkedIn."
+      successBody: "We'll be in touch soon with next steps. In the meantime, you can follow our build-in-public journey on LinkedIn.",
+      errors: {
+        summary: "Please fix the highlighted fields and try again.",
+        emailInvalid: "Please enter a valid work email.",
+        nameRequired: "Please enter your name.",
+        roleRequired: "Please select your role.",
+        sizeRequired: "Please choose your company size.",
+        submitFailed: "Something went wrong sending your request. Please try again in a moment."
+      },
+      status: {
+        submitting: "Sending your request…"
+      }
     },
     expect: {
       label: "What happens next",
@@ -145,7 +156,18 @@ window.waitlistTranslations = {
       submit: "얼리 액세스 신청",
       privacy: "스팸 없음. 데이터를 판매하지 않습니다.",
       successTitle: "신청 완료.",
-      successBody: "곧 다음 단계로 연락드리겠습니다. 그 사이에 LinkedIn에서 저희의 공개 빌드 여정을 팔로우하세요."
+      successBody: "곧 다음 단계로 연락드리겠습니다. 그 사이에 LinkedIn에서 저희의 공개 빌드 여정을 팔로우하세요.",
+      errors: {
+        summary: "강조 표시된 항목을 확인한 후 다시 시도해 주세요.",
+        emailInvalid: "유효한 업무용 이메일을 입력해 주세요.",
+        nameRequired: "성함을 입력해 주세요.",
+        roleRequired: "직책을 선택해 주세요.",
+        sizeRequired: "회사 규모를 선택해 주세요.",
+        submitFailed: "요청을 보내는 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요."
+      },
+      status: {
+        submitting: "요청을 보내는 중…"
+      }
     },
     expect: {
       label: "다음 단계",
@@ -232,7 +254,18 @@ window.waitlistTranslations = {
       submit: "アーリーアクセスを申請",
       privacy: "スパムなし。データを販売しません。",
       successTitle: "申請完了。",
-      successBody: "近日中に次のステップをご連絡します。それまでの間、LinkedInでビルドインパブリックの旅をフォローしてください。"
+      successBody: "近日中に次のステップをご連絡します。それまでの間、LinkedInでビルドインパブリックの旅をフォローしてください。",
+      errors: {
+        summary: "ハイライトされた項目を修正してもう一度お試しください。",
+        emailInvalid: "有効な業務用メールアドレスを入力してください。",
+        nameRequired: "お名前を入力してください。",
+        roleRequired: "役職を選択してください。",
+        sizeRequired: "会社の規模を選択してください。",
+        submitFailed: "送信中に問題が発生しました。しばらくしてからもう一度お試しください。"
+      },
+      status: {
+        submitting: "送信中…"
+      }
     },
     expect: {
       label: "次のステップ",
@@ -319,7 +352,18 @@ window.waitlistTranslations = {
       submit: "Solicitar Acceso Anticipado",
       privacy: "Sin spam. Nunca venderemos tus datos.",
       successTitle: "Ya estás dentro.",
-      successBody: "Nos pondremos en contacto pronto con los próximos pasos. Mientras tanto, puedes seguir nuestro viaje de construcción pública en LinkedIn."
+      successBody: "Nos pondremos en contacto pronto con los próximos pasos. Mientras tanto, puedes seguir nuestro viaje de construcción pública en LinkedIn.",
+      errors: {
+        summary: "Por favor corrige los campos marcados e inténtalo de nuevo.",
+        emailInvalid: "Ingresa un correo corporativo válido.",
+        nameRequired: "Ingresa tu nombre.",
+        roleRequired: "Selecciona tu rol.",
+        sizeRequired: "Selecciona el tamaño de tu empresa.",
+        submitFailed: "Algo salió mal al enviar tu solicitud. Inténtalo de nuevo en un momento."
+      },
+      status: {
+        submitting: "Enviando tu solicitud…"
+      }
     },
     expect: {
       label: "Qué pasa después",
@@ -406,7 +450,18 @@ window.waitlistTranslations = {
       submit: "申请早期访问",
       privacy: "不发垃圾邮件，我们永远不会出售您的数据。",
       successTitle: "申请成功。",
-      successBody: "我们很快会联系您告知后续步骤。在此期间，您可以在 LinkedIn 上关注我们的公开构建之旅。"
+      successBody: "我们很快会联系您告知后续步骤。在此期间，您可以在 LinkedIn 上关注我们的公开构建之旅。",
+      errors: {
+        summary: "请修正高亮的字段后再试一次。",
+        emailInvalid: "请输入有效的工作邮箱。",
+        nameRequired: "请输入您的姓名。",
+        roleRequired: "请选择您的职位。",
+        sizeRequired: "请选择公司规模。",
+        submitFailed: "发送请求时出错。请稍后再试一次。"
+      },
+      status: {
+        submitting: "正在发送您的请求…"
+      }
     },
     expect: {
       label: "接下来会发生什么",
@@ -437,6 +492,104 @@ window.waitlistTranslations = {
       privacy: "隐私政策",
       terms: "服务条款",
       copy: "© 2026 Arbor. 保留所有权利。"
+    }
+  },
+
+  ar: {
+    nav: {
+      badge: "الوصول المبكر متاح"
+    },
+    hero: {
+      eyebrow: "وصول مبكر",
+      headline: "طبقة المواءمة التي <em>تفتقدها</em> أدواتك.",
+      sub: "يربط Arbor أهداف شركتك بعمل فريقك اليومي في تسلسل هرمي حي واحد. لا مزيد من الفجوة بين الاستراتيجية والتنفيذ.",
+      subSecondary: "نفتح الوصول المبكر لمجموعة صغيرة من الفرق المستعدة للعمل بشكل مختلف.",
+      cta: "انضم إلى المتبنين الأوائل"
+    },
+    problems: {
+      label: "هل يبدو مألوفاً؟",
+      headline: "المشاكل التي نبني Arbor لحلها.",
+      card1: { title: "العمل المكرر", body: "فريقان. نفس المشكلة. صفر تنسيق. لا أحد يكتشف حتى يكون كلاهما في منتصف الطريق." },
+      card2: { title: "كثرة الاجتماعات", body: "اجتماعات حالة عن اجتماعات الحالة. لأن الأدوات لا تُظهر ما يهم، فيضطر البشر لفعل ذلك." },
+      card3: { title: "مسرحية OKR", body: "أهداف كطبقة تقارير منفصلة يحافظ عليها الجميع لكن لا أحد يستخدمها فعلياً لاتخاذ القرارات." },
+      card4: { title: "قرارات في الظلام", body: "قادة بلا رؤية أرضية يتخذون قرارات تتدفق إلى الأشخاص الذين يقومون بالعمل الفعلي." }
+    },
+    form: {
+      contextLabel: "المتبنون الأوائل",
+      contextHeadline: "شكّل Arbor من الأساس.",
+      contextBody: "نبحث عن مجموعة صغيرة من الفرق التي تعيش هذه المشاكل كل يوم. أشخاص يريدون إصلاح النظام، لا الالتفاف حوله. في المقابل، تحصل على خط مباشر مع الفريق الذي يبني الحل.",
+      benefit1: "وصول مبكر قبل الإطلاق العام. شاهده أولاً، جرّبه أولاً",
+      benefit2: "وصول مباشر إلى المؤسسين. ليس طابور دعم، بل محادثات فعلية",
+      benefit3: "ملاحظاتك تُشكّل خارطة الطريق. نبني لمشاكل حقيقية، لا افتراضات",
+      benefit4: "تسعير المتبني المبكر، مُثبّت للأبد",
+      cardTitle: "طلب الوصول المبكر",
+      cardSubtitle: "يستغرق حوالي 60 ثانية. نقرأ كل طلب.",
+      emailLabel: "البريد الإلكتروني للعمل",
+      emailPlaceholder: "you@company.com",
+      nameLabel: "اسمك",
+      namePlaceholder: "الاسم واللقب",
+      roleLabel: "دورك",
+      rolePlaceholder: "اختر الدور",
+      roleOptions: {
+        ceoFounder: "الرئيس التنفيذي / المؤسس",
+        cooOps: "مدير العمليات",
+        chiefOfStaff: "رئيس الموظفين",
+        vpDirector: "نائب الرئيس / المدير",
+        teamLead: "قائد الفريق / المدير",
+        pm: "مدير المنتج",
+        ic: "مساهم فردي",
+        other: "آخر"
+      },
+      sizeLabel: "حجم الشركة",
+      sizePlaceholder: "كم عدد الأشخاص؟",
+      frustrationLabel: "ما أكبر إحباط لديك بشأن كيفية تتبع فريقك ومواءمة العمل اليوم؟",
+      frustrationOptional: "اختياري لكنه مفيد جداً",
+      frustrationPlaceholder: "كلما كان أكثر تحديداً، كان أفضل.",
+      submit: "طلب الوصول المبكر",
+      privacy: "لا رسائل مزعجة، ولن نبيع بياناتك أبداً.",
+      successTitle: "تم قبولك.",
+      successBody: "سنتواصل معك قريباً بالخطوات التالية. في هذه الأثناء، يمكنك متابعة رحلتنا في البناء العلني على LinkedIn.",
+      errors: {
+        summary: "يرجى تصحيح الحقول المُميّزة والمحاولة مرة أخرى.",
+        emailInvalid: "يرجى إدخال بريد عمل صالح.",
+        nameRequired: "يرجى إدخال اسمك.",
+        roleRequired: "يرجى اختيار دورك.",
+        sizeRequired: "يرجى اختيار حجم شركتك.",
+        submitFailed: "حدث خطأ ما أثناء إرسال طلبك. يرجى المحاولة مرة أخرى بعد لحظة."
+      },
+      status: {
+        submitting: "جارٍ إرسال طلبك…"
+      }
+    },
+    expect: {
+      label: "ماذا يحدث بعد ذلك",
+      headline: "هذه ليست قائمة انتظار \"اشترك وانتظر\".",
+      card1: { title: "نقرأ ردودك فعلياً", body: "كل إجابة تساعدنا على بناء المنتج الصحيح. إحباطاتك تصبح أولويات ميزاتنا. هذا ليس تمرين مقاييس زائفة." },
+      card2: { title: "سنتواصل معك لمحادثة حقيقية", body: "ليست مكالمة مبيعات. محادثة قصيرة حول فريقك وأدواتك وأين تفشل الأمور. نحن هنا لنستمع أولاً." },
+      card3: { title: "ستحصل على وصول مبكر عندما نطلق", body: "المتبنون الأوائل يدخلون أولاً، بتسعير مُثبّت، مع خط مباشر للفريق. أنت لست مبكراً فقط. أنت جزء من كيفية بناء هذا." }
+    },
+    faq: {
+      headline: "بعض الأشياء التي قد تتساءل عنها.",
+      q1: "ما هو Arbor بالضبط؟",
+      a1: "Arbor هي منصة المواءمة الاستراتيجية. بكلمات بسيطة: تربط ما تريد شركتك تحقيقه (الأهداف، OKRs، المبادرات) بما يفعله فريقك فعلياً كل يوم (المهام، المشاريع، التسليمات) في تسلسل هرمي واحد يتدفق من الأعلى إلى الأسفل من الاستراتيجية، وليس من الأسفل إلى الأعلى كتقارير حالة. فكّر بها كالطبقة بين \"ها هي رؤيتنا\" و\"ها هي قائمة مهامي\" التي تديرها معظم الشركات حالياً بجداول البيانات والاجتماعات والأماني.",
+      q2: "لماذا أنضم الآن بدلاً من الانتظار للإطلاق؟",
+      a2: "لأن المتبنين الأوائل يشكّلون ما سيُبنى. مشاكلك، تدفقات عملك، لحظات \"أتمنى لو فعلها\" تذهب مباشرة إلى المنتج. كما تثبّت تسعير المتبني المبكر بشكل دائم. والفرق التي تنضم مبكراً تميل للحصول على أكبر قيمة، لأن المنتج مبني حرفياً حول واقعها.",
+      q3: "هل هذه مجرد أداة إدارة مشاريع أخرى؟",
+      a3: "لا، ونحن متعمدون جداً بشأن ذلك. Arbor لا تنافس متتبعات المهام أو أدوات التوثيق. نحن طبقة المواءمة الاستراتيجية، النظام الذي يضمن أن كل ذلك العمل اليومي يتصل فعلاً بما تحاول الشركة تحقيقه. يمكنك تشغيل Arbor جنباً إلى جنب مع أدواتك الحالية. بعض الفرق ستوحّد مع الوقت. بعضها لن يفعل. نحن لسنا متمسكين بذلك.",
+      q4: "ماذا تعني \"البناء العلني\" بالنسبة لي؟",
+      a4: "تعني أننا نشارك الرحلة. الانتصارات، العثرات، لحظات \"حسناً، ذلك لم ينجح\". سترى كيف تُتخذ القرارات، ما نتعلمه من محادثات المستخدمين، وما هو على خارطة الطريق فعلاً (ليس نسخة تسويقية منها). إذا كانت هذه الشفافية تجذبك، فأنت على الأرجح من أهلنا."
+    },
+    finalCta: {
+      headline: "أفضل الأدوات تُبنى مع الأشخاص الذين يحتاجونها.",
+      body: "إذا تجاوز فريقك الأدوات البسيطة لكنه يخشى عبء برامج المؤسسات، يجب أن نتحدث.",
+      cta: "انضم إلى المتبنين الأوائل"
+    },
+    footer: {
+      product: "المنتج",
+      linkedin: "LinkedIn",
+      privacy: "الخصوصية",
+      terms: "الشروط",
+      copy: "© 2026 Arbor. جميع الحقوق محفوظة."
     }
   },
 
@@ -493,7 +646,18 @@ window.waitlistTranslations = {
       submit: "申請早期訪問",
       privacy: "不發垃圾郵件，我們永遠不會出售您的數據。",
       successTitle: "申請成功。",
-      successBody: "我們很快會聯繫您告知後續步驟。在此期間，您可以在 LinkedIn 上關注我們的公開構建之旅。"
+      successBody: "我們很快會聯繫您告知後續步驟。在此期間，您可以在 LinkedIn 上關注我們的公開構建之旅。",
+      errors: {
+        summary: "請修正高亮的欄位後再試一次。",
+        emailInvalid: "請輸入有效的工作信箱。",
+        nameRequired: "請輸入您的姓名。",
+        roleRequired: "請選擇您的職位。",
+        sizeRequired: "請選擇公司規模。",
+        submitFailed: "發送請求時出錯。請稍後再試一次。"
+      },
+      status: {
+        submitting: "正在發送您的請求…"
+      }
     },
     expect: {
       label: "接下來會發生什麼",

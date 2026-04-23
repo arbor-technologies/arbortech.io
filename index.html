@@ -3,43 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arbor | Early Adopters</title>
-<meta name="description" content="Be among the first to use Arbor, the strategic alignment platform that connects goals to execution. Join our early adopters and help shape the future of how teams work.">
-<meta property="og:title" content="Arbor | Early Adopters">
+<title>Arbor | The strategic alignment platform for teams</title>
+<meta name="description" content="Arbor is the strategic alignment platform that connects company goals to daily team work in one living hierarchy. Join the early adopters shaping how teams align strategy with execution.">
+<meta name="author" content="Arbor">
+<meta name="application-name" content="Arbor">
+<meta name="theme-color" content="#0A4B44">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Canonical & i18n -->
+<link rel="canonical" href="https://arbortech.io/">
+<link rel="alternate" hreflang="en" href="https://arbortech.io/">
+<link rel="alternate" hreflang="ar" href="https://arbortech.io/?lang=ar">
+<link rel="alternate" hreflang="ko" href="https://arbortech.io/?lang=ko">
+<link rel="alternate" hreflang="ja" href="https://arbortech.io/?lang=ja">
+<link rel="alternate" hreflang="es" href="https://arbortech.io/?lang=es">
+<link rel="alternate" hreflang="zh-Hans" href="https://arbortech.io/?lang=zh">
+<link rel="alternate" hreflang="zh-Hant" href="https://arbortech.io/?lang=zh-TW">
+<link rel="alternate" hreflang="x-default" href="https://arbortech.io/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Arbor | The strategic alignment platform">
 <meta property="og:description" content="Work should flow from strategy, not report to it. Get early access to the platform that makes it happen.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://arbortech.io/waitlist">
+<meta property="og:url" content="https://arbortech.io/">
+<meta property="og:site_name" content="Arbor">
+<meta property="og:image" content="https://arbortech.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arbor — the alignment layer your tools are missing">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arbor | The strategic alignment platform">
+<meta name="twitter:description" content="Work should flow from strategy, not report to it. Get early access to the platform that makes it happen.">
+<meta name="twitter:image" content="https://arbortech.io/og-image.png">
+<meta name="twitter:image:alt" content="Arbor — the alignment layer your tools are missing">
+
+<!-- Icons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- LLM discovery hint (informational; agents that honor llms.txt fetch it directly) -->
+<link rel="alternate" type="text/markdown" title="Arbor for LLMs" href="/llms.txt">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Sync language from ?lang= or localStorage before first paint so <html lang> is correct from frame 1 -->
+<script>
+(function() {
+  var SUPPORTED = ['en','ar','ko','ja','es','zh','zh-TW'];
+  var RTL = ['ar'];
+  var HTML_LANG = { en:'en', ar:'ar', ko:'ko', ja:'ja', es:'es', zh:'zh-Hans', 'zh-TW':'zh-Hant' };
+  var q = new URLSearchParams(window.location.search).get('lang');
+  var stored = null;
+  try { stored = localStorage.getItem('arbor-lang'); } catch(e) {}
+  var nav = (navigator.language || 'en');
+  var pick = null;
+  if (q && SUPPORTED.indexOf(q) !== -1) pick = q;
+  else if (stored && SUPPORTED.indexOf(stored) !== -1) pick = stored;
+  else if (SUPPORTED.indexOf(nav) !== -1) pick = nav;
+  else if (SUPPORTED.indexOf(nav.split('-')[0]) !== -1) pick = nav.split('-')[0];
+  else pick = 'en';
+  window.__arborInitialLang = pick;
+  document.documentElement.lang = HTML_LANG[pick] || pick;
+  document.documentElement.dir = RTL.indexOf(pick) !== -1 ? 'rtl' : 'ltr';
+})();
+</script>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://arbortech.io/#organization",
+      "name": "Arbor",
+      "url": "https://arbortech.io/",
+      "logo": "https://arbortech.io/logo.svg",
+      "description": "Arbor is a strategic alignment platform that connects company goals to daily team work in one living hierarchy.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@arbortech.io",
+        "contactType": "customer support",
+        "availableLanguage": ["en", "ar", "ko", "ja", "es", "zh"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://arbortech.io/#website",
+      "url": "https://arbortech.io/",
+      "name": "Arbor",
+      "publisher": { "@id": "https://arbortech.io/#organization" },
+      "inLanguage": ["en", "ar", "ko", "ja", "es", "zh-Hans", "zh-Hant"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://arbortech.io/#software",
+      "name": "Arbor",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Strategic Alignment Platform",
+      "operatingSystem": "Web",
+      "description": "Arbor connects company goals (OKRs, initiatives) to daily team work (tasks, projects, deliverables) in a single living hierarchy that flows from strategy to execution.",
+      "url": "https://arbortech.io/",
+      "publisher": { "@id": "https://arbortech.io/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://arbortech.io/#waitlist-form",
+        "priceCurrency": "USD",
+        "price": "0",
+        "description": "Early-adopter access with locked-in pricing and direct founder contact."
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Growing teams that have outgrown casual tools but dread enterprise software overhead"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://arbortech.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What exactly is Arbor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arbor is a strategic alignment platform. In plain language: it connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between \"here's our vision\" and \"here's my to-do list\" that most companies are currently managing with spreadsheets, meetings, and wishful thinking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should I join now instead of waiting for launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the early adopters shape what gets built. Your problems, your workflows, your \"I wish it did this\" moments go directly into the product. You also lock in early adopter pricing permanently. And the teams who join early tend to get the most value, because the product is literally built around their reality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this just another project management tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, and we're pretty deliberate about that. Arbor isn't competing with task trackers or documentation tools. We're the strategic alignment layer, the system that ensures all that daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams will consolidate over time. Some won't. We're not precious about it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does \"building in public\" mean for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means we share the journey. The wins, the stumbles, the \"well, that didn't work\" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it). If that kind of transparency appeals to you, you're probably our people."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="https://arbortech.io" class="nav-logo">arbor</a>
-    <a href="#waitlist-form" class="nav-badge" data-i18n="nav.badge">Early Adopter Access Open</a>
+    <a href="https://arbortech.io" class="nav-logo" aria-label="Arbor, home">arbor</a>
+
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button type="button"
+                id="lang-toggle"
+                class="lang-toggle"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="lang-menu"
+                aria-label="Language">
+          <svg class="lang-globe" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M8 1.5 C 5 4 5 12 8 14.5 M8 1.5 C 11 4 11 12 8 14.5" stroke="currentColor" stroke-width="1.25" fill="none"/>
+            <path d="M1.5 8 L 14.5 8 M2.5 5 L 13.5 5 M2.5 11 L 13.5 11" stroke="currentColor" stroke-width="1.25"/>
+          </svg>
+          <span class="lang-current" lang="en">EN</span>
+          <svg class="lang-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul id="lang-menu"
+            class="lang-menu"
+            role="listbox"
+            aria-labelledby="lang-toggle"
+            hidden>
+          <li role="option" class="lang-option" data-lang="en"    lang="en"      tabindex="0"  aria-selected="true">English</li>
+          <li role="option" class="lang-option" data-lang="ar"    lang="ar"      dir="rtl"     tabindex="-1" aria-selected="false">العربية</li>
+          <li role="option" class="lang-option" data-lang="ko"    lang="ko"      tabindex="-1" aria-selected="false">한국어</li>
+          <li role="option" class="lang-option" data-lang="ja"    lang="ja"      tabindex="-1" aria-selected="false">日本語</li>
+          <li role="option" class="lang-option" data-lang="es"    lang="es"      tabindex="-1" aria-selected="false">Español</li>
+          <li role="option" class="lang-option" data-lang="zh"    lang="zh-Hans" tabindex="-1" aria-selected="false">简体中文</li>
+          <li role="option" class="lang-option" data-lang="zh-TW" lang="zh-Hant" tabindex="-1" aria-selected="false">繁體中文</li>
+        </ul>
+      </div>
+
+      <a href="#waitlist-form" class="nav-badge" data-i18n="nav.badge">Early Adopter Access Open</a>
+    </div>
   </div>
 </nav>
 
+<main id="main">
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-heading">
   <div class="hero-layout">
     <div class="hero-content">
       <div class="hero-eyebrow" data-i18n="hero.eyebrow">Early Access</div>
-      <h1 data-i18n-html="hero.headline">The alignment layer your tools are <em>missing.</em></h1>
+      <h1 id="hero-heading" data-i18n-html="hero.headline">The alignment layer your tools are <em>missing.</em></h1>
       <p class="hero-sub" data-i18n="hero.sub">Arbor connects your company's goals to your team's daily work in one living hierarchy. No more disconnect between strategy and execution.</p>
       <p class="hero-sub-secondary" data-i18n="hero.subSecondary">We're opening early access to a small group of teams who are ready to work differently.</p>
       <a href="#waitlist-form" class="btn-primary">
         <span data-i18n="hero.cta">Join the Early Adopters</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
     <div class="hero-visual">
-      <!-- Inline SVG: animated tree hierarchy illustration -->
-      <svg class="hero-tree-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="hero-tree-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-tree-title hero-tree-desc">
+        <title id="hero-tree-title">Strategy-to-execution hierarchy diagram</title>
+        <desc id="hero-tree-desc">A tree-shaped diagram with a single node at the top labeled "Strategy" that branches downward through intermediate nodes into many execution-level nodes, illustrating how company strategy connects to daily work.</desc>
         <circle cx="200" cy="220" r="160" fill="#0D6B5E" opacity="0.03"/>
         <circle cx="200" cy="220" r="100" fill="#0D6B5E" opacity="0.04"/>
         <circle cx="200" cy="60" r="14" fill="#0D6B5E" opacity="0.12"/>
@@ -105,8 +307,8 @@
         <circle cx="305" cy="320" r="3.5" fill="#D4654A" opacity="0.3"/>
         <circle cx="340" cy="320" r="8" fill="#D4654A" opacity="0.06"/>
         <circle cx="340" cy="320" r="3.5" fill="#D4654A" opacity="0.3"/>
-        <text x="200" y="38" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">STRATEGY</text>
-        <text x="200" y="365" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">EXECUTION</text>
+        <text x="200" y="38" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">STRATEGY</text>
+        <text x="200" y="365" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="#7A857F" font-weight="500" letter-spacing="0.06em">EXECUTION</text>
         <path d="M196 348 L200 353 L204 348" stroke="#7A857F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4"/>
         <path d="M200 345 L200 355" stroke="#7A857F" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
       </svg>
@@ -115,28 +317,28 @@
 </section>
 
 <!-- PROBLEM STRIP -->
-<section class="problem-strip">
+<section class="problem-strip" aria-labelledby="problems-heading">
   <div class="problem-strip-inner">
     <div class="problem-strip-label animate-on-scroll" data-i18n="problems.label">Sound familiar?</div>
-    <h2 class="animate-on-scroll" data-i18n="problems.headline">The problems we're building Arbor to&nbsp;solve.</h2>
+    <h2 id="problems-heading" class="animate-on-scroll" data-i18n="problems.headline">The problems we're building Arbor to&nbsp;solve.</h2>
     <div class="pain-grid">
       <div class="pain-card animate-on-scroll delay-1">
-        <div class="pain-icon">1</div>
+        <div class="pain-icon" aria-hidden="true">1</div>
         <h3 data-i18n="problems.card1.title">Duplicate work</h3>
         <p data-i18n="problems.card1.body">Two teams. Same problem. Zero coordination. Nobody finds out until both are halfway done.</p>
       </div>
       <div class="pain-card animate-on-scroll delay-2">
-        <div class="pain-icon">2</div>
+        <div class="pain-icon" aria-hidden="true">2</div>
         <h3 data-i18n="problems.card2.title">Meeting overload</h3>
         <p data-i18n="problems.card2.body">Status meetings about status meetings. Because the tools don't surface what matters, so humans have to.</p>
       </div>
       <div class="pain-card animate-on-scroll delay-3">
-        <div class="pain-icon">3</div>
+        <div class="pain-icon" aria-hidden="true">3</div>
         <h3 data-i18n="problems.card3.title">OKR theater</h3>
         <p data-i18n="problems.card3.body">Objectives as a separate reporting layer that everyone maintains but nobody actually uses to make decisions.</p>
       </div>
       <div class="pain-card animate-on-scroll delay-4">
-        <div class="pain-icon">4</div>
+        <div class="pain-icon" aria-hidden="true">4</div>
         <h3 data-i18n="problems.card4.title">Decisions in the dark</h3>
         <p data-i18n="problems.card4.body">Leaders without ground-level visibility making calls that cascade down to the people doing the actual work.</p>
       </div>
@@ -145,50 +347,54 @@
 </section>
 
 <!-- FORM SECTION -->
-<section class="form-section" id="waitlist-form">
+<section class="form-section" id="waitlist-form" aria-labelledby="form-heading">
   <div class="form-layout">
     <div class="form-context animate-on-scroll">
       <div class="form-context-label" data-i18n="form.contextLabel">Early adopters</div>
-      <h2 data-i18n="form.contextHeadline">Shape Arbor from the&nbsp;ground&nbsp;up.</h2>
+      <h2 id="form-heading" data-i18n="form.contextHeadline">Shape Arbor from the&nbsp;ground&nbsp;up.</h2>
       <p data-i18n="form.contextBody">We're looking for a small group of teams who live these problems every day. People who want to fix the system, not just manage around it. In return, you get a direct line to the team building the solution.</p>
       <ul class="what-you-get">
         <li>
-          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="check-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span data-i18n="form.benefit1">Early access before public launch. See it first, break it first</span>
         </li>
         <li>
-          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="check-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span data-i18n="form.benefit2">Direct access to the founders. Not a support queue, actual conversations</span>
         </li>
         <li>
-          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="check-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span data-i18n="form.benefit3">Your feedback shapes the roadmap. We build for real problems, not assumptions</span>
         </li>
         <li>
-          <div class="check-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="check-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <span data-i18n="form.benefit4">Early adopter pricing, locked in for good</span>
         </li>
       </ul>
     </div>
 
     <div class="waitlist-form-card animate-on-scroll delay-2" id="formCard">
-      <div id="formContent">
-        <div class="form-title" data-i18n="form.cardTitle">Request Early Access</div>
-        <div class="form-subtitle" data-i18n="form.cardSubtitle">Takes about 60 seconds. We read every&nbsp;one.</div>
+      <form id="formContent" novalidate aria-labelledby="form-card-title" aria-describedby="form-card-subtitle">
+        <div class="form-title" id="form-card-title" data-i18n="form.cardTitle">Request Early Access</div>
+        <div class="form-subtitle" id="form-card-subtitle" data-i18n="form.cardSubtitle">Takes about 60 seconds. We read every&nbsp;one.</div>
+
+        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 
         <div class="form-group">
           <label for="email" data-i18n="form.emailLabel">Work email</label>
-          <input type="email" id="email" name="email" data-i18n-attr="placeholder" data-i18n="form.emailPlaceholder" placeholder="you@company.com" required autocomplete="email">
+          <input type="email" id="email" name="email" data-i18n-attr="placeholder" data-i18n="form.emailPlaceholder" placeholder="you@company.com" required autocomplete="email" aria-required="true" aria-describedby="email-error">
+          <span class="field-error" id="email-error" aria-live="polite"></span>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="name" data-i18n="form.nameLabel">Your name</label>
-            <input type="text" id="name" name="name" data-i18n-attr="placeholder" data-i18n="form.namePlaceholder" placeholder="First Last" required autocomplete="name">
+            <input type="text" id="name" name="name" data-i18n-attr="placeholder" data-i18n="form.namePlaceholder" placeholder="First Last" required autocomplete="name" aria-required="true" aria-describedby="name-error">
+            <span class="field-error" id="name-error" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="role" data-i18n="form.roleLabel">Your role</label>
-            <select id="role" name="role" required>
+            <select id="role" name="role" required autocomplete="organization-title" aria-required="true" aria-describedby="role-error">
               <option value="" disabled selected data-i18n="form.rolePlaceholder">Select role</option>
               <option value="ceo-founder" data-i18n="form.roleOptions.ceoFounder">CEO / Founder</option>
               <option value="coo-ops" data-i18n="form.roleOptions.cooOps">COO / Head of Ops</option>
@@ -199,12 +405,13 @@
               <option value="ic" data-i18n="form.roleOptions.ic">Individual Contributor</option>
               <option value="other" data-i18n="form.roleOptions.other">Other</option>
             </select>
+            <span class="field-error" id="role-error" aria-live="polite"></span>
           </div>
         </div>
 
         <div class="form-group">
           <label for="company-size" data-i18n="form.sizeLabel">Company size</label>
-          <select id="company-size" name="company-size" required>
+          <select id="company-size" name="company-size" required aria-required="true" aria-describedby="company-size-error">
             <option value="" disabled selected data-i18n="form.sizePlaceholder">How many people?</option>
             <option value="1-10">1–10</option>
             <option value="11-20">11–20</option>
@@ -213,6 +420,7 @@
             <option value="101-200">101–200</option>
             <option value="200+">200+</option>
           </select>
+          <span class="field-error" id="company-size-error" aria-live="polite"></span>
         </div>
 
         <div class="form-group">
@@ -223,15 +431,15 @@
           <textarea id="frustration" name="frustration" data-i18n-attr="placeholder" data-i18n="form.frustrationPlaceholder" placeholder="The more specific, the better."></textarea>
         </div>
 
-        <button type="button" class="btn-submit" id="submitBtn" onclick="handleSubmit()">
+        <button type="submit" class="btn-submit" id="submitBtn">
           <span data-i18n="form.submit">Request Early Access</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="form-footer" data-i18n="form.privacy">No spam, and we'll never sell your data.</div>
-      </div>
+      </form>
 
-      <div class="form-success" id="formSuccess">
-        <div class="form-success-icon">
+      <div class="form-success" id="formSuccess" tabindex="-1">
+        <div class="form-success-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3 data-i18n="form.successTitle">You're in.</h3>
@@ -242,25 +450,25 @@
 </section>
 
 <!-- WHAT TO EXPECT -->
-<section class="expect-section">
+<section class="expect-section" aria-labelledby="expect-heading">
   <div class="expect-inner">
     <div class="expect-header animate-on-scroll">
       <div class="expect-label" data-i18n="expect.label">What happens next</div>
-      <h2 data-i18n="expect.headline">This isn't a "sign up and wait" waitlist.</h2>
+      <h2 id="expect-heading" data-i18n="expect.headline">This isn't a "sign up and wait" waitlist.</h2>
     </div>
     <div class="expect-grid">
       <div class="expect-card animate-on-scroll delay-1">
-        <div class="expect-number">01</div>
+        <div class="expect-number" aria-hidden="true">01</div>
         <h3 data-i18n="expect.card1.title">We actually read your responses</h3>
         <p data-i18n="expect.card1.body">Every answer helps us build the right product. Your frustrations become our feature priorities. This isn't a vanity metric exercise.</p>
       </div>
       <div class="expect-card animate-on-scroll delay-2">
-        <div class="expect-number">02</div>
+        <div class="expect-number" aria-hidden="true">02</div>
         <h3 data-i18n="expect.card2.title">We'll reach out for a real conversation</h3>
         <p data-i18n="expect.card2.body">Not a sales call. A short conversation about your team, your tools, and where things break down. We're here to listen first.</p>
       </div>
       <div class="expect-card animate-on-scroll delay-3">
-        <div class="expect-number">03</div>
+        <div class="expect-number" aria-hidden="true">03</div>
         <h3 data-i18n="expect.card3.title">You'll get early access when we launch</h3>
         <p data-i18n="expect.card3.body">Early adopters get in first, at locked-in pricing, with a direct line to the team. You're not just early. You're part of how this gets built.</p>
       </div>
@@ -269,18 +477,20 @@
 </section>
 
 <!-- MINI FAQ -->
-<section class="mini-faq">
+<section class="mini-faq" aria-labelledby="faq-heading">
   <div class="mini-faq-inner">
     <div class="mini-faq-header animate-on-scroll">
-      <h2 data-i18n="faq.headline">A few things you might be wondering.</h2>
+      <h2 id="faq-heading" data-i18n="faq.headline">A few things you might be wondering.</h2>
     </div>
 
     <div class="faq-item animate-on-scroll">
-      <button class="faq-question" aria-expanded="false">
-        <span data-i18n="faq.q1">What exactly is Arbor?</span>
-        <span class="arrow">▾</span>
-      </button>
-      <div class="faq-answer">
+      <h3 class="faq-heading">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+          <span data-i18n="faq.q1">What exactly is Arbor?</span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-answer-1-label" hidden>
         <div class="faq-answer-inner">
           <p data-i18n="faq.a1">Arbor is a strategic alignment platform. In plain language: it connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between "here's our vision" and "here's my to-do list" that most companies are currently managing with spreadsheets, meetings, and wishful thinking.</p>
         </div>
@@ -288,11 +498,13 @@
     </div>
 
     <div class="faq-item animate-on-scroll">
-      <button class="faq-question" aria-expanded="false">
-        <span data-i18n="faq.q2">Why should I join now instead of waiting for launch?</span>
-        <span class="arrow">▾</span>
-      </button>
-      <div class="faq-answer">
+      <h3 class="faq-heading">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+          <span data-i18n="faq.q2">Why should I join now instead of waiting for launch?</span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-2" role="region" hidden>
         <div class="faq-answer-inner">
           <p data-i18n="faq.a2">Because the early adopters shape what gets built. Your problems, your workflows, your "I wish it did this" moments go directly into the product. You also lock in early adopter pricing permanently. And the teams who join early tend to get the most value, because the product is literally built around their reality.</p>
         </div>
@@ -300,11 +512,13 @@
     </div>
 
     <div class="faq-item animate-on-scroll">
-      <button class="faq-question" aria-expanded="false">
-        <span data-i18n="faq.q3">Is this just another project management tool?</span>
-        <span class="arrow">▾</span>
-      </button>
-      <div class="faq-answer">
+      <h3 class="faq-heading">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+          <span data-i18n="faq.q3">Is this just another project management tool?</span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-3" role="region" hidden>
         <div class="faq-answer-inner">
           <p data-i18n="faq.a3">No, and we're pretty deliberate about that. Arbor isn't competing with task trackers or documentation tools. We're the strategic alignment layer, the system that ensures all that daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams will consolidate over time. Some won't. We're not precious about it.</p>
         </div>
@@ -312,11 +526,13 @@
     </div>
 
     <div class="faq-item animate-on-scroll">
-      <button class="faq-question" aria-expanded="false">
-        <span data-i18n="faq.q4">What does "building in public" mean for me?</span>
-        <span class="arrow">▾</span>
-      </button>
-      <div class="faq-answer">
+      <h3 class="faq-heading">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+          <span data-i18n="faq.q4">What does "building in public" mean for me?</span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-4" role="region" hidden>
         <div class="faq-answer-inner">
           <p data-i18n="faq.a4">It means we share the journey. The wins, the stumbles, the "well, that didn't work" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it). If that kind of transparency appeals to you, you're probably our people.</p>
         </div>
@@ -326,26 +542,28 @@
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta">
+<section class="final-cta" aria-labelledby="final-cta-heading">
   <div class="final-cta-inner animate-on-scroll">
-    <h2 data-i18n="finalCta.headline">The best tools get built with the people who need&nbsp;them.</h2>
+    <h2 id="final-cta-heading" data-i18n="finalCta.headline">The best tools get built with the people who need&nbsp;them.</h2>
     <p data-i18n="finalCta.body">If your team has outgrown casual tools but dreads the overhead of enterprise software, we should talk.</p>
     <a href="#waitlist-form" class="btn-final">
       <span data-i18n="finalCta.cta">Join the Early Adopters</span>
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
-<footer>
+<footer aria-label="Site footer">
   <div class="footer-inner">
     <div class="footer-logo">arbor</div>
     <ul class="footer-links">
       <li><a href="https://arbortech.io" data-i18n="footer.product">Product</a></li>
-      <li><a href="#" data-i18n="footer.linkedin">LinkedIn</a></li>
-      <li><a href="#" data-i18n="footer.privacy">Privacy</a></li>
-      <li><a href="#" data-i18n="footer.terms">Terms</a></li>
+      <li><a href="#" class="footer-link-disabled" role="link" aria-disabled="true" tabindex="-1" title="Coming soon"><span data-i18n="footer.linkedin">LinkedIn</span><span class="visually-hidden"> (coming soon)</span></a></li>
+      <li><a href="#" class="footer-link-disabled" role="link" aria-disabled="true" tabindex="-1" title="Coming soon"><span data-i18n="footer.privacy">Privacy</span><span class="visually-hidden"> (coming soon)</span></a></li>
+      <li><a href="#" class="footer-link-disabled" role="link" aria-disabled="true" tabindex="-1" title="Coming soon"><span data-i18n="footer.terms">Terms</span><span class="visually-hidden"> (coming soon)</span></a></li>
     </ul>
     <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 Arbor. All rights reserved.</p>
   </div>

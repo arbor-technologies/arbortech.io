@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Arbor — the alignment layer your tools are missing</title>
+  <desc id="og-desc">Arbor wordmark and headline on a deep-teal background, with a tree-shaped strategy-to-execution hierarchy diagram on the right.</desc>
+
+  <defs>
+    <radialGradient id="bg-glow" cx="85%" cy="90%" r="65%">
+      <stop offset="0%" stop-color="#D4A843" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#D4A843" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0A4B44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg-fade" cx="20%" cy="15%" r="80%">
+      <stop offset="0%" stop-color="#0D6B5E" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0A4B44" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A4B44"/>
+  <rect width="1200" height="630" fill="url(#bg-fade)"/>
+  <rect width="1200" height="630" fill="url(#bg-glow)"/>
+
+  <!-- Left column: wordmark, eyebrow, headline, url -->
+  <g font-family="Fraunces, Georgia, 'Times New Roman', serif" fill="#E0F5F0">
+    <text x="80" y="140" font-size="56" font-weight="600" font-style="italic" letter-spacing="-1">arbor</text>
+  </g>
+
+  <g font-family="DM Sans, Inter, Helvetica, Arial, sans-serif">
+    <!-- Eyebrow -->
+    <text x="80" y="230" font-size="18" font-weight="600" fill="#D4A843" letter-spacing="3">EARLY ACCESS</text>
+    <line x1="80" y1="246" x2="140" y2="246" stroke="#D4A843" stroke-width="2"/>
+  </g>
+
+  <g font-family="Fraunces, Georgia, 'Times New Roman', serif" fill="#E0F5F0">
+    <!-- Headline, line 1 -->
+    <text x="80" y="320" font-size="62" font-weight="600" letter-spacing="-2">The alignment layer</text>
+    <!-- Headline, line 2 -->
+    <text x="80" y="390" font-size="62" font-weight="600" letter-spacing="-2">your tools are</text>
+    <!-- Headline, italic emphasis -->
+    <text x="80" y="460" font-size="62" font-weight="600" font-style="italic" fill="#A8DDD0" letter-spacing="-2">missing.</text>
+  </g>
+
+  <g font-family="DM Sans, Inter, Helvetica, Arial, sans-serif" fill="#A8DDD0">
+    <text x="80" y="545" font-size="22" font-weight="500">Strategy → execution, in one living hierarchy.</text>
+    <text x="80" y="585" font-size="18" font-weight="500" fill="#74C69D" letter-spacing="1">arbortech.io</text>
+  </g>
+
+  <!-- Right column: tree hierarchy (static, no animation) -->
+  <g transform="translate(760, 80)">
+    <!-- Soft concentric halos -->
+    <circle cx="200" cy="260" r="220" fill="#1A8A7A" opacity="0.06"/>
+    <circle cx="200" cy="260" r="150" fill="#1A8A7A" opacity="0.08"/>
+
+    <!-- Root node (Strategy) -->
+    <circle cx="200" cy="70" r="20" fill="#D4A843" opacity="0.25"/>
+    <circle cx="200" cy="70" r="11" fill="#D4A843"/>
+
+    <!-- Vertical trunk -->
+    <line x1="200" y1="90" x2="200" y2="170" stroke="#A8DDD0" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- Branches to mid-level -->
+    <line x1="200" y1="160" x2="100" y2="230" stroke="#A8DDD0" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+    <line x1="200" y1="160" x2="300" y2="230" stroke="#A8DDD0" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Mid-level nodes -->
+    <circle cx="100" cy="240" r="16" fill="#0D6B5E" opacity="0.3"/>
+    <circle cx="100" cy="240" r="9" fill="#1A8A7A"/>
+    <circle cx="300" cy="240" r="16" fill="#D4A843" opacity="0.3"/>
+    <circle cx="300" cy="240" r="9" fill="#D4A843"/>
+
+    <!-- Branches to leaf level -->
+    <line x1="100" y1="250" x2="50"  y2="330" stroke="#A8DDD0" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <line x1="100" y1="250" x2="150" y2="330" stroke="#A8DDD0" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <line x1="300" y1="250" x2="250" y2="330" stroke="#A8DDD0" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <line x1="300" y1="250" x2="350" y2="330" stroke="#A8DDD0" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Leaf nodes -->
+    <circle cx="50"  cy="340" r="12" fill="#1A8A7A" opacity="0.28"/>
+    <circle cx="50"  cy="340" r="6"  fill="#1A8A7A"/>
+    <circle cx="150" cy="340" r="12" fill="#1A8A7A" opacity="0.28"/>
+    <circle cx="150" cy="340" r="6"  fill="#1A8A7A"/>
+    <circle cx="250" cy="340" r="12" fill="#D4A843" opacity="0.28"/>
+    <circle cx="250" cy="340" r="6"  fill="#D4A843"/>
+    <circle cx="350" cy="340" r="12" fill="#D4654A" opacity="0.28"/>
+    <circle cx="350" cy="340" r="6"  fill="#D4654A"/>
+
+    <!-- Sub-leaves -->
+    <line x1="50"  y1="350" x2="30"  y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="50"  y1="350" x2="70"  y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="150" y1="350" x2="130" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="150" y1="350" x2="170" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="250" y1="350" x2="230" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="250" y1="350" x2="270" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="350" y1="350" x2="330" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+    <line x1="350" y1="350" x2="370" y2="400" stroke="#A8DDD0" stroke-width="1.5" stroke-linecap="round" opacity="0.22"/>
+
+    <circle cx="30"  cy="410" r="6" fill="#1A8A7A" opacity="0.8"/>
+    <circle cx="70"  cy="410" r="6" fill="#1A8A7A" opacity="0.8"/>
+    <circle cx="130" cy="410" r="6" fill="#1A8A7A" opacity="0.8"/>
+    <circle cx="170" cy="410" r="6" fill="#1A8A7A" opacity="0.8"/>
+    <circle cx="230" cy="410" r="6" fill="#D4A843" opacity="0.8"/>
+    <circle cx="270" cy="410" r="6" fill="#D4A843" opacity="0.8"/>
+    <circle cx="330" cy="410" r="6" fill="#D4654A" opacity="0.8"/>
+    <circle cx="370" cy="410" r="6" fill="#D4654A" opacity="0.8"/>
+
+    <!-- Labels -->
+    <text x="200" y="35" text-anchor="middle" font-family="DM Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#A8DDD0" font-weight="600" letter-spacing="3">STRATEGY</text>
+    <text x="200" y="455" text-anchor="middle" font-family="DM Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#A8DDD0" font-weight="600" letter-spacing="3">EXECUTION</text>
+  </g>
+
+  <!-- Subtle bottom accent bar -->
+  <rect x="0" y="625" width="1200" height="5" fill="#D4A843" opacity="0.6"/>
+</svg>

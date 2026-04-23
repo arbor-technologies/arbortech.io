@@ -19,7 +19,7 @@
   --charcoal-mid: #2A302E;
   --text-primary: #1A1F1E;
   --text-secondary: #4A5550;
-  --text-muted: #7A857F;
+  --text-muted: #5E6B64;
   --text-on-dark: #E0F5F0;
   --text-on-dark-muted: #A8DDD0;
   --bg-warm: #FAFAF7;
@@ -32,6 +32,64 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
+
+/* --- A11Y UTILITIES --- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 12px;
+  background: var(--green-deep);
+  color: var(--text-on-dark);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  z-index: 10000;
+  transition: top 0.18s ease;
+}
+.skip-link:focus {
+  top: 12px;
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* Global focus-visible baseline — inputs have their own, everything else gets a consistent ring. */
+:focus-visible {
+  outline: 2px solid var(--green-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.nav-badge:focus-visible,
+.btn-primary:focus-visible,
+.btn-final:focus-visible,
+.btn-submit:focus-visible {
+  outline-color: var(--amber);
+  outline-offset: 3px;
+}
+
+/* Anchor jump targets should sit below the fixed nav. */
+#main,
+#waitlist-form,
+.hero,
+.problem-strip,
+.expect-section,
+.mini-faq,
+.final-cta {
+  scroll-margin-top: 88px;
+}
 
 body {
   font-family: var(--font-body);
@@ -117,6 +175,121 @@ nav.scrolled {
   letter-spacing: -0.02em;
 }
 .nav-logo span { color: var(--green-mid); }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-on-dark);
+  padding: 7px 10px 7px 9px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+.lang-globe {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+}
+.lang-current {
+  min-width: 1.5ch;
+  letter-spacing: 0.02em;
+}
+.lang-caret {
+  width: 8px;
+  height: 5px;
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+.lang-toggle[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1100;
+}
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-option {
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+.lang-option:hover,
+.lang-option:focus-visible {
+  background: var(--green-light);
+  color: var(--green-deep);
+  outline: none;
+}
+.lang-option[aria-selected="true"] {
+  background: var(--green-primary);
+  color: #fff;
+}
+.lang-option[aria-selected="true"]:hover,
+.lang-option[aria-selected="true"]:focus-visible {
+  background: var(--green-deep);
+  color: #fff;
+}
+
+/* --- RTL OVERRIDES --- */
+[dir="rtl"] .hero-eyebrow::before,
+[dir="rtl"] .problem-strip-label::before,
+[dir="rtl"] .form-context-label::before,
+[dir="rtl"] .expect-label::before {
+  /* Eyebrow decoration already inherits flex direction; nothing to flip here,
+     but keep the rule so future ::before pseudo lines get handled centrally. */
+}
+/* Flip the right-arrow glyph inside CTAs — in RTL it should visually point left. */
+[dir="rtl"] .btn-primary svg,
+[dir="rtl"] .btn-final svg,
+[dir="rtl"] .btn-submit svg,
+[dir="rtl"] .nav-badge svg {
+  transform: scaleX(-1);
+}
+/* Form select chevron sits on the right in LTR; move it to the left in RTL. */
+[dir="rtl"] .form-group select {
+  background-position: left 16px center;
+  padding-right: 16px;
+  padding-left: 40px;
+}
+/* Check icons in the benefits list stay on the reading-start side. */
+[dir="rtl"] .what-you-get li { flex-direction: row; }
+/* Nav badge pulsing dot should sit at reading-start. Flex already handles it. */
 .nav-badge {
   display: inline-flex;
   align-items: center;
@@ -272,13 +445,12 @@ nav.scrolled {
 .hero-cta-arrow svg { transition: transform 0.2s; }
 .hero-cta-arrow:hover svg { transform: translateX(3px); }
 
-/* Hero visual */
+/* Hero visual — visible by default so the illustration still renders if CSS
+   animations don't run (screenshotters, print, reduced-motion). */
 .hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 1s ease 0.3s forwards;
-  opacity: 0;
 }
 .hero-tree-svg {
   width: 100%;
@@ -919,5 +1091,147 @@ footer {
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+/* --- NAV ACTIONS RESPONSIVE --- */
+@media (max-width: 720px) {
+  .nav-actions { gap: 10px; }
+  .lang-btn { padding: 5px 7px; min-width: 26px; font-size: 0.68rem; }
+  .nav-badge { font-size: 0.65rem; padding: 7px 12px; letter-spacing: 0.04em; }
+}
+@media (max-width: 520px) {
+  .lang-switcher {
+    /* Collapse the switcher to the three most-likely-relevant codes on narrow screens;
+       the others remain in DOM for keyboard/screen-reader users via the focus-visible rule below. */
+    max-width: 148px;
+    overflow: hidden;
+  }
+  .nav-badge .hide-on-tiny { display: none; }
+}
+
+/* --- FAQ DISCLOSURE HEADING WRAPPER ---
+   The button sits inside an h3 so the question still functions as a heading
+   for screen-reader rotor navigation. The h3 itself has no visible text. */
+.faq-heading {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: inherit;
+}
+.faq-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* --- FORM VALIDATION & STATUS --- */
+.form-status {
+  min-height: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  transition: min-height 0.2s ease, margin-bottom 0.2s ease, padding 0.2s ease;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+.form-status.is-error {
+  background: var(--rose-subtle);
+  color: #8A3320;
+  border: 1px solid var(--rose-light);
+  padding: 10px 12px;
+  margin-bottom: 20px;
+}
+.form-status.is-success {
+  background: var(--green-light);
+  color: var(--green-deep);
+  border: 1px solid var(--green-mid);
+  padding: 10px 12px;
+  margin-bottom: 20px;
+}
+.field-error {
+  display: block;
+  font-size: 0.78rem;
+  color: #8A3320;
+  margin-top: 6px;
+  min-height: 0;
+  line-height: 1.4;
+}
+.field-error:empty { display: none; }
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: var(--rose);
+  background: var(--rose-subtle);
+}
+.form-group input[aria-invalid="true"]:focus,
+.form-group select[aria-invalid="true"]:focus,
+.form-group textarea[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(212, 101, 74, 0.15);
+}
+.form-success[tabindex]:focus { outline: none; }
+
+/* --- FOOTER PLACEHOLDER LINKS ---
+   These links point at content that doesn't exist yet. aria-disabled + tabindex=-1
+   takes them out of the tab order and the title tooltip explains why. */
+.footer-link-disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.footer-link-disabled:hover { color: var(--text-on-dark-muted) !important; }
+
+/* --- REDUCED MOTION ---
+   Strip animations + transforms and neutralize smooth scroll. We leave opacity transitions
+   on hover feedback so the interface still feels responsive to input. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+  .animate-on-scroll,
+  .hero-visual,
+  .hero-content {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .tree-leaf-group,
+  .tree-node-glow,
+  .nav-badge::before {
+    animation: none !important;
+  }
+  .pain-card:hover,
+  .expect-card:hover,
+  .btn-primary:hover,
+  .btn-submit:hover,
+  .btn-final:hover,
+  .nav-badge:hover {
+    transform: none !important;
+  }
+}
+
+/* --- FORCED COLORS (Windows High Contrast) --- */
+@media (forced-colors: active) {
+  .skip-link,
+  .btn-primary,
+  .btn-submit,
+  .btn-final,
+  .nav-badge,
+  .lang-btn,
+  .faq-question {
+    border: 1px solid ButtonBorder;
+    forced-color-adjust: none;
+  }
+  .pain-card,
+  .expect-card,
+  .waitlist-form-card,
+  .faq-item {
+    border: 1px solid CanvasText;
+  }
+  :focus-visible {
+    outline: 2px solid Highlight;
   }
 }

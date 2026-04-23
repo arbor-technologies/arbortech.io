@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://arbortech.io/</loc>
-        <lastmod>2026-03-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://arbortech.io/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arbortech.io/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arbortech.io/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://arbortech.io/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://arbortech.io/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arbortech.io/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://arbortech.io/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://arbortech.io/?lang=zh-TW"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arbortech.io/"/>
+  </url>
 </urlset>

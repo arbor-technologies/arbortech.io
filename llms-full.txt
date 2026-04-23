@@ -1,0 +1,124 @@
+# Arbor — Full Site Content
+
+> Arbor is a strategic alignment platform that connects company goals to daily team work in one living hierarchy. This file contains the complete public-facing copy of arbortech.io in plain markdown, suitable for ingestion by language models and agentic crawlers.
+
+Last updated: 2026-04-23
+Canonical URL: https://arbortech.io/
+
+---
+
+## Hero
+
+**Eyebrow:** Early Access
+
+**Headline:** The alignment layer your tools are missing.
+
+**Subtext:** Arbor connects your company's goals to your team's daily work in one living hierarchy. No more disconnect between strategy and execution.
+
+**Secondary subtext:** We're opening early access to a small group of teams who are ready to work differently.
+
+**Primary CTA:** Join the Early Adopters → https://arbortech.io/#waitlist-form
+
+---
+
+## Problems Arbor is being built to solve
+
+### Sound familiar?
+
+1. **Duplicate work.** Two teams. Same problem. Zero coordination. Nobody finds out until both are halfway done.
+
+2. **Meeting overload.** Status meetings about status meetings. Because the tools don't surface what matters, so humans have to.
+
+3. **OKR theater.** Objectives as a separate reporting layer that everyone maintains but nobody actually uses to make decisions.
+
+4. **Decisions in the dark.** Leaders without ground-level visibility making calls that cascade down to the people doing the actual work.
+
+---
+
+## Shape Arbor from the ground up
+
+We're looking for a small group of teams who live these problems every day. People who want to fix the system, not just manage around it. In return, you get a direct line to the team building the solution.
+
+### What early adopters get
+
+- Early access before public launch. See it first, break it first.
+- Direct access to the founders. Not a support queue — actual conversations.
+- Your feedback shapes the roadmap. We build for real problems, not assumptions.
+- Early-adopter pricing, locked in for good.
+
+### Who we're looking for
+
+Work emails from companies with 1 to 200+ people. Roles typically include:
+
+- CEO / Founder
+- COO / Head of Ops
+- Chief of Staff
+- VP / Director
+- Team Lead / Manager
+- Product Manager
+- Individual Contributor
+
+---
+
+## What happens next
+
+This isn't a "sign up and wait" waitlist.
+
+**01. We actually read your responses.** Every answer helps us build the right product. Your frustrations become our feature priorities. This isn't a vanity metric exercise.
+
+**02. We'll reach out for a real conversation.** Not a sales call. A short conversation about your team, your tools, and where things break down. We're here to listen first.
+
+**03. You'll get early access when we launch.** Early adopters get in first, at locked-in pricing, with a direct line to the team. You're not just early — you're part of how this gets built.
+
+---
+
+## FAQ
+
+### What exactly is Arbor?
+
+Arbor is a strategic alignment platform. In plain language: it connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between "here's our vision" and "here's my to-do list" that most companies are currently managing with spreadsheets, meetings, and wishful thinking.
+
+### Why should I join now instead of waiting for launch?
+
+Because the early adopters shape what gets built. Your problems, your workflows, your "I wish it did this" moments go directly into the product. You also lock in early-adopter pricing permanently. And the teams who join early tend to get the most value, because the product is literally built around their reality.
+
+### Is this just another project management tool?
+
+No, and we're pretty deliberate about that. Arbor isn't competing with task trackers or documentation tools. We're the strategic alignment layer, the system that ensures all that daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams will consolidate over time. Some won't. We're not precious about it.
+
+### What does "building in public" mean for me?
+
+It means we share the journey. The wins, the stumbles, the "well, that didn't work" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it). If that kind of transparency appeals to you, you're probably our people.
+
+---
+
+## Final call
+
+The best tools get built with the people who need them. If your team has outgrown casual tools but dreads the overhead of enterprise software, we should talk.
+
+**Join the Early Adopters:** https://arbortech.io/#waitlist-form
+
+---
+
+## Contact
+
+- Email: hello@arbortech.io
+- Website: https://arbortech.io/
+- Privacy: forthcoming
+- Terms: forthcoming
+
+---
+
+## Available languages
+
+- English (en) — https://arbortech.io/
+- العربية (ar) — https://arbortech.io/?lang=ar
+- 한국어 (ko) — https://arbortech.io/?lang=ko
+- 日本語 (ja) — https://arbortech.io/?lang=ja
+- Español (es) — https://arbortech.io/?lang=es
+- 简体中文 (zh) — https://arbortech.io/?lang=zh
+- 繁體中文 (zh-TW) — https://arbortech.io/?lang=zh-TW
+
+---
+
+*This content mirrors the public landing page at https://arbortech.io/. Retrieve the live page for any content that may have changed since the date above.*

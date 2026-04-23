@@ -1,0 +1,70 @@
+# Arbor
+
+> Arbor is a strategic alignment platform that connects company goals (OKRs, initiatives) to daily team work (tasks, projects, deliverables) in one living hierarchy that flows from strategy to execution — not the other way around.
+
+Arbor is currently in early access. This file is an LLM-friendly index of the public site, following the llms.txt convention. The canonical human-facing page is https://arbortech.io/.
+
+## What Arbor is
+
+A single living hierarchy that links company strategy to the daily work that carries it out. Goals, OKRs, and initiatives sit at the top; projects, tasks, and deliverables sit underneath them — all connected. Leaders see execution reality without status meetings. Teams see how their work ladders up to something that matters.
+
+Arbor is not a task tracker, not a documentation tool, not a status-reporting layer. It sits above those tools, connecting them to strategy.
+
+## Who it's for
+
+Growing teams — typically 10 to 200 people — that have outgrown casual tools (spreadsheets, ad-hoc docs, status meetings) but dread the overhead of enterprise planning software. Founders, COOs, Chiefs of Staff, VPs, and team leads who feel the disconnect between the company's direction and the daily work happening across the org.
+
+## Problems Arbor is built to solve
+
+- **Duplicate work.** Two teams solving the same problem with zero coordination, not discovering the overlap until both are halfway done.
+- **Meeting overload.** Status meetings about status meetings, because the tools don't surface what matters and humans end up doing the surfacing.
+- **OKR theater.** Objectives maintained as a separate reporting layer that everyone fills in but nobody uses to make decisions.
+- **Decisions in the dark.** Leaders without ground-level visibility making calls that cascade down to the people doing the actual work.
+
+## What early adopters get
+
+- Early access before public launch
+- A direct line to the founders — real conversations, not a support queue
+- Direct influence on the roadmap
+- Early-adopter pricing, locked in permanently
+
+## FAQ
+
+### What exactly is Arbor?
+
+Arbor is a strategic alignment platform. It connects what your company wants to achieve (goals, OKRs, initiatives) to what your team actually does every day (tasks, projects, deliverables) in one hierarchy that flows downward from strategy, not upward as status reports. Think of it as the layer between "here's our vision" and "here's my to-do list" that most companies are currently managing with spreadsheets, meetings, and wishful thinking.
+
+### Why join now instead of waiting for launch?
+
+Early adopters shape what gets built. Your problems, your workflows, your "I wish it did this" moments go directly into the product. You also lock in early-adopter pricing permanently. Teams who join early tend to get the most value because the product is literally built around their reality.
+
+### Is this just another project management tool?
+
+No. Arbor isn't competing with task trackers or documentation tools. It's the strategic alignment layer — the system that ensures daily work actually connects to what the company is trying to accomplish. You can run Arbor alongside your existing tools. Some teams consolidate over time, some don't. We're not precious about it.
+
+### What does "building in public" mean?
+
+We share the journey — wins, stumbles, and "well, that didn't work" moments. You'll see how decisions get made, what we're learning from user conversations, and what's actually on the roadmap (not a marketing version of it).
+
+## Join the early adopters
+
+Request early access at: https://arbortech.io/#waitlist-form
+
+## Contact
+
+- Email: hello@arbortech.io
+- Website: https://arbortech.io/
+
+## Languages
+
+The site is available in English, Arabic (العربية), Korean (한국어), Japanese (日本語), Spanish (Español), Simplified Chinese (简体中文), and Traditional Chinese (繁體中文).
+
+## Optional
+
+- [Full site content (extended)](https://arbortech.io/llms-full.txt)
+- [Sitemap](https://arbortech.io/sitemap.xml)
+- [Structured data (JSON-LD)](https://arbortech.io/) — embedded in the homepage HTML
+
+---
+
+*This file is maintained for language models and agentic crawlers. Last updated 2026-04-23.*
